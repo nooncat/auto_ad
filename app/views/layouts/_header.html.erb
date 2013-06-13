@@ -4,8 +4,22 @@
       <%= link_to "Ваше авто", '#', id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",  root_path %></li>
-          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Главная",  root_path %></li>
+          <li><%= link_to "О нас", about_path %></li>
+          <% if signed_in? %>
+            <li><%= link_to "Пользователи", '#' %></li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Аккаунт <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Настройки", '#' %></li>
+                <li><%= link_to "Выход", signout_path, method: "delete" %>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Вход", signin_path %></li>
+          <% end %>
         </ul>
       </nav>
     </div>
