@@ -7,10 +7,10 @@ describe "UserPages" do
   
   describe "index" do
     
-    let(:user) { FactoryGirl.create(:user) }
+    let(:admin) { FactoryGirl.create(:admin) }
 
     before(:each) do
-      sign_in user
+      sign_in admin
       visit users_path
     end
 
@@ -29,33 +29,14 @@ describe "UserPages" do
           page.should have_selector('li', text: user.name)
         end
       end
-    end
-    
-    describe "delete links" do
       
-      it { should_not have_link('удалить') }
-
-      describe "as an admin user" do
-        let(:admin) { FactoryGirl.create(:admin) }
-        before do
-          sign_in admin
-          visit users_path
-        end
-        
-        it { should have_link('удалить', href: user_path(User.first)) }
-        it "should be able to delete another user" do
-          expect { click_link('удалить') }.to change(User, :count).by(-1)
-        end
-        it { should_not have_link('удалить', href: users_path(admin)) }
+      it { should have_link('удалить', href: user_path(User.first)) }
+      it "should be able to delete another user" do
+        expect { click_link('удалить') }.to change(User, :count).by(-1)
       end
+    
+      it { should_not have_link('удалить', href: users_path(admin)) }
     end
-  end
-  
-  describe "signup page" do
-    before { visit signup_path }
-
-    it { should have_selector('h1', text: 'Новый пользователь') }
-    it { should have_selector('title', text: full_title('Новый пользователь')) }
   end
 
   describe "signup" do

@@ -33,10 +33,9 @@ describe "Authentication" do
         fill_in "Пароль", with: user.password
         click_button "Войти"
       end
-
+      
       it { should have_link('Сменить пароль', href: edit_user_path(user)) }
       it { should have_link('Выйти', href: signout_path) }
-      it { should have_link('Пользователи',  href: users_path) }
 
       describe "followed by signout" do
         before { click_link "Выйти" }
