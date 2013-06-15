@@ -1,24 +1,26 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Ваше авто", '#', id: "logo" %>
+      <%= link_to "Ваше авто", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Главная",  root_path %></li>
           <li><%= link_to "О нас", about_path %></li>
           <% if signed_in? %>
-            <li><%= link_to "Пользователи", '#' %></li>
+            <% if current_user.admin? %>
+              <li><%= link_to "Пользователи", users_path %></li>
+            <% end %>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Аккаунт <b class="caret"></b>
+                <%= current_user.name %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Настройки", '#' %></li>
-                <li><%= link_to "Выход", signout_path, method: "delete" %>
+                <li><%= link_to "Сменить пароль", edit_user_path(current_user) %></li>
+                <li><%= link_to "Выйти", signout_path, method: "delete" %>
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Вход", signin_path %></li>
+            <li><%= link_to "Войти", signin_path %></li>
           <% end %>
         </ul>
       </nav>
