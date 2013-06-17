@@ -1,6 +1,20 @@
-<div class="center hero-unit">
-  <h1>Ваше авто</h1>
-  <p>
-    здесь будет список авто
-  </p>
-</div>
+<div class="row">
+  <aside class="span3">
+    <li>safasd</li>
+    <li>safasd</li>
+    <li>safasd</li>
+    <li>safasd</li>
+    <li>safasd</li>
+  </aside>
+  <div class="span7">
+    <% if @cars.any? %>
+      <h3> Предлагаем вам следующие варианты: </h3>
+      <ol class="cars">
+        <%= render @cars %>
+      </ol>
+      <%= will_paginate @cars %>
+    <% else %>
+      <h3> На данный момент предложения отсутсвуют. </h3>
+    <% end %>
+  </div>
+</div> 

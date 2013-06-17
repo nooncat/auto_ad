@@ -7,6 +7,7 @@
           <li><%= link_to "Главная",  root_path %></li>
           <li><%= link_to "О нас", about_path %></li>
           <% if signed_in? %>
+            <li><%= link_to "Объявление", compose_path %></li>
             <% if current_user.admin? %>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">

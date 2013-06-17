@@ -8,4 +8,11 @@ FactoryGirl.define do
       admin true
     end
   end
+
+  factory :car do
+    name   "Volga"
+    yearofrelease "2000"
+    price "100000"
+    describtion "Cool car"
+  end
 end

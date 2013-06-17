@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "Пользователь успешно создан!"
+      flash[:success] = "Пользователь успешно создан."
       redirect_to root_url 
     else
       render 'new'
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
     def signed_in_user
       unless signed_in?
         store_location
-        redirect_to signin_url, notice: "Please sign in."
+        redirect_to signin_url, notice: "Пожалуйста, войдите."
       end
     end
 

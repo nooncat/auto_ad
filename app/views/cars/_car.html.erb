@@ -1,0 +1,11 @@
+<div class="well">
+  <li>
+    <%= car.name %>
+    <%= car.yearofrelease %>
+    <% if signed_in? %>
+      | <%= link_to "редактировать", edit_car_path(car) %>
+      | <%= link_to "удалить", car, method: :delete,
+                                    data: { confirm: "Удалить?" } %>
+    <% end %>
+  </li>
+</div>

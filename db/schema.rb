@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614123252) do
+ActiveRecord::Schema.define(:version => 20130617085601) do
+
+  create_table "cars", :force => true do |t|
+    t.string   "name"
+    t.string   "yearofrelease"
+    t.string   "price"
+    t.text     "describtion"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "cars", ["created_at"], :name => "index_cars_on_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "name"
