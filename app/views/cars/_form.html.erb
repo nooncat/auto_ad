@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="span4 offset1">
+    <%= nested_form_for @car, :html=>{:multipart => true } do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <p>
+      <%= f.label :name, "Марка автомобиля" %>
+      <%= f.text_field :name %>
+      </p>
+      <p>
+      <%= f.label :yearofrelease, "Год выпуска" %>
+      <%= f.text_field :yearofrelease %>
+      </p>
+      <p>
+      <%= f.label :price, "Цена" %>
+      <%= f.text_field :price %>
+      </p>
+      <p>
+      <%= f.label :describtion, "Описание" %>
+      <%= f.text_area :describtion, :size => "25x4" %>
+      </p> 
+      <%= f.fields_for :photos do |photo_form| %>
+        <p>
+        <%= image_tag(photo_form.object.image.url(:thumb)) if photo_form.object.image? %>
+        <%= photo_form.file_field :image unless photo_form.object.image? %><br />
+        <%= photo_form.link_to_remove "удалить" %>
+        </p>
+      <% end %>
+      <%= f.link_to_add "добавить фото", :photos %> 
+      <p><%= f.submit "Сохранить объявление", class: "btn btn-large btn-primary" %></p>
+    <% end %>
+  </div>
+</div>
+

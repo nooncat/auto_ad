@@ -12,8 +12,10 @@
 #
 
 class Car < ActiveRecord::Base
-  attr_accessible :name, :describtion, :price, :yearofrelease
-  has_many :photos, dependent: :destroy
+  attr_accessible :name, :describtion, :price, :yearofrelease, :photos_attributes
+  has_many :photos, dependent: :destroy, :as => :attachable  
+  accepts_nested_attributes_for :photos, allow_destroy: true, :reject_if => lambda { |a| a[:image].blank? }
+
   
   validates :name, presence: true, length: { maximum: 30 }
   validates :yearofrelease, presence: true, length: { maximum: 15 }

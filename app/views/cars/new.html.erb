@@ -1,24 +1,4 @@
 <% provide(:title, 'Создать объявление') %>
 <h1>Создать объявление</h1>
 
-<div class="row">
-  <div class="span4 offset1">
-    <%= form_for(@car) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-
-      <%= f.label :name, "Марка автомобиля" %>
-      <%= f.text_field :name %>
-
-      <%= f.label :yearofrelease, "Год выпуска" %>
-      <%= f.text_field :yearofrelease %>
-
-      <%= f.label :price, "Цена" %>
-      <%= f.text_field :price %>
-
-      <%= f.label :describtion, "Описание" %>
-      <%= f.text_area :describtion, :size => "25x4" %>
-      
-      <%= f.submit "Создать объявление", class: "btn btn-large btn-primary" %>
-    <% end %>
-  </div>
-</div>
+<%= render 'form' %>

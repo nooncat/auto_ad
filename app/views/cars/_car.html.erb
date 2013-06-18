@@ -1,11 +1,17 @@
 <div class="well">
-  <li>
+  <ol>
+    <% if car.photos.any? %>
+      <%= image_tag(car.photos.first.image.url(:thumb)) %>
+    <% else %>
+      <%= image_tag ("thumb_default.png") %>
+    <% end %>
     <%= car.name %>
     <%= car.yearofrelease %>
+    <%= link_to "Подробнее", car_path(car) %>
     <% if signed_in? %>
       | <%= link_to "редактировать", edit_car_path(car) %>
       | <%= link_to "удалить", car, method: :delete,
                                     data: { confirm: "Удалить?" } %>
     <% end %>
-  </li>
+  </ol>
 </div>
