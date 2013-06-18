@@ -19,4 +19,6 @@ class Car < ActiveRecord::Base
   validates :yearofrelease, presence: true, length: { maximum: 15 }
   validates :price, presence: true, length: { maximum: 15 }
   validates :describtion, presence: true, length: { maximum: 1500 }
+
+  default_scope order: 'cars.created_at DESC'
 end
