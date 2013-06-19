@@ -1,14 +1,20 @@
-<% provide(:title, @car.name) %>
-<h1><%= @car.name %></h1>
-<h1><%= @car.name %></h1>
+<% provide(:title, "#{@car.name}, #{@car.yearofrelease}") %>
+<h5><%= "#{@car.name}, #{@car.yearofrelease}" %></h5>
 <ul>
   <% if @car.photos.any? %>
-    <% for photo in @car.photos %>
       <li>
-        <%= image_tag(photo.image.url) %>
+        <%= image_tag(@photo.image.url) %>
       </li>
-    <% end %>
   <% else %>
     <%= image_tag ("default.png") %>
+  <% end %>
+  <% if @car.photos.any? %>
+    <div class="car_photos">
+      <% for photo in @car.photos %>
+        <li>
+          <%= link_to image_tag(photo.image.url(:thumb)), car_path(@car, photo.id) %>
+        </li>
+      </div>
+    <% end %>
   <% end %>
 </ul>
