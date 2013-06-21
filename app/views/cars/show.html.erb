@@ -1,5 +1,6 @@
 <% provide(:title, "#{@car.name}, #{@car.yearofrelease}") %>
 <h5><%= "#{@car.name}, #{@car.yearofrelease}" %></h5>
+<<<<<<< HEAD
 <ul>
   <% if @car.photos.any? %>
       <li>
@@ -18,3 +19,26 @@
     <% end %>
   <% end %>
 </ul>
+=======
+<div class="span8">
+  <ul>
+    <% if @car.photos.any? %>
+      <%= link_to image_tag(@photo.image.url), car_path(@car, next_photo_id), :title => "Щелкните для просмотра следующего фото" %>
+    <% else %>
+      <%= image_tag ("default.png") %>
+    <% end %>
+  </ul>
+</div>
+
+<div class="span4">
+  <section>
+  <% if @car.photos.any? %>
+    <div class="car_photos">
+      <% for photo in @car.photos %>
+          <%= link_to image_tag(photo.image.url(:thumb)), car_path(@car, photo.id), :title => "Щелкните для просмотра" %>
+      <% end %>
+    </div>
+  <% end %>
+  </section>
+</div>
+>>>>>>> design-css

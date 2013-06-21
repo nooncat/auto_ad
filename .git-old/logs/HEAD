@@ -1,0 +1,57 @@
+0000000000000000000000000000000000000000 7b9575b2377e21b1529555bd8354b99d31a02a4b kom <kom01@rambler.ru> 1370715158 +0000	commit (initial): Start commit
+7b9575b2377e21b1529555bd8354b99d31a02a4b 27d3a4c7982e4a252d3ce7af9767db16ab2aaf67 kom <kom01@rambler.ru> 1370715397 +0000	commit: README change
+27d3a4c7982e4a252d3ce7af9767db16ab2aaf67 394e825afcf98edaf98ab39d762ac690d02a97fd kom <kom01@rambler.ru> 1370715951 +0000	commit: README change
+394e825afcf98edaf98ab39d762ac690d02a97fd 394e825afcf98edaf98ab39d762ac690d02a97fd kom <kom01@rambler.ru> 1370716676 +0000	checkout: moving from master to static-pages
+394e825afcf98edaf98ab39d762ac690d02a97fd 2d3828ea36bce0f13b594b30cff89f9c04b0a69c kom <kom01@rambler.ru> 1370726614 +0000	commit: vimrc
+2d3828ea36bce0f13b594b30cff89f9c04b0a69c 394e825afcf98edaf98ab39d762ac690d02a97fd kom <kom01@rambler.ru> 1370726970 +0000	reset: moving to HEAD^
+394e825afcf98edaf98ab39d762ac690d02a97fd e9690df3dcb3f64d77f1fa4f47f71af2e6e0deaf kom <kom01@rambler.ru> 1370788286 +0000	commit: Finish static pages
+e9690df3dcb3f64d77f1fa4f47f71af2e6e0deaf 394e825afcf98edaf98ab39d762ac690d02a97fd kom <kom01@rambler.ru> 1370788334 +0000	checkout: moving from static-pages to master
+394e825afcf98edaf98ab39d762ac690d02a97fd e9690df3dcb3f64d77f1fa4f47f71af2e6e0deaf kom <kom01@rambler.ru> 1370788355 +0000	merge static-pages: Fast-forward
+e9690df3dcb3f64d77f1fa4f47f71af2e6e0deaf 9df91fd60cc65dfea23aed37c52bc45ea5c0528d kom <kom01@rambler.ru> 1370790897 +0000	commit: Add a full_title helper
+9df91fd60cc65dfea23aed37c52bc45ea5c0528d 9df91fd60cc65dfea23aed37c52bc45ea5c0528d kom <kom01@rambler.ru> 1370798003 +0000	checkout: moving from master to filling-in-layout
+9df91fd60cc65dfea23aed37c52bc45ea5c0528d e58442f3a25b01894642e77cd8abe367cd558e6a kom <kom01@rambler.ru> 1370898202 +0000	commit: Finish layout and routes
+e58442f3a25b01894642e77cd8abe367cd558e6a 9df91fd60cc65dfea23aed37c52bc45ea5c0528d kom <kom01@rambler.ru> 1370898223 +0000	checkout: moving from filling-in-layout to master
+9df91fd60cc65dfea23aed37c52bc45ea5c0528d e58442f3a25b01894642e77cd8abe367cd558e6a kom <kom01@rambler.ru> 1370898271 +0000	merge filling-in-layout: Fast-forward
+e58442f3a25b01894642e77cd8abe367cd558e6a bc08148df077bff18b5f22e3f276bcdd32a659a6 kom <kom01@rambler.ru> 1370900095 +0000	commit: vendor compiled assets
+bc08148df077bff18b5f22e3f276bcdd32a659a6 dd866513240eb3e2dc6e1e1b0157a169e4009a12 kom <kom01@rambler.ru> 1370900232 +0000	commit: vend comp assets 2
+dd866513240eb3e2dc6e1e1b0157a169e4009a12 b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 kom <kom01@rambler.ru> 1370901063 +0000	commit: change gemfile
+b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 kom <kom01@rambler.ru> 1370901238 +0000	checkout: moving from master to master
+b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 kom <kom01@rambler.ru> 1370901263 +0000	checkout: moving from master to modeling-users
+b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 13cd7e77a16c6f2574ca3780740641626486df4c kom <kom01@rambler.ru> 1370951821 +0000	commit: Make a basic User model (incl. secure password)
+13cd7e77a16c6f2574ca3780740641626486df4c b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 kom <kom01@rambler.ru> 1370951835 +0000	checkout: moving from modeling-users to master
+b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 13cd7e77a16c6f2574ca3780740641626486df4c kom <kom01@rambler.ru> 1370951860 +0000	merge modeling-users: Fast-forward
+13cd7e77a16c6f2574ca3780740641626486df4c 13cd7e77a16c6f2574ca3780740641626486df4c kom <kom01@rambler.ru> 1370951974 +0000	checkout: moving from master to master
+13cd7e77a16c6f2574ca3780740641626486df4c 13cd7e77a16c6f2574ca3780740641626486df4c kom <kom01@rambler.ru> 1370952000 +0000	checkout: moving from master to sign-up
+13cd7e77a16c6f2574ca3780740641626486df4c cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 kom <kom01@rambler.ru> 1370967129 +0000	commit: Finish user signup
+cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 13cd7e77a16c6f2574ca3780740641626486df4c kom <kom01@rambler.ru> 1370967142 +0000	checkout: moving from sign-up to master
+13cd7e77a16c6f2574ca3780740641626486df4c cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 kom <kom01@rambler.ru> 1370967158 +0000	merge sign-up: Fast-forward
+cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 kom <kom01@rambler.ru> 1370967779 +0000	checkout: moving from master to sign-in-out
+cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 kom <kom01@rambler.ru> 1371124254 +0000	commit: Finish sign in
+3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 kom <kom01@rambler.ru> 1371124268 +0000	checkout: moving from sign-in-out to master
+cbb2297dc8c5cff448df3de5cef5e75c27ad6dc4 3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 kom <kom01@rambler.ru> 1371124285 +0000	merge sign-in-out: Fast-forward
+3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 kom <kom01@rambler.ru> 1371124747 +0000	checkout: moving from master to updating-users
+3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 92f07ef4980f0896af9ff56701c3183cc72adaf9 kom <kom01@rambler.ru> 1371281975 +0000	commit: Finish user edit, update, index, and destroy actions
+92f07ef4980f0896af9ff56701c3183cc72adaf9 3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 kom <kom01@rambler.ru> 1371282003 +0000	checkout: moving from updating-users to master
+3beff85dc8b14490fb8508ee2ad4c7366a4c9b35 92f07ef4980f0896af9ff56701c3183cc72adaf9 kom <kom01@rambler.ru> 1371282024 +0000	merge updating-users: Fast-forward
+92f07ef4980f0896af9ff56701c3183cc72adaf9 fb964ede56818a8faba8223e35160679d608f7d4 kom <kom01@rambler.ru> 1371284123 +0000	commit: vendor compiled assets
+fb964ede56818a8faba8223e35160679d608f7d4 9ea62b5c5b2cadb6c0536ae5bd53e1a85a17282b kom <kom01@rambler.ru> 1371284975 +0000	commit: foo
+9ea62b5c5b2cadb6c0536ae5bd53e1a85a17282b 5f1690a05e9a6b0cb0ab160ea669a70643fe7725 kom <kom01@rambler.ru> 1371290342 +0000	commit: test repair
+5f1690a05e9a6b0cb0ab160ea669a70643fe7725 5f1690a05e9a6b0cb0ab160ea669a70643fe7725 kom <kom01@rambler.ru> 1371290471 +0000	checkout: moving from master to user_cars
+5f1690a05e9a6b0cb0ab160ea669a70643fe7725 1f171cb9b8982fc78002d5df46e1681cbcde81d7 kom <kom01@rambler.ru> 1371477958 +0000	commit: Baginning car
+1f171cb9b8982fc78002d5df46e1681cbcde81d7 5f1690a05e9a6b0cb0ab160ea669a70643fe7725 kom <kom01@rambler.ru> 1371477975 +0000	checkout: moving from user_cars to master
+5f1690a05e9a6b0cb0ab160ea669a70643fe7725 1f171cb9b8982fc78002d5df46e1681cbcde81d7 kom <kom01@rambler.ru> 1371478002 +0000	merge user_cars: Fast-forward
+1f171cb9b8982fc78002d5df46e1681cbcde81d7 1f171cb9b8982fc78002d5df46e1681cbcde81d7 kom <kom01@rambler.ru> 1371478085 +0000	checkout: moving from master to car-photos
+1f171cb9b8982fc78002d5df46e1681cbcde81d7 1f171cb9b8982fc78002d5df46e1681cbcde81d7 kom <kom01@rambler.ru> 1371495617 +0000	checkout: moving from car-photos to master
+1f171cb9b8982fc78002d5df46e1681cbcde81d7 1f171cb9b8982fc78002d5df46e1681cbcde81d7 kom <kom01@rambler.ru> 1371498034 +0000	checkout: moving from master to master
+1f171cb9b8982fc78002d5df46e1681cbcde81d7 80fe57396b1239f55bcfffd9059b944a938cbf5c kom <kom01@rambler.ru> 1371498727 +0000	commit: final pre
+80fe57396b1239f55bcfffd9059b944a938cbf5c de36c228f14ab566de02627ffbf57a7b60b3504e kom <kom01@rambler.ru> 1371555774 +0000	commit: Car order in home fix
+de36c228f14ab566de02627ffbf57a7b60b3504e de36c228f14ab566de02627ffbf57a7b60b3504e kom <kom01@rambler.ru> 1371555857 +0000	checkout: moving from master to car-photos
+de36c228f14ab566de02627ffbf57a7b60b3504e c3f8f1c3edf61b0d45971d78bd9f4486bf08be72 kom <kom01@rambler.ru> 1371591509 +0000	commit: Finish fotos
+c3f8f1c3edf61b0d45971d78bd9f4486bf08be72 de36c228f14ab566de02627ffbf57a7b60b3504e kom <kom01@rambler.ru> 1371591542 +0000	checkout: moving from car-photos to master
+de36c228f14ab566de02627ffbf57a7b60b3504e c3f8f1c3edf61b0d45971d78bd9f4486bf08be72 kom <kom01@rambler.ru> 1371591572 +0000	merge car-photos: Fast-forward
+c3f8f1c3edf61b0d45971d78bd9f4486bf08be72 ba88732a0357529e5143a26b23997d0e8c9db59a kom <kom01@rambler.ru> 1371674928 +0000	commit: car photo viewer end
+ba88732a0357529e5143a26b23997d0e8c9db59a ba88732a0357529e5143a26b23997d0e8c9db59a kom <kom01@rambler.ru> 1371674951 +0000	checkout: moving from master to master
+ba88732a0357529e5143a26b23997d0e8c9db59a c3f8f1c3edf61b0d45971d78bd9f4486bf08be72 kom <kom01@rambler.ru> 1371675091 +0000	checkout: moving from master to car-photos
+c3f8f1c3edf61b0d45971d78bd9f4486bf08be72 ba88732a0357529e5143a26b23997d0e8c9db59a kom <kom01@rambler.ru> 1371675193 +0000	checkout: moving from car-photos to master
+ba88732a0357529e5143a26b23997d0e8c9db59a ba88732a0357529e5143a26b23997d0e8c9db59a kom <kom01@rambler.ru> 1371722197 +0000	checkout: moving from master to design-css
+ba88732a0357529e5143a26b23997d0e8c9db59a ba41df3fcbd507e0f763417d4f2557e4c02cf228 kom <kom01@rambler.ru> 1371759655 +0000	commit: css

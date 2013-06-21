@@ -11,15 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618135531) do
+ActiveRecord::Schema.define(:version => 20130621195409) do
 
   create_table "cars", :force => true do |t|
     t.string   "name"
-    t.string   "yearofrelease"
+    t.string   "year_of_release"
     t.string   "price"
     t.text     "describtion"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "body_type"
+    t.string   "engine"
+    t.string   "engine_type"
+    t.string   "transmission"
+    t.string   "color"
+    t.string   "mileage"
+    t.string   "model"
   end
 
   add_index "cars", ["created_at"], :name => "index_cars_on_created_at"

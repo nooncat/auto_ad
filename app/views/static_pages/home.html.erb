@@ -9,9 +9,9 @@
   <div class="span7">
     <% if @cars.any? %>
       <h3> Предлагаем вам следующие варианты: </h3>
-      <ol class="cars">
+      <div class="cars">
         <%= render @cars %>
-      </ol>
+      </div>
       <%= will_paginate @cars %>
     <% else %>
       <h3> На данный момент предложения отсутсвуют. </h3>
