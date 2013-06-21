@@ -3,12 +3,16 @@
     <%= nested_form_for @car, :html=>{:multipart => true } do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <p>
-      <%= f.label :name, "Марка автомобиля" %>
-      <%= f.text_field :name %>
+      <%= f.select(:name, options_for_select(car_names_list, @car.name), include_blank: "--Марка--")  %>
+      <%= f.label :model, "Модель" %>
+      <%= f.text_field :model %>
       </p>
       <p>
-      <%= f.label :yearofrelease, "Год выпуска" %>
-      <%= f.text_field :yearofrelease %>
+      <%= f.select(:year_of_release, options_for_select(years_list, @car.year_of_release), include_blank: "--Год выпуска--") %>
+      </p>
+      <p>
+      <%= f.select(:body_type, options_for_select(car_bodys_list, @car.body_type), include_blank: "--Тип кузова--") %> 
+      <%= f.select(:engine, options_for_select(car_engines_v_list, @car.engine), include_blank: "--Объем двигателя--") %>
       </p>
       <p>
       <%= f.label :price, "Цена" %>

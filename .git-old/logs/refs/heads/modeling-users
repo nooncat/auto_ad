@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 kom <kom01@rambler.ru> 1370901263 +0000	branch: Created from HEAD
+b730a3183d92c3655dfa3b1ca5c2efd3bbc534c9 13cd7e77a16c6f2574ca3780740641626486df4c kom <kom01@rambler.ru> 1370951821 +0000	commit: Make a basic User model (incl. secure password)

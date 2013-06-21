@@ -1,17 +1,4 @@
 #encoding: UTF-8
-# == Schema Information
-#
-# Table name: cars
-#
-#  id            :integer          not null, primary key
-#  name          :string(255)
-#  yearofrelease :string(255)
-#  price         :string(255)
-#  describtion   :text
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#
-
 require 'spec_helper'
 
 describe Car do
@@ -69,3 +56,24 @@ describe Car do
     it { should_not be_valid }
   end
 end
+
+# == Schema Information
+#
+# Table name: cars
+#
+#  id            :integer          not null, primary key
+#  name          :string(255)
+#  yearofrelease :string(255)
+#  price         :string(255)
+#  describtion   :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  body_type     :string(255)
+#  engine        :string(255)
+#  engine_type   :string(255)
+#  transmission  :string(255)
+#  color         :string(255)
+#  mileage       :string(255)
+#  model         :string(255)
+#
+

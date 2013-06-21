@@ -4,6 +4,9 @@ class CarsController < ApplicationController
   
   def show
     @car = Car.find(params[:id])
+    if @car.photos.any? 
+      @photo = Photo.find(params[:format])
+    end
   end
   
   def new
