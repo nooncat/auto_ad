@@ -1,14 +1,24 @@
-<div class="well">
+<div>
     <% if car.photos.any? %>
       <%= link_to(image_tag(car.photos.first.image.url(:thumb)), car_path(car, car.photos.first.id)) %>
-    <%= link_to (h("#{car.name}, #{car.year_of_release}")), car_path(car, car.photos.first.id) %>
     <% else %>
       <%= link_to(image_tag("thumb_default.png"), car_path(car)) %>
-      <%= link_to (h("#{car.name}, #{car.year_of_release}")), car_path(car) %>
     <% end %>
+    <span>
+      <% if car.photos.any? %>
+      <%= link_to (h("#{car.name}, #{car.year_of_release}")), car_path(car, car.photos.first.id) %>
+      <% else %>
+        <%= link_to (h("#{car.name}, #{car.year_of_release}")), car_path(car) %>
+      <% end %>
+    </span>
+    <span>
+      <%= "#{car.price} руб.   #{car.engine} #{car.transmission}    #{car.body_type.mb_chars.downcase}" %>
+    </span>
     <% if signed_in? %>
-      | <%= link_to "редактировать", edit_car_path(car) %>
-      | <%= link_to "удалить", car, method: :delete,
-                                    data: { confirm: "Удалить?" } %>
+      <span>
+        | <%= link_to "редактировать", edit_car_path(car) %>
+        | <%= link_to "удалить", car, method: :delete,
+                                      data: { confirm: "Удалить?" } %>
+      </span>
     <% end %>
 </div>

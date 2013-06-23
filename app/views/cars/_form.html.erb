@@ -9,14 +9,21 @@
       </p>
       <p>
       <%= f.select(:year_of_release, options_for_select(years_list, @car.year_of_release), include_blank: "--Год выпуска--") %>
+      <%= f.select(:mileage, options_for_select(mileage_list, @car.mileage), include_blank: "--Пробег, км--") %>
       </p>
       <p>
       <%= f.select(:body_type, options_for_select(car_bodys_list, @car.body_type), include_blank: "--Тип кузова--") %> 
-      <%= f.select(:engine, options_for_select(car_engines_v_list, @car.engine), include_blank: "--Объем двигателя--") %>
+      <%= f.select(:color, options_for_select(colors_list, @car.color), include_blank: "--Цвет--") %>
       </p>
       <p>
+      <%= f.select(:engine, options_for_select(car_engines_v_list, @car.engine), include_blank: "--Объем двигателя--") %>
+      <%= f.select(:transmission, options_for_select([["Автоматическа","AT"],["Механическая","MT"]], @car.transmission), include_blank: "--Коробка передач--") %>
+      </p>
+      <p>
+      <%= f.select(:engine_type, options_for_select([["Бензиновый","бензин"],["Дизельный","дизель"],["Гибридный","гибрид"]], @car.engine_type), include_blank: "--Тип двигателя--") %>
+      <p>
       <%= f.label :price, "Цена" %>
-      <%= f.text_field :price %>
+      <%= f.text_field :price %><%= "руб." %>
       </p>
       <p>
       <%= f.label :describtion, "Описание" %>

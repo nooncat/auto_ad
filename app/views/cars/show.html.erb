@@ -1,44 +1,34 @@
-<% provide(:title, "#{@car.name}, #{@car.yearofrelease}") %>
-<h5><%= "#{@car.name}, #{@car.yearofrelease}" %></h5>
-<<<<<<< HEAD
-<ul>
-  <% if @car.photos.any? %>
-      <li>
-        <%= image_tag(@photo.image.url) %>
-      </li>
-  <% else %>
-    <%= image_tag ("default.png") %>
-  <% end %>
-  <% if @car.photos.any? %>
-    <div class="car_photos">
-      <% for photo in @car.photos %>
-        <li>
-          <%= link_to image_tag(photo.image.url(:thumb)), car_path(@car, photo.id) %>
-        </li>
+<% provide(:title, "#{@car.name}, #{@car.year_of_release}") %>
+<div class="row">
+  <h5><%= "#{@car.name}, #{@car.year_of_release}" %></h5>
+  <div class="span8">
+    <ul>
+      <% if @car.photos.any? %>
+        <%= link_to image_tag(@photo.image.url), car_path(@car, next_photo_id), :title => "Щелкните для просмотра следующего фото" %>
+      <% else %>
+        <%= image_tag ("default.png") %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="span4">
+    <section>
+    <% if @car.photos.any? %>
+      <div class="car_photos">
+        <% for photo in @car.photos %>
+            <%= link_to image_tag(photo.image.url(:thumb)), car_path(@car, photo.id), :title => "Щелкните для просмотра" %>
+        <% end %>
       </div>
     <% end %>
-  <% end %>
-</ul>
-=======
-<div class="span8">
-  <ul>
-    <% if @car.photos.any? %>
-      <%= link_to image_tag(@photo.image.url), car_path(@car, next_photo_id), :title => "Щелкните для просмотра следующего фото" %>
-    <% else %>
-      <%= image_tag ("default.png") %>
-    <% end %>
-  </ul>
+    </section>
+  </div>
 </div>
 
-<div class="span4">
-  <section>
-  <% if @car.photos.any? %>
-    <div class="car_photos">
-      <% for photo in @car.photos %>
-          <%= link_to image_tag(photo.image.url(:thumb)), car_path(@car, photo.id), :title => "Щелкните для просмотра" %>
-      <% end %>
-    </div>
-  <% end %>
-  </section>
+<div class="row">
+  <div class="span8">
+    <%= "Цена          #{@car.price} руб." %><br />
+    <%= "#{@car.name} #{@car.model}, #{@car.year_of_release} г." %>
+    <%= "Пробег #{@car.mileage} км, #{@car.engine} #{@car.transmission}, #{@car.engine_type}, #{@car.body_type.mb_chars.downcase}, цвет #{@car.color.mb_chars.downcase}" %>
+    <p><%= @car.describtion %> </p>
+  </div>
 </div>
->>>>>>> design-css
