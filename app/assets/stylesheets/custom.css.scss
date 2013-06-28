@@ -165,7 +165,7 @@ input {
 }
 
 .photo {
-  float: none;
+  margin-left: 10px;  
 }
 
 .name {
@@ -173,6 +173,22 @@ input {
 }
 .price {
   color: $grayLight;
+}
+
+.vip_cars {
+  list-style:none;
+  margin: 10px 0 0 0;
+
+  li {
+    margin-left: 15px;
+    padding: 0px 0;
+    width: 200px;
+    border: 1px solid #e8e8e8;
+  }
+}
+
+.vip-name {
+  display: block;
 }
 
 aside {

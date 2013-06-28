@@ -16,4 +16,11 @@
       <h3> На данный момент предложения отсутсвуют. </h3>
     <% end %>
   </div>
+  <div class="span3">
+    <% if @cars_vip.any? %>
+      <ol class="vip_cars">
+        <%= render 'shared/car_vip' %>     
+      </ol>
+    <% end %>
+  </div>
 </div> 

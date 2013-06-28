@@ -1,8 +1,12 @@
-<li>
+<% if car.vip? %>
+  <li style="background-color:#fff7ad">
+<% else %>
+  <li>
+<% end %>
   <% if car.photos.any? %>
     <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)", class:"photo"), car_path(car)) %>
   <% else %>
-    <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
+    <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)", class:"photo"), car_path(car)) %>
   <% end %>
   <span class="name">
     <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>

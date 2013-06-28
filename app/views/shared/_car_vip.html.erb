@@ -1,0 +1,15 @@
+<% for i in 0..(@cars_vip.count-1) %>
+  <li>
+    <% if @cars_vip[i].photos.any? %>
+      <%= link_to(image_tag(@cars_vip[i].photos.first.image.url(:small), title: "#{@cars_vip[i].name} #{@cars_vip[i].model}, #{@cars_vip[i].year_of_release}"), car_path(@cars_vip[i].id)) %>
+    <% else %>
+      <%= link_to(image_tag("small_default.png", title: "#{@cars_vip[i].name} #{@cars_vip[i].model}, #{@cars_vip[i].year_of_release}"), car_path(@cars_vip[i].id)) %>
+    <% end %>
+    <span class="vip-name">
+      <%= link_to (h("#{@cars_vip[i].name} #{@cars_vip[i].model}, #{@cars_vip[i].year_of_release}")), car_path(@cars_vip[i]) %>
+    </span>
+    <span class="price">
+      <%= "#{@cars_vip[i].price} руб.   #{@cars_vip[i].engine} #{@cars_vip[i].transmission}" %>
+    </span>
+  </li>
+<% end %>
