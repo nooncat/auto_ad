@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  attr_accessible :image
+  attr_accessible :image, :image_cache
 
   belongs_to :attachable, :polymorphic => true
 

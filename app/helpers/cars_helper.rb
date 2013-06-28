@@ -13,6 +13,10 @@ module CarsHelper
     end
   end
   
+  def validate_photos
+    errors.add(:photos, "too much") if photos.length > 5
+  end
+  
   def car_names_list
     cnl = ["Acura","Alfa Romeo","Alpina","Aston Martin","Audi","Bentley","BMW","Bugatti","BYD","Cadillac","Chery","Chevrolet","Chrysler","Citroen","Daewoo","Dodge","Ferrari","Fiat","Ford","Geely","GMC","Great Wall","Haima","Honda","Hyundai","Infiniti","JAC","Jaguar","Jeep","Kia","Lamborghini","Land Rover","Lexus","Lifan","Lincoln","Lotus","Marussia","Maserati","Maybach","Mazda","Mercedes","Mini","Mitsubishi","Nissan","Opel","Peugeot","Porsche","Renault","Rolls-Royce","SEAT","Skoda","Smart","SsangYong","Subaru","Suzuki","Toyota","Volkswagen","Volvo","Vortex","ВАЗ","ГАЗ","ЗАЗ","ТагАЗ","УАЗ","Другая"]
   end

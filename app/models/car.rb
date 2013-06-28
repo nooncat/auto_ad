@@ -1,14 +1,14 @@
 class Car < ActiveRecord::Base
   attr_accessible :name, :describtion, :price, :year_of_release, :body_type, :engine, :engine_type, :transmission, :color, :mileage, :model, :photos_attributes
   has_many :photos, dependent: :destroy, :as => :attachable  
-  accepts_nested_attributes_for :photos, allow_destroy: true, :reject_if => lambda { |a| a[:image].blank? }
+  accepts_nested_attributes_for :photos, allow_destroy: true, reject_if: lambda { |a| a[:image].blank? && a['image_cache'].blank? }
 
   
   validates :name, presence: true, length: { maximum: 30 }
   validates :year_of_release, presence: true, length: { maximum: 15 }
   validates :price, presence: true, length: { maximum: 15 }
   validates :describtion, presence: true, length: { maximum: 1500 }
-
+  validates :photos, length: { maximum: 25, too_long: 'too much' }
   default_scope order: 'cars.created_at DESC'
 end
 

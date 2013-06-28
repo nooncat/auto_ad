@@ -4,12 +4,12 @@ require 'spec_helper'
 describe Car do
   
   before { @car = Car.new(name: "Example car name",
-                          yearofrelease: "2013",
+                          year_of_release: "2013",
                           price: "100000", describtion: "cool car") }
   subject { @car }
                          
   it { should respond_to(:name) }
-  it { should respond_to(:yearofrelease) }
+  it { should respond_to(:year_of_release) }
   it { should respond_to(:price) }
   it { should respond_to(:describtion) }
   it { should respond_to(:photos) }
@@ -27,12 +27,12 @@ describe Car do
   end
 
   describe "when yearofrelease is not present" do
-    before { @car.yearofrelease = " " }
+    before { @car.year_of_release = " " }
     it { should_not be_valid }
   end
 
   describe "when yearofrelease is too long" do
-    before { @car.yearofrelease = "a" * 16 }
+    before { @car.year_of_release = "a" * 16 }
     it { should_not be_valid }
   end
   

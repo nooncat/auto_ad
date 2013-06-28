@@ -77,7 +77,7 @@ describe "Car pages" do
     describe "with valid information" do
       let(:new_name)  { "New_volga" }
       before do
-        fill_in "Марка автомобиля",    with: new_name
+        select "Audi", from: car.name
         fill_in "Год выпуска", with: "2013"
         fill_in "Цена", with: "100000"
         fill_in "Описание", with: "Cool car"

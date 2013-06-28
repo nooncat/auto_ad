@@ -11,7 +11,7 @@ FactoryGirl.define do
 
   factory :car do
     name   "Volga"
-    yearofrelease "2000"
+    year_of_release "2000"
     price "100000"
     describtion "Cool car"
   end
