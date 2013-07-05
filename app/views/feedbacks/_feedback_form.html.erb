@@ -1,0 +1,12 @@
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :name, "Ваше имя:" %>
+<%= f.text_field :name, class: 'fname-field' %>
+
+<%= f.label :contact, "Email или номер телефона:" %>
+<%= f.text_field :contact, class: 'fcontact-field' %>
+
+<%= f.label :contact, "Отзыв:" %>
+<%= f.text_area :content, :size => "25x7" %>
+
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130628095622) do
+ActiveRecord::Schema.define(:version => 20130630132537) do
 
   create_table "cars", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,17 @@ ActiveRecord::Schema.define(:version => 20130628095622) do
   end
 
   add_index "cars", ["created_at"], :name => "index_cars_on_created_at"
+
+  create_table "feedbacks", :force => true do |t|
+    t.string   "name"
+    t.string   "contact"
+    t.string   "content"
+    t.boolean  "checkf",     :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  add_index "feedbacks", ["created_at"], :name => "index_feedbacks_on_created_at"
 
   create_table "photos", :force => true do |t|
     t.string   "image"

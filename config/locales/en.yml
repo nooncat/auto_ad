@@ -6,3 +6,6 @@ en:
     attributes:
       user:
         password_digest: "Password"
+  will_paginate:
+    previous_label: "<<"
+    next_label: ">>"

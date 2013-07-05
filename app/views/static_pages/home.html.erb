@@ -1,10 +1,15 @@
 <div class="row">
   <aside class="span3">
-    <li>safasd</li>
-    <li>safasd</li>
-    <li>safasd</li>
-    <li>safasd</li>
-    <li>safasd</li>
+    <ol>
+      <li>Звоните нам</li>
+      <li><i class="icon-phone-sign"></i> 37-17-17</li>   
+      <li><a href="skype:vasheavto", class="skype-link"><i class="icon-skype"></i> vasheavto</a></li>
+    </ol>
+    <% if @feedbacks.any? %>
+      <ol class="feedbacks">
+        <%= render @feedbacks %>
+      </ol>
+    <% end %>
   </aside>
   <div class="span6">
     <% if @cars.any? %>

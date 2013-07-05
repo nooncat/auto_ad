@@ -13,9 +13,9 @@
     <% end %>
   </div>
   <div class="span3">
-    <%= "Цена          #{@car.price} руб." %><br />
+    <%= "Цена          #{number_with_delimiter(@car.price.to_i, delimiter: " ")} руб." %><br />
     <%= "#{@car.name} #{@car.model}, #{@car.year_of_release} г." %>
-    <%= "Пробег #{@car.mileage} км, #{@car.engine} #{@car.transmission}, #{@car.engine_type}, #{@car.body_type.mb_chars.downcase}, цвет #{@car.color.mb_chars.downcase}" %>
+    <%= "Пробег #{number_with_delimiter(@car.mileage.to_i, delimiter: " ")} км, #{@car.engine} #{@car.transmission}, #{@car.engine_type}, #{@car.body_type.mb_chars.downcase}, цвет #{@car.color.mb_chars.downcase}" %>
     <p><%= @car.describtion %> </p>
   </div>
 </div>

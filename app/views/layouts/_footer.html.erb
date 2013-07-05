@@ -1,6 +1,9 @@
 <footer class="footer">
-  <small>
+  <ul>
+    <% unless signed_in? %>
+      <a href=/signin><i class="icon-lock"></i></a>
+    <% end %>
     &copy 2013, vasheavto
-  </small>
+  </ul>
 </footer>
   

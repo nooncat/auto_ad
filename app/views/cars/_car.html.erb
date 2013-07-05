@@ -1,24 +1,30 @@
 <% if car.vip? %>
   <li style="background-color:#fff7ad">
 <% else %>
-  <li>
+  <li style="background-color:#f5f5f5">
 <% end %>
-  <% if car.photos.any? %>
-    <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)", class:"photo"), car_path(car)) %>
-  <% else %>
-    <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)", class:"photo"), car_path(car)) %>
-  <% end %>
-  <span class="name">
-    <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>
-  </span>
-  <span class="price">
-    <%= "#{car.price} руб.   #{car.engine} #{car.transmission}    #{car.body_type.mb_chars.downcase}" %>
-  </span>
-  <% if signed_in? %>
-    <span>
-      | <%= link_to "редактировать", edit_car_path(car) %>
-      | <%= link_to "удалить", car, method: :delete,
-                                    data: { confirm: "Удалить?" } %>
-    </span>
-  <% end %>
+  <div class="photo">
+    <% if car.photos.any? %>
+      <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)"), car_path(car)) %>
+    <% else %>
+      <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
+    <% end %>
+  </div>
+  <div>
+    <div class="name">
+      <h5>
+        <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>
+      </h5>
+    </div>
+    <div class="price">
+      <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб.   #{car.engine} #{car.transmission}    #{car.body_type.mb_chars.downcase}  #{number_with_delimiter(car.mileage.to_i, delimiter: " ")} км" %>
+    </div>
+    <% if signed_in? %>
+      <div>
+        | <%= link_to "редактировать", edit_car_path(car) %>
+        | <%= link_to "удалить", car, method: :delete,
+                                      data: { confirm: "Удалить?" } %>
+      </div>
+    <% end %>
+  </div> 
 </li>

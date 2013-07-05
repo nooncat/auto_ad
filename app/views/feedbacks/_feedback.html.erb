@@ -1,0 +1,18 @@
+<li>
+  <div class="fname">
+    <%= feedback.name %>:
+  </div>
+  <div class="fcontent">
+    "<%= feedback.content %>"
+  </div>
+    <% if signed_in? && current_page?(controller: 'feedbacks', action: 'index') %>
+      <div class="edit">
+        <% if feedback.checkf %>
+          <i class="icon-check icon-large"></i>
+        <% end %>
+        | <%= link_to "редактировать", edit_feedback_path(feedback) %>
+        | <%= link_to "удалить", feedback, method: :delete,
+                            data: { confirm: "Удалить?" } %>
+      </div>
+    <% end %>
+</li>
