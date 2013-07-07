@@ -12,9 +12,7 @@
   </div>
   <div>
     <div class="name">
-      <h5>
-        <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>
-      </h5>
+      <b><%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %></b>
     </div>
     <div class="price">
       <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб.   #{car.engine} #{car.transmission}    #{car.body_type.mb_chars.downcase}  #{number_with_delimiter(car.mileage.to_i, delimiter: " ")} км" %>

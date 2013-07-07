@@ -19,7 +19,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  padding-top: 50px;
+  padding-top: 45px;
   background-color: #ffffff;
 }
   
@@ -35,14 +35,14 @@ h2 {
 
 h4 { 
   text-align: left;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 /* header */
 
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-right: 1em;
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
@@ -153,22 +153,21 @@ input {
   list-style: none;
   margin: 10px 0 0 0;
   li {
-    height: 102px;
+    height: 8.3em;
     border-bottom: 2px solid #ffffff;
   }
-}
+  .photo {
+    margin: 5px 15px 5px 5px;  
+    float: left;
+    border: 1px solid #e8e8e8;
+  }
 
-.photo {
-  margin: 5px 15px 5px 5px;  
-  float: left;
-  border: 1px solid #e8e8e8;
-}
-
-.name {
-  display: inline-block;
-}
-.price {
-  margin-left: 30px;
+  .name {
+    display: inline-block;
+  }
+  .price {
+    margin-left: 30px;
+  }
 }
 
 .vip_cars {
@@ -177,7 +176,6 @@ input {
   border-top: 1px solid #e8e8e8;
 
   li {
-    margin-left: 15px;
     padding: 0px 0;
     border-right: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
@@ -193,6 +191,45 @@ input {
 .vip-price {
   margin-left: 5px;
 }
+/* carshow */
+
+.leftcol-carshow {
+  width: 66.66%;
+  float: left;
+}
+
+.rightcol-carshow {
+  width: 33.33%;
+  float: right;
+  .cardesc {
+    margin-left: 1.5em;
+    .price {
+      margin-left: 0;
+      padding-top: 1.5em;
+      
+      b {
+        margin-left: 1em;
+      }
+    }
+    
+    .contacts {
+      
+      li {
+        list-style: none;
+        font-size: 1.3em;
+      }
+    }
+    .ttx {
+      padding-top: 0.5em;
+    }
+
+    .describtion {
+      padding-top: 1em;
+      text-indent: 1em;
+    }
+
+  }
+}
 
 /* sidebar */
 
@@ -201,7 +238,6 @@ aside {
   ol {
     background-color: #d3d3d3;
     margin-left: 0px;
-    margin-right: 10px;
     list-style: none;
     font-size: 1.7em;
     font-weight: bold;
