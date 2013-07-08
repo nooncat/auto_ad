@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
 @import "font-awesome";
 
 /* mixins, variables, etc. */
@@ -193,42 +194,33 @@ input {
 }
 /* carshow */
 
-.leftcol-carshow {
-  width: 66.66%;
-  float: left;
-}
-
-.rightcol-carshow {
-  width: 33.33%;
-  float: right;
-  .cardesc {
-    margin-left: 1.5em;
-    .price {
-      margin-left: 0;
-      padding-top: 1.5em;
-      
-      b {
-        margin-left: 1em;
-      }
-    }
+.cardesc {
+  margin-left: 1.5em;
+  .price {
+    margin-left: 0;
+    padding-top: 1.5em;
     
-    .contacts {
-      
-      li {
-        list-style: none;
-        font-size: 1.3em;
-      }
+    b {
+      margin-left: 1em;
     }
-    .ttx {
-      padding-top: 0.5em;
-    }
-
-    .describtion {
-      padding-top: 1em;
-      text-indent: 1em;
-    }
-
   }
+  
+  .contacts {
+    
+    li {
+      list-style: none;
+      font-size: 1.3em;
+    }
+  }
+  .ttx {
+    padding-top: 0.5em;
+  }
+
+  .describtion {
+    padding-top: 1em;
+    text-indent: 1em;
+  }
+
 }
 
 /* sidebar */
