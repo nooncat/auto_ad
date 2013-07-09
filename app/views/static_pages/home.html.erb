@@ -1,18 +1,19 @@
 <div class="row-fluid">
-  <aside class="span3">
+  <div class="as-contacts">
+    <div class="contacts-head visible-desktop">
+            наши контакты
+    </div>
     <ol>
-      <li>Звоните нам</li>
-      <li><i class="icon-phone-sign"></i> 37-17-17</li>   
-      <li><a href="skype:vasheavto", class="skype-link"><i class="icon-skype"></i> vasheavto</a></li>
+      <span class="callus visible-desktop">Звоните нам</span>
+      <span class="phone"><i class="icon-phone-sign"></i> 37-17-17</span>   
+      <span class="skype"><a href="skype:vasheavto", class="skype-link"><i class="icon-skype"></i> vasheavto</a></span>
     </ol>
-    <% if @feedbacks.any? %>
-      <ol class="feedbacks">
-        <%= render @feedbacks %>
-      </ol>
-    <% end %>
-  </aside>
-  <div class="span6">
+  </div>
+  <div class="centr-cars">
     <% if @cars.any? %>
+      <div class="cars-head">
+        текущие предложения
+      </div>
       <ol class="cars">
         <%= render @cars %>
       </ol>
@@ -21,10 +22,23 @@
       <h3> На данный момент предложения отсутсвуют. </h3>
     <% end %>
   </div>
-  <div class="span3">
+  <div class="right-vipcars">
     <% if @cars_vip.any? %>
       <ol class="vip_cars">
+        <div class="vip-head">
+          рекомендуем
+        </div>
         <%= render 'shared/car_vip' %>     
+      </ol>
+    <% end %>
+  </div>
+  <div class="as-feesbacks">
+    <% if @feedbacks.any? %>
+      <div class="feedbacks-head">
+        отзывы
+      </div>
+      <ol class="feedbacks">
+        <%= render @feedbacks %>
       </ol>
     <% end %>
   </div>

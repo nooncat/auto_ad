@@ -18,11 +18,12 @@
       <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб.   #{car.engine} #{car.transmission}    #{car.body_type.mb_chars.downcase}  #{number_with_delimiter(car.mileage.to_i, delimiter: " ")} км" %>
     </div>
     <% if signed_in? %>
-      <div>
+      <div class="admin">
         | <%= link_to "редактировать", edit_car_path(car) %>
         | <%= link_to "удалить", car, method: :delete,
                                       data: { confirm: "Удалить?" } %>
       </div>
     <% end %>
   </div> 
+  <br clear="all">
 </li>
