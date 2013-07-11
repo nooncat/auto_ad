@@ -1,5 +1,5 @@
 <% for car in @cars_vip %>
-  <li>
+  <div class="car-vip">
     <% if car.photos.any? %>
       <%= link_to(image_tag(car.photos.first.image.url(:small), class: "vip-photo", title: "#{car.name} #{car.model}, #{car.year_of_release}"), car_path(car)) %>
     <% else %>
@@ -9,8 +9,11 @@
       <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>
     </span>
     <span class="vip-price">
-      <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб.   #{car.engine} #{car.transmission}" %>
+      <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб." %>
+    </span>
+    <span class="vip-engine-trans">   
+      <%= "#{car.engine} #{car.transmission}" %>
     </span>
     <br clear="all">
-  </li>
+  </div>
 <% end %>

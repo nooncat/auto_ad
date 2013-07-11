@@ -7,6 +7,9 @@
       <span class="callus visible-desktop">Звоните нам</span>
       <span class="phone"><i class="icon-phone-sign"></i> 37-17-17</span>   
       <span class="skype"><a href="skype:vasheavto", class="skype-link"><i class="icon-skype"></i> vasheavto</a></span>
+      <span class="vkon">
+      <%= link_to(image_tag("vkon.png"), href="http://vk.com/avto") %>
+      </span>
     </ol>
   </div>
   <div class="centr-cars">
@@ -24,12 +27,12 @@
   </div>
   <div class="right-vipcars">
     <% if @cars_vip.any? %>
-      <ol class="vip_cars">
+      <div class="vip_cars">
         <div class="vip-head">
           рекомендуем
         </div>
         <%= render 'shared/car_vip' %>     
-      </ol>
+      </div>
     <% end %>
   </div>
   <div class="as-feesbacks">
@@ -37,9 +40,9 @@
       <div class="feedbacks-head">
         отзывы
       </div>
-      <ol class="feedbacks">
+      <div class="feedbacks">
         <%= render @feedbacks %>
-      </ol>
+      </div>
     <% end %>
   </div>
 </div> 

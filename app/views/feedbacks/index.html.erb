@@ -1,17 +1,17 @@
 <% provide(:title, 'Отзывы') %>
-<div class="row">
-  <div class="span8">
+<div class="row-fluid">
+  <div class="feedbacks-col">
     <h4>Отзывы наших клиентов:</h4> 
     <% if @feedbacks.any? %> 
-        <ol class="feedbacks">
+        <div class="feedbacks">
           <%= render @feedbacks %>
-        </ol>
+        </div>
       <%= will_paginate @feedbacks %> 
     <% else %>
       <%= "Отзывов пока нет. Вы можете стать первым." %>
     <% end %>
   </div>
-  <div class="span4">
+  <div class="newfeedback-col">
     <h4>Оставьте свой отзыв:</h4>
     <%= form_for(@feedback) do |f| %>
       <%= render 'feedback_form', f: f %>

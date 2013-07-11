@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="span6 offset3">
+  <div class="car-form">
     <%= nested_form_for @car, :html=>{:multipart => true } do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <p>
@@ -20,9 +20,12 @@
       </p>
       <p>
         <%= f.select(:engine_type, options_for_select([["Бензиновый","бензин"],["Дизельный","дизель"],["Гибридный","гибрид"]], @car.engine_type), include_blank: "--Тип двигателя--") %>
-        <%=" VIP оъявление "%><%= f.check_box :vip %>
+      </p>
       <p>
         <%= f.text_field :price, placeholder: "Цена" %><%= " руб." %>
+      </p>
+      <p class="vip-text">
+        <%= "VIP объявление" %><%= f.check_box :vip %>
       </p>
       <p>
         <%= f.text_area :describtion, placeholder: "Описание...", :size => "25x7" %>
@@ -31,14 +34,14 @@
         <p class="photo-add">
           <%= image_tag(p.object.image.url(:thumb),class:"photo-pre") if p.object.image? %>
           <%= p.file_field :image unless p.object.image? %>
-          <%= p.hidden_field :image_cache %>
-          <%= p.link_to_remove " удалить фото" %>
+          <%= p.hidden_field :image_cache %><br />
+          <nobr><%= p.link_to_remove " удалить фото" %></nobr>
         </p>
       <% end %>
       <p class="link-to-add">
-        <%= f.link_to_add "добавить фото", :photos %> 
+        <%= f.link_to_add "добавить фото", :photos %><br /> 
       </p>
-      <p><%= f.submit "Сохранить объявление", class: "btn btn-large btn-primary" %></p>
+      <p><%= f.submit "Сохранить объявление", class: "btn btn-primary" %></p>
     <% end %>
   </div>
 </div>

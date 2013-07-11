@@ -10,19 +10,28 @@
       <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
     <% end %>
   </div>
-  <div>
-    <div class="name">
-      <b><%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %></b>
-    </div>
-    <div class="price">
-      <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб.   #{car.engine} #{car.transmission}    #{car.body_type.mb_chars.downcase}  #{number_with_delimiter(car.mileage.to_i, delimiter: " ")} км" %>
-    </div>
+  <div class="cartext">
+    <span class="name">
+      <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>
+    </span><br />
+    <span class="price">
+      <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб." %>
+    </span>
+    <span class="engine-trans">
+      <%= "#{car.engine} #{car.transmission}" %>
+    </span>
+    <span class="body-type">
+      <%= car.body_type.mb_chars.downcase %>
+    </span>
+    <span class="footage">
+      <%= "#{number_with_delimiter(car.mileage.to_i, delimiter: " ")} км" %>
+    </span><br />
     <% if signed_in? %>
-      <div class="admin">
-        | <%= link_to "редактировать", edit_car_path(car) %>
+      <span class="admin">
+        | <%= link_to "изменить", edit_car_path(car) %>
         | <%= link_to "удалить", car, method: :delete,
                                       data: { confirm: "Удалить?" } %>
-      </div>
+      </span>
     <% end %>
   </div> 
   <br clear="all">
