@@ -1,8 +1,8 @@
 <% provide(:title, 'Новый пользователь') %>
-<h2>Новый пользователь</h2>
+<h3>Новый пользователь</h3>
 
 <div class="row">
-  <div class="span6 offset4">
+  <div class="user-new">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 

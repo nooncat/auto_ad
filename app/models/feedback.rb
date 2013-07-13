@@ -1,7 +1,7 @@
 class Feedback < ActiveRecord::Base
   attr_accessible :checkf, :contact, :content, :name
-  validates :name, presence: true, length: { maximum: 30 }
-  validates :contact, presence: true, length: { maximum: 30 }
+  validates :name, presence: true, length: { maximum: 45 }
+  validates :contact, presence: true, length: { maximum: 45 }
   validates :content, presence: true, length: { maximum: 1000 }
   default_scope order: 'feedbacks.created_at DESC'
 end

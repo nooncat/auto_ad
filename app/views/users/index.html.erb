@@ -1,18 +1,19 @@
 <% provide(:title, 'Пользователи') %>
-<h2>Пользователи</h2>
+<h3>Пользователи</h3>
+<div class="users">
+  <%= will_paginate %>
 
-<%= will_paginate %>
+  <ul>
+    <% @users.each do |user| %>
+      <li>
+        <%=  user.name %>
+        <% if current_user.admin? && !current_user?(user) %>
+          | <%= link_to "удалить", user, method: :delete,
+                                  data: {confirm: "Удалить?" } %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%=  user.name %>
-      <% if current_user.admin? && !current_user?(user) %>
-        | <%= link_to "удалить", user, method: :delete,
-                                data: {confirm: "Удалить?" } %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
-
-<%= will_paginate %>
+  <%= will_paginate %>
+</div>
