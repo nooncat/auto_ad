@@ -1,0 +1,9 @@
+<% if @cars_vip.any? %>
+  <div class="vip_cars">
+    <div class="vip-head">
+      рекомендуем
+    </div>
+    <%= render 'shared/car_vip' %>     
+  </div>
+<% end %>
+

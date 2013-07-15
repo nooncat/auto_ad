@@ -1,0 +1,12 @@
+<% if @cars.any? %>
+  <div class="cars-head">
+    текущие предложения
+  </div>
+  <ol class="cars">
+    <%= render @cars %>
+  </ol>
+  <%= will_paginate @cars %>
+<% else %>
+  <h3> На данный момент предложения отсутсвуют. </h3>
+<% end %>
+

@@ -24,7 +24,7 @@
                 </ul>
             <% end %>
             <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-male"></i> <%= current_user.name %> <b class="caret"></b>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-male"></i> <%= current_user.login %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Сменить пароль", edit_user_path(current_user) %></li>

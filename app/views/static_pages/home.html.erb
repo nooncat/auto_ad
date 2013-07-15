@@ -1,46 +1,32 @@
 <div class="row-fluid">
-  <div class="as-contacts">
-    <div class="contacts-head visible-desktop">
-            наши контакты
+  <div class="as-contacts hidden-desktop">
+    <%= render 'as_contacts' %>
+  </div>
+  <span class="left-as">
+    <div class="as-contacts visible-desktop">
+      <%= render 'as_contacts' %>
     </div>
-    <ol>
-      <span class="callus visible-desktop">Звоните нам</span>
-      <span class="phone"><i class="icon-phone-sign"></i> 37-17-17</span>   
-      <span class="skype"><a href="skype:vasheavto", class="skype-link", title="Skype"><i class="icon-skype"></i> vasheavto</a></span>
-      <span><a href="http://vk.com/avto", class="vkon", title="ВКонтакте"><i class="icon-vk"></i></a></span>
-    </ol>
-  </div>
-  <div class="centr-cars">
-    <% if @cars.any? %>
-      <div class="cars-head">
-        текущие предложения
-      </div>
-      <ol class="cars">
-        <%= render @cars %>
-      </ol>
-      <%= will_paginate @cars %>
-    <% else %>
-      <h3> На данный момент предложения отсутсвуют. </h3>
-    <% end %>
-  </div>
-  <div class="right-vipcars">
-    <% if @cars_vip.any? %>
-      <div class="vip_cars">
-        <div class="vip-head">
-          рекомендуем
-        </div>
-        <%= render 'shared/car_vip' %>     
-      </div>
-    <% end %>
-  </div>
-  <div class="as-feesbacks">
-    <% if @feedbacks.any? %>
-      <div class="feedbacks-head">
-        отзывы
-      </div>
-      <div class="feedbacks">
-        <%= render @feedbacks %>
-      </div>
-    <% end %>
-  </div>
+    <div class="as-feedbacks visible-desktop">
+      <%= render 'as_feedbacks' %>
+    </div>
+  </span>
+  <span class="center-col">
+    <div class="center-cars">
+      <%= render 'center_cars' %>
+    </div>
+    <div class="right-vipcars visible-phone">
+      <%= render 'right_vipcars' %>
+    </div>
+    <div class="as-feedbacks visible-phone">
+      <%= render 'as_feedbacks' %>
+    </div>
+  </span>
+  <span class="right-as">
+    <div class="right-vipcars hidden-phone">
+      <%= render 'right_vipcars' %>
+    </div>
+    <div class="as-feedbacks visible-tablet">
+      <%= render 'as_feedbacks' %>
+    </div>
+  </span>
 </div> 

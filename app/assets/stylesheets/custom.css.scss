@@ -27,6 +27,11 @@ body {
   height: 100%;
 }
 
+.container-fluid {
+  max-width: 1001px;
+  margin: 0 auto;
+}
+
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -38,11 +43,6 @@ body {
   padding-top: 45px;
   height: 25px;
   clear: both;
-}
-
-.navbar {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 textarea {
@@ -65,6 +65,10 @@ h4 {
 }
 
 /* header */
+
+.navbar {
+  margin: 0;
+}
 
 #logo {
   float: left;
@@ -210,7 +214,7 @@ input {
 .cars-head, .contacts-head, .vip-head, .feedbacks-head {
   text-align: center;
   color: #ffffff;
-  background-color: #161616;
+  background-color: #bebebe;
   font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
@@ -227,7 +231,6 @@ input {
   list-style: none;
   margin: 0 0 0 0;
   li {
-    border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
   }
   .photo {
@@ -292,47 +295,41 @@ input {
 .vip-price {
   margin-left: 5px;
 }
+
 /* carshow */
-.fotoshow {
+
+.fotoshow-col {
+  margin: 0 auto;
+  max-width: 640px;
 }
 
-.cardesc {
-  margin: 0 10px;
-  .contacts {
-    font-size: 1.5em;
-    padding-top: 10px;
-    text-align: center;
-    .vkon {
-      color: #333333;
-      &:hover {
-        color: #47739d;
-        text-decoration: none;
+.cardesc-col {
+  margin: 0 auto;
+  max-width: 640px;
+  .cardesc {
+    margin: 0 10px;
+    .contacts {
+      font-size: 1.5em;
+      padding-top: 10px;
+      text-align: center;
+    }
+    .price {
+      margin: 20px 0 0 0;
+      
+      b {
+        margin-left: 1em;
       }
-    }    
-    .skype-link {
-      &:hover {
-        text-decoration: none;
-      }
-    }    
-  }
-  .price {
-    margin-left: 0;
-    padding-top: 10px;
+    }
     
-    b {
-      margin-left: 1em;
+    .ttx {
+      padding-top: 0.5em;
+    }
+
+    .describtion {
+      padding-top: 1em;
+      text-indent: 1em;
     }
   }
-  
-  .ttx {
-    padding-top: 0.5em;
-  }
-
-  .describtion {
-    padding-top: 1em;
-    text-indent: 1em;
-  }
-
 }
 
 /* contacts */
@@ -341,47 +338,61 @@ input {
   padding-top: 0px;
   ol {
     text-align: center;
-    background-color: #e8e8e8;
     margin: 0 0;
     list-style: none;
     font-size: 1.5em;
     font-weight: bold;
     line-height: 1;
   }
-  .phone {
+  .phone-desk, .phone-sh {
+    color: #696969;
   }
   .skype-link {
-    white-space: nowrap;
     &:hover {
       text-decoration: none;
     }
   }
-  .vkon {
-    color: #333333;
-    &:hover {
-      color: #47739d;
-      text-decoration: none;
-    }
-  }    
 }
-
+.vkonsq-desk, .vkonsq-sh {
+  img {
+    width: 22px;
+    margin-bottom: 2px;
+  }
+}    
+.vkon-desk, .vkon-sh {
+  img {
+    width: 79px;
+    margin-bottom: 2px;
+  }
+}    
+.phone-desk, .phone-sh, .skype-desk, .skype-sh {
+  white-space: nowrap;
+}
 .skype-link {
   color: #01aff0;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /* feedbacks */
+.as-feedbacks {
+}
 
 .feedbacks-col {
   h4 {
-    padding: 10px 0;
-    border-bottom: 1px solid #e8e8e8; 
+    margin: 15px 0;
   }
 }
 
 .feedback {
-  margin-top: 10px;
+  padding-top: 15px;
   border-bottom: 1px solid #e8e8e8; 
-}   
+}  
+
+.feedback:first-child {
+  border-top: 1px solid #e8e8e8; 
+}
 
 .fname {
   font-weight: bold;
@@ -396,32 +407,29 @@ input {
   color: #696969;
 }
 
-/* feed edit */
-
 .edit {
-  float: right;
-  margin-right: 70px;
+  margin-left: 25px
 }
 
-.newfeedback-col {
+/* feed new edit */
+
+.newfeedback-col, .feed-edit {
   text-align: center;
   h4 {
-    padding: 10px 0;
+    margin: 15px 0;
+  }
+  input {
+    width: 230px;
+  }
+  textarea {
+    width: 301px;
+  }
+  .btn {
+    width: auto;
+    margin-top: 15px;
   }
 }
   
-.fname-field {
-  width: 230px;
-}
-
-.fcontact-field {
-  width: 230px;
-}
-
-.ftext-area {
-  width: 301px;
-}
-
 /* signin-page user-edit-page user-new */
 
 .sign-in, .user-edit, .user-new {
@@ -451,26 +459,177 @@ input {
 
 /* @media queries */
 
-@media (max-width: 480px) {
+@media (min-width: 980px) {
+  body {
+    padding-top: 0px;
+  }
+  .navbar {
+    position: static;
+  }
+  h4 {
+    text-align: left;
+  }
+
+/* heads */
+
+  .cars-head, .contacts-head, .vip-head {
+    margin-top: 8px;
+  }
+
+/* feedbacks */
+  
+  .feedbacks-col {
+    width: 60%;
+    float: left;
+    h4 {
+      text-align: center;
+    }
+    .feedbacks {
+      margin-right: 20px;
+    }
+  }
+  .newfeedback-col {
+    width: 40%;
+    float: right;
+    h4 {
+      text-align: center;
+    }
+  }
+  .fname {
+    margin-left: 10px;
+  }
+
+  .fcontent {
+    margin: 5px 5px 0 40px;
+  }
+   
+  /* carshow */
+
+  .fotoshow-col {
+    width: 65%;
+    float: left;
+  }
+  .cardesc-col {
+    width: 35%;
+    float: right;
+    padding: 0;
+    .cardesc {
+      margin: 0 20px;
+    }
+  }
+
+/* home */
+  
+  .left-as {
+    width: 25%;
+    float: left;
+  }
+  .center-col {
+    float: left;
+    width: 49%;
+    margin-left: 1%;
+  }
+  .right-as {
+    width: 24%;
+    float: right;
+  }
+
+/* contacts */
+
+  .desc-contacts {
+    padding: 10px 0;
+  }
+  .vkonsq-desk, .vkonsq-sh {
+    display: none;
+  }
+  .phone-desk {
+    font-size: 1.5em;
+  }
+  .skype-desk {
+    display: block;
+    margin: 8px 0;
+    font-size: 1.4em;
+  }
+  .vkon-desk {
+    img {
+      width: 170px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  h4 {
+    text-align: left;
+  }
+
+/* feedbacks */
+  
+  .feedbacks-col {
+    width: 60%;
+    float: left;
+    h4 {
+      text-align: center;
+    }
+    .feedbacks {
+      margin-right: 20px;
+    }
+  }
+  .newfeedback-col {
+    width: 40%;
+    float: right;
+    h4 {
+      text-align: center;
+    }
+  }
+  .fname {
+    margin-left: 10px;
+  }
+
+  .fcontent {
+    margin: 5px 5px 0 40px;
+  }
+   
+/* carshow */
+
+  .fotoshow-col {
+    width: 60%;
+    float: left;
+  }
+  .cardesc-col {
+    width: 40%;
+    float: right;
+    padding: 0;
+    .cardesc {
+      margin: 0 15px;
+    }
+  }
+
+/* home */
+
+  .center-col {
+    width: 69%;
+    float: left;
+  }
+  .right-as {
+    width: 29%;
+    float: right;
+  }
+  
+/* contacts */
+
+  .vkonsq-desk, .vkonsq-sh {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
   header {
-    margin-bottom: 0 !important;
     .container-fluid {
      margin: 0 10px;
     }
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-  header {
-    margin-bottom: 0 !important;
-  }
-}
-
-@media (min-width: 980px) {
-  body {
-    padding-top: 0px;
-  }
+@media (max-width: 480px) {
 }

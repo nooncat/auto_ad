@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    user = User.find_by_name(current_user.name).try(:authenticate, params[:current_password])
+    user = User.find_by_login(current_user.login).try(:authenticate, params[:current_password])
     if user && @user.update_attributes(params[:user])
       flash[:success] = "Пароль изменен!"
       sign_in @user
