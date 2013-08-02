@@ -1,7 +1,26 @@
+  <% $carprev %>
 <% if car.vip? %>
-  <li style="background-color:#fff7ad">
+  <% if $carprev  == 4 %>
+    <li class="vip-first">
+    <% $carprev = 3 %>
+  <% elsif $carprev == 3 %>
+    <li class="vip-sec">
+    <% $carprev = 4 %>
+  <% else %>
+    <li class="vip-first">
+    <% $carprev = 3 %>
+  <% end %>
 <% else %>
-  <li style="background-color:#f5f5f5">
+  <% if $carprev == 2 %>
+    <li class="simple-first">
+    <% $carprev = 1 %>
+  <% elsif $carprev == 1 %>
+    <li class="simple-sec">
+    <% $carprev = 2 %>
+  <% else %>
+    <li class="simple-first">
+    <% $carprev = 1 %>
+  <% end %>
 <% end %>
   <div class="photo">
     <% if car.photos.any? %>

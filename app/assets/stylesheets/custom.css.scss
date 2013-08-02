@@ -180,7 +180,7 @@ input {
   color: #f00;
   ul {
     list-style: none;
-    margin: 0 0 18px 0;
+    margin: 0 0 8px 0;
   }
 }
 
@@ -227,12 +227,25 @@ input {
 
 /* cars */
 
+.vip-first {
+  background-color: #fff7ad;
+}
+
+.vip-sec {
+  background-color: #fff9c9;
+}
+
+.simple-first {
+  background-color: #fcfcfc;
+}
+
+.simple-sec {
+  background-color: #f2f2f2;
+}
+
 .cars {
   list-style: none;
   margin: 0 0 0 0;
-  li {
-    border-bottom: 1px solid #ffffff;
-  }
   .photo {
     margin: 5px 15px 5px 5px;  
     float: left;
@@ -279,7 +292,7 @@ input {
   .car-vip {
     margin: 0 auto;
     max-width: 240px;
-    background-color: #fff7ad;
+    background-color: #fff9c9;
     span + span {
       margin-left: 8px;
     }
@@ -335,6 +348,7 @@ input {
 /* contacts */
 
 .as-contacts {
+  background-color: #f2f2f2;
   padding-top: 0px;
   ol {
     text-align: center;
@@ -377,6 +391,7 @@ input {
 
 /* feedbacks */
 .as-feedbacks {
+  background-color: #f2f2f2;
 }
 
 .feedbacks-col {
