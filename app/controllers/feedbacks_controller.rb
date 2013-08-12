@@ -17,7 +17,11 @@ class FeedbacksController < ApplicationController
       flash[:success] = "Ваш отзыв сохранен. Отзыв будет отображен после проверки администратором сайта."
       redirect_to feedbacks_url
     else
-      @feedbacks = Feedback.paginate(page: params[:page], per_page: 10)
+      if signed_in?
+        @feedbacks = Feedback.paginate(page: params[:page], per_page: 10)
+      else 
+        @feedbacks = Feedback.where("checkf = ?", true).paginate(page: params[:page], per_page: 10)
+      end
       render 'index'
     end
   end
