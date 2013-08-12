@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.3.2'
 gem 'font-awesome-rails'
@@ -11,6 +13,7 @@ gem 'jquery-rails', '3.0.1'
 gem 'carrierwave'
 gem 'nested_form'
 gem 'rmagick'
+gem 'rails-settings-cached', '0.2.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,6 +25,8 @@ group :development, :test do
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
   gem 'annotate', '2.5.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 

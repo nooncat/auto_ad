@@ -1,0 +1,23 @@
+<% provide(:title, "Изменить настройки сайта") %>
+<h3>Изменить настройки сайта</h3>
+
+<div class="row-fluid">
+  <div class="site-edit">
+    <%= form_for(@setting) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %> 
+      
+      <p> 
+        <div class="item-var">
+          <%= f.label :var, t(@setting.var) %>
+        </div>
+        <% if @setting.var == "about_text" %>
+          <%= f.text_area :value, size: "25x7" %>
+        <% else %>
+          <%= f.text_field :value %>
+        <% end %>
+      </p>
+
+      <%= f.submit "Сохранить", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

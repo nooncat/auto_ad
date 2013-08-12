@@ -15,13 +15,13 @@
   <div class="cardesc-col">
     <div class="cardesc">
       <div class="contacts">
-        <span class="phone-sh"><i class="icon-phone-sign"></i> 37-17-17</span>   
-        <span class="skype-sh"><a href="skype:vasheavto", class="skype-link", title="Skype"><i class="icon-skype"></i> vasheavto</a></span>
+        <span class="phone-sh"><i class="icon-phone-sign"></i> <%=Setting.phone_text %></span>   
+        <span class="skype-sh"><a href="skype:<%=Setting.skype_text%>", class="skype-link", title="Skype"><i class="icon-skype"></i><%=Setting.skype_text%></a></span>
         <span class="vkonsq-sh">
-          <%= link_to(image_tag("vkon_square.png", title: "ВКонтакте"), "http://vk.com/avto") %>
+          <%= link_to(image_tag("vkon_square.png", title: "ВКонтакте"), Setting.vk_text) %>
         </span>
         <span class="vkon-sh hidden-phone">
-          <%= link_to(image_tag("vkon.png", title: "ВКонтакте"), "http://vk.com/avto") %>
+          <%= link_to(image_tag("vkon.png", title: "ВКонтакте"), Setting.vk_text) %>
         </span>
       </div>
       <div class="price">

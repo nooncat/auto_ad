@@ -34,4 +34,6 @@ AutoAd::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  BetterErrors::Middleware.allow_ip! '192.168.137.2'
 end

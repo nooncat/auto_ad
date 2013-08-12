@@ -9,3 +9,10 @@ en:
   will_paginate:
     previous_label: "<<"
     next_label: ">>"
+  about_text: "Текст страницы О нас"
+  copyrights_text: "Copyrights текст в футере"
+  phone_text: "Номер телефона"
+  skype_text: "Skype username"
+  title_text: "Название сайта"
+  vk_text: "Ссылка вконтакте(http://vk.com/id)"
+

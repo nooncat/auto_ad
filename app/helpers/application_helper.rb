@@ -1,7 +1,7 @@
 #encoding: UTF-8
 module ApplicationHelper
   def full_title(page_title)
-    base_title = "Ваше авто"
+    base_title = Setting.title_text 
     if page_title.empty?
       base_title
     else

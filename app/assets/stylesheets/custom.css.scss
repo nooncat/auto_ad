@@ -428,22 +428,64 @@ input {
 
 /* feed new edit */
 
-.newfeedback-col, .feed-edit {
+.newfeedback-col, .feed-edit, .site-edit {
   text-align: center;
+  
   h4 {
     margin: 15px 0;
   }
+
   input {
     width: 230px;
   }
+  
   textarea {
     width: 301px;
   }
+
   .btn {
     width: auto;
     margin-top: 15px;
   }
 }
+
+/* siteset edit */
+
+.site-edit {
+  text-align: center;
+  
+  .item-var {
+    font-weight: bold;
+  }
+ 
+  input {
+    width: 230px;
+  }
+
+  textarea {
+    width: 301px;
+  }
+  
+  .btn {
+    width: auto;
+    margin-top: 15px;
+  }
+}
+
+/* sitesets index */
+
+.all-sitesets {
+  max-width: 500px;
+
+  .item-var {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .item-value {
+    margin-left: 20px;
+  } 
+}  
+
   
 /* signin-page user-edit-page user-new */
 
