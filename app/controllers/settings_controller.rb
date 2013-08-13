@@ -1,5 +1,6 @@
 #encoding: UTF-8
 class SettingsController < ApplicationController
+  before_filter :signed_in_user, only: [:index, :edit, :update]
   before_filter :admin_user,     only: [:index, :edit, :update]
 
   def index
@@ -23,6 +24,12 @@ class SettingsController < ApplicationController
   end
 
   private
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Пожалуйста, войдите."
+      end
+    end
   
     def admin_user
       redirect_to(root_path) unless current_user.admin?

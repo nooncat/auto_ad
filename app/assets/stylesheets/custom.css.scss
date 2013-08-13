@@ -214,7 +214,7 @@ input {
 .cars-head, .contacts-head, .vip-head, .feedbacks-head {
   text-align: center;
   color: #ffffff;
-  background-color: #bebebe;
+  background-color: #828282;
   font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
@@ -451,12 +451,8 @@ input {
 
 /* siteset edit */
 
-.site-edit {
+.siteset-edit {
   text-align: center;
-  
-  .item-var {
-    font-weight: bold;
-  }
  
   input {
     width: 230px;
@@ -477,14 +473,16 @@ input {
 .all-sitesets {
   max-width: 500px;
 
-  .item-var {
-    font-weight: bold;
-    margin-top: 10px;
-  }
+
   .item-value {
     margin-left: 20px;
   } 
 }  
+
+.item-var {
+  font-weight: bold;
+  margin-top: 10px;
+}
 
   
 /* signin-page user-edit-page user-new */
