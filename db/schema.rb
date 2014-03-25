@@ -62,11 +62,6 @@ ActiveRecord::Schema.define(:version => 20130812132902) do
 
   add_index "settings", ["thing_type", "thing_id", "var"], :name => "index_settings_on_thing_type_and_thing_id_and_var", :unique => true
 
-  create_table "sitesets", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login"
     t.datetime "created_at",                         :null => false
