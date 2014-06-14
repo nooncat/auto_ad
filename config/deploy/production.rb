@@ -25,18 +25,11 @@ server '192.168.1.4', user: 'deployer', roles: %w{web}
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
-#
 set :ssh_options, {
-    forward_agent: false,
-    auth_methods: %w(password),
-    password: 'user_deployers_password'
-    user: 'deployer'
+  keys: %w(/home/bitnami/.ssh/id_rsa),
+  forward_agent: true,
 }
+
 # And/or per server (overrides global)
 # ------------------------------------
 # server 'example.com',
