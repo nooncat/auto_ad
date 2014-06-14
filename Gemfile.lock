@@ -112,7 +112,6 @@ GEM
     nested_form (0.3.2)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
-    pg (0.12.2)
     polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -216,7 +215,6 @@ DEPENDENCIES
   jquery-rails (= 3.0.1)
   libnotify (= 0.5.9)
   nested_form
-  pg (= 0.12.2)
   rails (= 3.2.13)
   rails-settings-cached (= 0.2.4)
   rb-inotify (= 0.8.8)
