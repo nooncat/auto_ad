@@ -48,12 +48,15 @@ group :test do
   gem 'libnotify', '0.5.9'
 end
 
+group :production do
+  gem 'pg', '0.15.1'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
 # Use unicorn as the app server
 # gem 'unicorn'
 
