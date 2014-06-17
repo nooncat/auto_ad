@@ -15,7 +15,7 @@ config/initializers/secret_token.rb
 /log
 /tmp
 /doc
-.Gemfile.lock
+Gemfile.lock
 /spec/tmp
 *~
 .sw*
