@@ -10,7 +10,6 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 database.yml
-config/initializers/secret_token.rb
 # Ignore all logfiles and tempfiles.
 /log
 /tmp
@@ -18,6 +17,7 @@ config/initializers/secret_token.rb
 Gemfile.lock
 /spec/tmp
 *~
+.secret
 .sw*
 /config/deploy
 /public/uploads/tmp
