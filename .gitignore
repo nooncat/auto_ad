@@ -20,4 +20,4 @@ Gemfile.lock
 .secret
 .sw*
 /config/deploy
-/public/uploads/tmp
+/public/uploads/
