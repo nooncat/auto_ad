@@ -358,35 +358,16 @@ input {
     font-weight: bold;
     line-height: 1;
   }
-  .phone-desk, .phone-sh {
+  .phone-desk {
     color: #696969;
   }
-  .skype-link {
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
-.vkonsq-desk, .vkonsq-sh {
-  img {
-    width: 22px;
-    margin-bottom: 2px;
-  }
-}    
-.vkon-desk, .vkon-sh {
-  img {
-    width: 79px;
-    margin-bottom: 2px;
-  }
-}    
-.phone-desk, .phone-sh, .skype-desk, .skype-sh {
+.phone-desk {
   white-space: nowrap;
+  padding-bottom: 10px;
 }
-.skype-link {
-  color: #01aff0;
-  &:hover {
-    text-decoration: none;
-  }
+.desc-contacts > div:last-child {
+  padding-bottom: 0;
 }
 
 /* feedbacks */
@@ -424,6 +405,18 @@ input {
 
 .edit {
   margin-left: 25px
+}
+
+/* vk_group */
+
+.vkgroup-vidget {
+  width: 100%;
+  margin-top: 2px;
+}
+
+#vk_groups,
+#vk_groups iframe {
+  width: 100% !important;
 }
 
 /* feed new edit */

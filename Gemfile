@@ -13,7 +13,6 @@ gem 'jquery-rails', '3.0.1'
 gem 'carrierwave'
 gem 'nested_form'
 gem 'rmagick'
-gem 'rails-settings-cached', '0.2.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
