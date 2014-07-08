@@ -4,7 +4,6 @@ AutoAd::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :cars, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :feedbacks, only: [:index, :create, :edit, :update, :destroy]
-  resources :settings, only: [:index, :edit, :update]
 
   root to: 'static_pages#home'
   match '/signup', to: 'users#new'
