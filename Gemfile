@@ -4,7 +4,7 @@ ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.3.2'
-gem 'font-awesome-rails', '3.2.1'
+gem 'font-awesome-rails', '4.1.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
