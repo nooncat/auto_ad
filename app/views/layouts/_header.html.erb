@@ -9,9 +9,9 @@
       <%= link_to "Подбор АВТО", root_path, id: "logo" %>
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
-          <li><a href="/"><i class="icon-home"></i> Домой</a></li>
-          <li><a href="/about"><i class="icon-info-sign"></i> Информация</a></li>
+          <li><%= link_to '<i class="fa fa-automobile"></i> Автомобили'.html_safe, cars_path %><li>
           <li><a href="/feedbacks"><i class="icon-thumbs-up"></i> Отзывы</a></li>
+          <li><a href="/about"><i class="icon-info-sign"></i> Информация</a></li>
           <% if signed_in? %>
             <li><a href="/compose"><i class="icon-truck"></i> Объявление</a></li>
             <% if current_user.admin? %>

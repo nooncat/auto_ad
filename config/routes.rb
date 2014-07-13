@@ -1,8 +1,8 @@
 AutoAd::Application.routes.draw do
 
-  resources :users
+  resources :users, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :cars, only: [:show, :new, :create, :edit, :update, :destroy]
+  resources :cars
   resources :feedbacks, only: [:index, :create, :edit, :update, :destroy]
 
   root to: 'static_pages#home'

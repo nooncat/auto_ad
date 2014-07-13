@@ -2,6 +2,12 @@
 class CarsController < ApplicationController
   before_filter :signed_in_user, only: [:edit,:create, :update, :new, :destroy]
   
+  def index
+    @cars = Car.paginate(page: params[:page], per_page: 15)
+    @cars_vip = Car.where("vip = ?", true).shuffle.first(3)
+    @feedbacks = Feedback.where("checkf = ?", true).shuffle.first(3)
+  end
+
   def show
     @car = Car.find(params[:id])
   end
