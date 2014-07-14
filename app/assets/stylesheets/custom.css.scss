@@ -120,6 +120,23 @@ footer {
   @include box_sizing;
 }
 
+/* flat buttons */
+
+.btn-flat {
+  filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+  -webgit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-image: none;
+  background-color: #1570a6;
+  color: #ffffff;
+  border: 0;
+  &:hover {
+    background-color: #083047;
+    color: #ffffff;
+  }
+}
+
 /* forms */
 
 input, textarea, select {
@@ -443,42 +460,6 @@ input {
   }
 }
 
-/* siteset edit */
-
-.siteset-edit {
-  text-align: center;
- 
-  input {
-    width: 230px;
-  }
-
-  textarea {
-    width: 301px;
-  }
-  
-  .btn {
-    width: auto;
-    margin-top: 15px;
-  }
-}
-
-/* sitesets index */
-
-.all-sitesets {
-  max-width: 500px;
-
-
-  .item-value {
-    margin-left: 20px;
-  } 
-}  
-
-.item-var {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-  
 /* signin-page user-edit-page user-new */
 
 .sign-in, .user-edit, .user-new {
@@ -588,22 +569,8 @@ input {
   .desc-contacts {
     padding: 10px 0;
   }
-  .vkonsq-desk, .vkonsq-sh {
-    display: none;
-  }
   .phone-desk {
     font-size: 1.5em;
-  }
-  .skype-desk {
-    display: block;
-    margin: 8px 0;
-    font-size: 1.4em;
-  }
-  .vkon-desk {
-    img {
-      width: 170px;
-      margin-bottom: 0px;
-    }
   }
 }
 
@@ -663,12 +630,6 @@ input {
   .right-as {
     width: 29%;
     float: right;
-  }
-  
-/* contacts */
-
-  .vkonsq-desk, .vkonsq-sh {
-    display: none;
   }
 }
 
