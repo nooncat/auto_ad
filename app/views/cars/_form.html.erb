@@ -22,9 +22,6 @@
         <%= f.select(:engine_type, options_for_select([["Бензиновый","бензин"],["Дизельный","дизель"],["Гибридный","гибрид"]], @car.engine_type), include_blank: "--Тип двигателя--") %>
         <%= f.text_field :price, placeholder: "Цена" %>
       </p>
-      <p class="vip-text">
-        <%= "VIP объявление" %><%= f.check_box :vip %>
-      </p>
       <p>
         <%= f.text_area :describtion, placeholder: "Описание...", :size => "25x7" %>
       </p> 
