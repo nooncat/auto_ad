@@ -1,32 +1,19 @@
-  <% $carprev %>
-<% if car.vip? %>
-  <% if $carprev  == 4 %>
-    <li class="vip-first">
-    <% $carprev = 3 %>
-  <% elsif $carprev == 3 %>
-    <li class="vip-sec">
-    <% $carprev = 4 %>
-  <% else %>
-    <li class="vip-first">
-    <% $carprev = 3 %>
-  <% end %>
-<% else %>
-  <% if $carprev == 2 %>
+<% $carprev %>
+<% if $carprev == 2 %>
     <li class="simple-first">
     <% $carprev = 1 %>
-  <% elsif $carprev == 1 %>
+<% elsif $carprev == 1 %>
     <li class="simple-sec">
     <% $carprev = 2 %>
-  <% else %>
+<% else %>
     <li class="simple-first">
     <% $carprev = 1 %>
-  <% end %>
 <% end %>
-  <div class="photo">
-    <% if car.photos.any? %>
-      <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)"), car_path(car)) %>
-    <% else %>
-      <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
+<div class="photo">
+  <% if car.photos.any? %>
+    <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)"), car_path(car)) %>
+  <% else %>
+    <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
     <% end %>
   </div>
   <div class="cartext">
@@ -52,6 +39,6 @@
                                       data: { confirm: "Удалить?" } %>
       </span>
     <% end %>
-  </div> 
+  </div>
   <br clear="all">
 </li>

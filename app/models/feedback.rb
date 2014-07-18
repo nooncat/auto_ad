@@ -1,11 +1,3 @@
-class Feedback < ActiveRecord::Base
-  attr_accessible :checkf, :contact, :content, :name
-  validates :name, presence: true, length: { maximum: 45 }
-  validates :contact, presence: true, length: { maximum: 45 }
-  validates :content, presence: true, length: { maximum: 1000 }
-  default_scope order: 'feedbacks.created_at DESC'
-end
-
 # == Schema Information
 #
 # Table name: feedbacks
@@ -18,4 +10,15 @@ end
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_feedbacks_on_created_at  (created_at)
+#
 
+class Feedback < ActiveRecord::Base
+  attr_accessible :checkf, :contact, :content, :name
+  validates :name, presence: true, length: { maximum: 45 }
+  validates :contact, presence: true, length: { maximum: 45 }
+  validates :content, presence: true, length: { maximum: 1000 }
+  default_scope order: 'feedbacks.created_at DESC'
+end

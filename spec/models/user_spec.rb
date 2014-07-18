@@ -1,4 +1,23 @@
 #encoding: UTF-8
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  login           :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_users_on_login           (login) UNIQUE
+#  index_users_on_name            (login) UNIQUE
+#  index_users_on_remember_token  (remember_token)
+#
+
 require 'spec_helper'
 
 describe User do
@@ -89,17 +108,3 @@ describe User do
     its(:remember_token) { should_not be_blank }
   end
 end
-
-# == Schema Information
-#
-# Table name: users
-#
-#  id              :integer          not null, primary key
-#  login           :string(255)
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  password_digest :string(255)
-#  remember_token  :string(255)
-#  admin           :boolean          default(FALSE)
-#
-

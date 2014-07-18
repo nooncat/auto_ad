@@ -36,12 +36,11 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -46px;
+  margin: 0 auto -41px;
 }
 
 .push {
-  padding-top: 45px;
-  height: 25px;
+  height: 40px;
   clear: both;
 }
 
@@ -89,22 +88,23 @@ h4 {
 /* footer */
 
 footer {
-  height: 25px;
-  color: #c0c0c0;
-  border-top: 1px solid #c0c0c0;
+  height: 40px;
+  color: #a0a0a0;
+  background-color: #e6e6e6;
   clear: both;
   ul {
-    text-align:center;
-    margin-left: 10px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0;
   }
 }
 
 .fa-lock {
   float: left;
-  padding-top: 5px;
-  color: #c0c0c0;
+  color: #e6e6e6;
+  padding: 14px 0 0 12px;
   &:hover {
-    color: #696969;
+    color: #c0c0c0;
     text-decoration: none;
   }
 }
@@ -158,7 +158,7 @@ input {
   text-align: center;
   p {
   }
-  .vip-text {
+  .teaser-text {
     margin: 0 0 20px 10px;
     float: left;
   }
@@ -229,7 +229,7 @@ input {
 
 /* heads */
 
-.cars-head, .contacts-head, .vip-head, .feedbacks-head {
+.cars-head, .contacts-head, .teaser-head, .feedbacks-head {
   text-align: center;
   color: #ffffff;
   background-color: #828282;
@@ -245,20 +245,20 @@ input {
 
 /* cars */
 
-.vip-first {
-  background-color: #fff7ad;
+.teaser-first {
+  background-color: #eeeeee;
 }
 
-.vip-sec {
-  background-color: #fff9c9;
+.teaser-sec {
+  background-color: #f6f6f6;
 }
 
 .simple-first {
-  background-color: #fcfcfc;
+  background-color: #eeeeee;
 }
 
 .simple-sec {
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
 }
 
 .cars {
@@ -302,12 +302,12 @@ input {
   }
 }
 
-/* vip_cars */
+/* teaser_cars */
 
-.vip_cars {
+.teaser_cars {
   margin: 0 0 0 0;
   text-align: center;
-  .car-vip {
+  .car-teaser {
     margin: 0 auto;
     max-width: 240px;
     background-color: #fff9c9;
@@ -317,13 +317,13 @@ input {
   }
 }
 
-.vip-name {
+.teaser-name {
   display: block;
   margin-left: 5px;
   font-weight: bold;
 }
 
-.vip-price {
+.teaser-price {
   margin-left: 5px;
 }
 
@@ -389,6 +389,7 @@ input {
 }
 
 /* feedbacks */
+
 .as-feedbacks {
   background-color: #f2f2f2;
 }
@@ -502,7 +503,7 @@ input {
 
 /* heads */
 
-  .cars-head, .contacts-head, .vip-head {
+  .cars-head, .contacts-head, .teaser-head {
     margin-top: 8px;
   }
 

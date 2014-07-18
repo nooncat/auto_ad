@@ -1,9 +1,3 @@
-require 'spec_helper'
-
-describe Photo do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
-
 # == Schema Information
 #
 # Table name: photos
@@ -16,3 +10,8 @@ end
 #  updated_at      :datetime         not null
 #
 
+require 'spec_helper'
+
+describe Photo do
+  pending "add some examples to (or delete) #{__FILE__}"
+end

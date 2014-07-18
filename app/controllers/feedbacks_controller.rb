@@ -1,16 +1,16 @@
 #encoding: UTF-8
 class FeedbacksController < ApplicationController
   before_filter :signed_in_user, only: [:edit, :update, :destroy]
-  
+
   def index
     @feedback = Feedback.new
     if signed_in?
       @feedbacks = Feedback.paginate(page: params[:page], per_page: 10)
-    else 
+    else
       @feedbacks = Feedback.where("checkf = ?", true).paginate(page: params[:page], per_page: 10)
     end
   end
-  
+
   def create
     @feedback = Feedback.new(params[:feedback])
     if @feedback.save
@@ -19,13 +19,13 @@ class FeedbacksController < ApplicationController
     else
       if signed_in?
         @feedbacks = Feedback.paginate(page: params[:page], per_page: 10)
-      else 
+      else
         @feedbacks = Feedback.where("checkf = ?", true).paginate(page: params[:page], per_page: 10)
       end
       render 'index'
     end
   end
-  
+
   def edit
     @feedback = Feedback.find(params[:id])
   end
@@ -45,14 +45,13 @@ class FeedbacksController < ApplicationController
     flash[:success] = "Отзыв удален."
     redirect_to feedbacks_url
   end
-  
+
   private
-  
+
     def signed_in_user
       unless signed_in?
         store_location
         redirect_to signin_url, notice: "Пожалуйста, войдите."
       end
     end
-end 
-
+end

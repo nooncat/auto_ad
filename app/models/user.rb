@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  login           :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_users_on_login           (login) UNIQUE
+#  index_users_on_name            (login) UNIQUE
+#  index_users_on_remember_token  (remember_token)
+#
+
 class User < ActiveRecord::Base
   attr_accessible :login, :password, :password_confirmation
   has_secure_password
@@ -16,17 +35,3 @@ class User < ActiveRecord::Base
       self.remember_token = SecureRandom.urlsafe_base64
     end
 end
-
-# == Schema Information
-#
-# Table name: users
-#
-#  id              :integer          not null, primary key
-#  login           :string(255)
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  password_digest :string(255)
-#  remember_token  :string(255)
-#  admin           :boolean          default(FALSE)
-#
-

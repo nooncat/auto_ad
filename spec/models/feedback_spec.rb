@@ -1,9 +1,3 @@
-require 'spec_helper'
-
-describe Feedback do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
-
 # == Schema Information
 #
 # Table name: feedbacks
@@ -16,4 +10,13 @@ end
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_feedbacks_on_created_at  (created_at)
+#
 
+require 'spec_helper'
+
+describe Feedback do
+  pending "add some examples to (or delete) #{__FILE__}"
+end

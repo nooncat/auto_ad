@@ -1,21 +1,20 @@
 #encoding: UTF-8
 class CarsController < ApplicationController
   before_filter :signed_in_user, only: [:edit,:create, :update, :new, :destroy]
-  
+
   def index
     @cars = Car.paginate(page: params[:page], per_page: 15)
-    @cars_vip = Car.where("vip = ?", true).shuffle.first(3)
     @feedbacks = Feedback.where("checkf = ?", true).shuffle.first(3)
   end
 
   def show
     @car = Car.find(params[:id])
   end
-  
+
   def new
     @car = Car.new
   end
-  
+
   def create
     @car = Car.new(params[:car])
     if @car.save
@@ -25,7 +24,7 @@ class CarsController < ApplicationController
       render 'new'
     end
   end
-  
+
   def edit
     @car = Car.find(params[:id])
   end
@@ -39,15 +38,15 @@ class CarsController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     Car.find(params[:id]).destroy
     flash[:success] = "Объявление удалено."
     redirect_to root_url
   end
-    
+
   private
-  
+
     def signed_in_user
       unless signed_in?
         store_location
