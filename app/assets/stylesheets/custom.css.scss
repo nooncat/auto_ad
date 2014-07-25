@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 @import "font-awesome";
+@import "fotorama";
 
 /* mixins, variables, etc. */
 
@@ -159,7 +160,7 @@ input {
 
 .company-main {
   background-color: #eeeeee;
-} 
+}
 
 /* car form */
 
@@ -557,6 +558,10 @@ input {
   }
 
 /* header */
+
+  .navbar {
+    z-index: 10000;
+  }
 
   .affix {
     position: fixed;
