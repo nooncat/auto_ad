@@ -71,8 +71,8 @@ h4 {
   .navbar {
     li {
      font-weight: bold;
-    } 
-  } 
+    }
+  }
 
 #logo {
   float: left;
@@ -154,6 +154,12 @@ input, textarea, select {
 input {
   height: auto !important;
 }
+
+/* company describtion home */
+
+.company-main {
+  background-color: #eeeeee;
+} 
 
 /* car form */
 
@@ -238,7 +244,7 @@ input {
 
 /* heads */
 
-.cars-head, .contacts-head, .teaser-head, .feedbacks-head {
+.cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head {
   text-align: center;
   color: #ffffff;
   background-color: #828282;
@@ -372,29 +378,28 @@ input {
   }
 }
 
-/* contacts */
+/* phones */
 
-.as-contacts {
-  background-color: #f2f2f2;
-  padding-top: 0px;
-  ol {
-    text-align: center;
-    margin: 0 0;
-    list-style: none;
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 1;
+.phones {
+  text-align: center;
+  padding-top: 4px;
+  font-weight: bold;
+  font-size: 1.8em;
+  .phone-1 {
+    margin: 4px 0;
+    color: #474747;
+    display: inline;
   }
-  .phone-desk {
-    color: #696969;
+  .phone-2 {
+    margin: 4px 0;
+    color: #545454;
+    display: inline;
   }
-}
-.phone-desk {
-  white-space: nowrap;
-  padding-bottom: 10px;
-}
-.desc-contacts > div:last-child {
-  padding-bottom: 0;
+  .phone-3 {
+    margin: 4px 0;
+    color: #616161;
+    display: inline;
+  }
 }
 
 /* feedbacks */
@@ -429,6 +434,7 @@ input {
   margin: 5px 20px 0 60px;
   text-indent: 10px;
   color: #696969;
+  word-wrap: break-word;
 }
 
 .edit {
@@ -514,19 +520,27 @@ input {
         max-height: 100%;
       }
     }
-    .intro-phones {
+    .phones {
+      padding: 0 10px 0 0;
       float: right;
       font-weight: bold;
       font-size: 1.8em;
-      padding-right: 15px;
       .phone-1 {
-        margin: 3px 0;
+        margin: 4px 0;
+        padding-left: 40px;
+        color: #474747;
+        display: block;
       }
       .phone-2 {
-        margin: 3px 0;
+        margin: 4px 0;
+        padding-left: 20px;
+        color: #545454;
+        display: block;
       }
       .phone-3 {
-        margin: 3px 0;
+        margin: 4px 0;
+        color: #616161;
+        display: block;
       }
     }
     .intro-slogan {
@@ -537,6 +551,7 @@ input {
         line-height: 93px;
         margin: 0;
         font-size: 1.5em;
+        font-style: italic;
       }
     }
   }
@@ -561,8 +576,8 @@ input {
 
 /* heads */
 
-  .cars-head, .contacts-head, .teaser-head {
-    margin-top: 8px;
+  .cars-head, .feedbacks-head, .teaser-head, .company-head {
+    margin-top: 3px;
   }
 
 /* feedbacks */
@@ -607,7 +622,7 @@ input {
     }
   }
 
-/* home */
+/* home, carindex */
 
   .left-as {
     width: 25%;
@@ -621,15 +636,6 @@ input {
   .right-as {
     width: 24%;
     float: right;
-  }
-
-/* contacts */
-
-  .desc-contacts {
-    padding: 10px 0;
-  }
-  .phone-desk {
-    font-size: 1.5em;
   }
 }
 
@@ -685,15 +691,21 @@ input {
     }
   }
 
-/* home */
+/* home, carindex */
 
   .center-col {
-    width: 69%;
+    width: 72%;
     float: left;
   }
   .right-as {
-    width: 29%;
+    width: 26%;
     float: right;
+  }
+
+/* heads */
+
+  .cars-head, .feedbacks-head, .teaser-head {
+    margin-top: 3px;
   }
 }
 
