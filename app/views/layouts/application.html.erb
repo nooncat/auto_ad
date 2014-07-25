@@ -12,9 +12,28 @@
   </head>
   <body>
     <div class="wrapper">
-    <div class="intro">
-    </div>
-    <%= render 'layouts/header' %>
+      <div class="intro visible-desktop">
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <span class="intro-logo">
+              <%= link_to(image_tag("logo_wide.png", class: "logo-png"), root_path) %>
+            </span>
+            <span class="intro-slogan">
+              <ul>
+                БЕРЕЖЕМ ВАШИ ВРЕМЯ, НЕРВЫ и ДЕНЬГИ..
+              </ul>
+            </span>
+            <span class="intro-phones">
+              <div class="phones">
+                <div class="phone-1"><i class="fa fa-phone-square"></i> 36-04-95 </div>
+                <div class="phone-2"><i class="fa fa-phone-square"></i> 36-04-96 </div>
+                <div class="phone-3"><i class="fa fa-phone-square"></i> 36-04-97 </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <%= render 'layouts/header' %>
       <div class="container-fluid">
         <% flash.each do |key, value| %>
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>

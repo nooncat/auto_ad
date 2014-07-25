@@ -18,12 +18,17 @@ html {
   padding: 0;
   margin: 0;
   height: 100%;
-} 
+}
 
 body {
   background-color: #ffffff;
   margin: 0;
+  padding: 0;
   height: 100%;
+}
+
+.affix {
+  position: static;
 }
 
 .container-fluid {
@@ -56,16 +61,18 @@ h3 {
   text-align: center;
 }
 
-h4 { 
+h4 {
   text-align: center;
   margin: 3px 0;
 }
 
 /* header */
 
-/*.navbar { 
-  margin: 0;
-} */
+  .navbar {
+    li {
+     font-weight: bold;
+    } 
+  } 
 
 #logo {
   float: left;
@@ -160,17 +167,17 @@ input {
     margin: 0 0 20px 10px;
     float: left;
   }
-    
+
   textarea {
     width: 100%;
   }
   input, select {
     width: 49%;
   }
-  
+
   .btn {
     width: auto;
-  } 
+  }
 
   .photo-add {
     border-bottom: 2px solid #c0c0c0;
@@ -178,7 +185,7 @@ input {
     input {
       width: auto;
     }
-  } 
+  }
 
   .photo-pre {
     margin: 0 15px 10px 2px;
@@ -189,7 +196,7 @@ input {
     padding-bottom: 10px;
   }
 }
-  
+
 /* errors */
 
 .alert {
@@ -267,7 +274,7 @@ input {
   list-style: none;
   margin: 0 0 0 0;
   .photo {
-    margin: 5px 15px 5px 5px;  
+    margin: 5px 15px 5px 5px;
     float: left;
     border: 1px solid #e8e8e8;
     max-height: 100%;
@@ -285,7 +292,7 @@ input {
     margin-right: 5px;
     white-space: nowrap;
   }
-  
+
   .engine-trans {
     margin-right: 5px;
   }
@@ -348,12 +355,12 @@ input {
     }
     .price {
       margin: 20px 0 0 0;
-      
+
       b {
         margin-left: 1em;
       }
     }
-    
+
     .ttx {
       padding-top: 0.5em;
     }
@@ -404,11 +411,11 @@ input {
 
 .feedback {
   padding-top: 15px;
-  border-bottom: 1px solid #e8e8e8; 
-}  
+  border-bottom: 1px solid #e8e8e8;
+}
 
 .feedback:first-child {
-  border-top: 1px solid #e8e8e8; 
+  border-top: 1px solid #e8e8e8;
 }
 
 .fname {
@@ -444,7 +451,7 @@ input {
 
 .newfeedback-col, .feed-edit, .site-edit {
   text-align: center;
-  
+
   h4 {
     margin: 15px 0;
   }
@@ -452,7 +459,7 @@ input {
   input {
     width: 230px;
   }
-  
+
   textarea {
     width: 301px;
   }
@@ -483,29 +490,71 @@ input {
   h3 {
     margin: 0;
   }
-  
+
   p {
     margin: 0 10px 0 15px;
     text-indent: 15px
   }
-}   
+}
 
 /* @media queries */
 
 @media (min-width: 980px) {
-  
+
+/* intro */
+
   .intro {
-    height: 60px;
-    background-color: #c34523;
+    height: 93px;
+    background-color: #fff;
+    .intro-logo {
+      float: left;
+    }
+    .intro-logo {
+      .logo-png {
+        max-height: 100%;
+      }
+    }
+    .intro-phones {
+      float: right;
+      font-weight: bold;
+      font-size: 1.8em;
+      padding-right: 15px;
+      .phone-1 {
+        margin: 3px 0;
+      }
+      .phone-2 {
+        margin: 3px 0;
+      }
+      .phone-3 {
+        margin: 3px 0;
+      }
+    }
+    .intro-slogan {
+      display: inline-block;
+      padding-left: 80px;
+      ul {
+        text-align: center;
+        line-height: 93px;
+        margin: 0;
+        font-size: 1.5em;
+      }
+    }
   }
+
+/* header */
+
+  .affix {
+    position: fixed;
+  }
+
   .navbar.affix {
     top: 0;
     width: 100%;
   }
   .navbar.affix + .container-fluid {
-    padding-top: 40px; 
+    padding-top: 40px;
   }
-  
+
   h4 {
     text-align: left;
   }
@@ -517,7 +566,7 @@ input {
   }
 
 /* feedbacks */
-  
+
   .feedbacks-col {
     width: 60%;
     float: left;
@@ -542,7 +591,7 @@ input {
   .fcontent {
     margin: 5px 5px 0 40px;
   }
-   
+
   /* carshow */
 
   .fotoshow-col {
@@ -559,7 +608,7 @@ input {
   }
 
 /* home */
-  
+
   .left-as {
     width: 25%;
     float: left;
@@ -585,12 +634,17 @@ input {
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+
+  .affix {
+    position: static;
+  }
+
   h4 {
     text-align: left;
   }
 
 /* feedbacks */
-  
+
   .feedbacks-col {
     width: 60%;
     float: left;
@@ -615,7 +669,7 @@ input {
   .fcontent {
     margin: 5px 5px 0 40px;
   }
-   
+
 /* carshow */
 
   .fotoshow-col {

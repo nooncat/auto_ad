@@ -9,12 +9,12 @@
     <li class="simple-first">
     <% $carprev = 1 %>
 <% end %>
-<div class="photo">
-  <% if car.photos.any? %>
-    <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)"), car_path(car)) %>
-  <% else %>
-    <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
-    <% end %>
+  <div class="photo">
+    <% if car.photos.any? %>
+      <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)"), car_path(car)) %>
+    <% else %>
+      <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
+      <% end %>
   </div>
   <div class="cartext">
     <span class="name">

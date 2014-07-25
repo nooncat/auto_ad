@@ -11,7 +11,7 @@
         <%= f.select(:mileage, options_for_select(mileage_list, @car.mileage), include_blank: "--Пробег, км--") %>
       </p>
       <p>
-        <%= f.select(:body_type, options_for_select(car_bodys_list, @car.body_type), include_blank: "--Тип кузова--") %> 
+        <%= f.select(:body_type, options_for_select(car_bodys_list, @car.body_type), include_blank: "--Тип кузова--") %>
         <%= f.select(:color, options_for_select(colors_list, @car.color), include_blank: "--Цвет--") %>
       </p>
       <p>
@@ -24,7 +24,7 @@
       </p>
       <p>
         <%= f.text_area :describtion, placeholder: "Описание...", :size => "25x7" %>
-      </p> 
+      </p>
       <%= f.fields_for :photos do |p| %>
         <p class="photo-add">
           <%= image_tag(p.object.image.url(:thumb),class:"photo-pre") if p.object.image? %>
@@ -34,7 +34,7 @@
         </p>
       <% end %>
       <p class="link-to-add">
-        <%= f.link_to_add "добавить фото", :photos %><br /> 
+        <%= f.link_to_add "добавить фото", :photos %><br />
       </p>
       <p><%= f.submit "Сохранить объявление", class: "btn btn-flat" %></p>
     <% end %>
