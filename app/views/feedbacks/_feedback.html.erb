@@ -1,4 +1,13 @@
-<div class="feedback">
+<% if $feedprev == 2 %>
+    <li class="feed-first">
+    <% $feedprev = 1 %>
+<% elsif $feedprev == 1 %>
+    <li class="feed-sec">
+    <% $feedprev = 2 %>
+<% else %>
+    <li class="feed-first">
+    <% $feedprev = 1 %>
+<% end %>
   <div class="fname">
     <%= feedback.name %>:
   </div>
@@ -16,4 +25,4 @@
       </div>
     <% end %>
     <br clear="all">
-</div>
+</li>

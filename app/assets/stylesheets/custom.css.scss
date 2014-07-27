@@ -79,14 +79,14 @@ h4 {
   float: left;
   margin-right: 1em;
   font-size: 1.7em;
-  color: white;
+  color: #474747;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: white;
+    color: #777777;
     text-decoration: none;
   }
 }
@@ -133,12 +133,16 @@ footer {
   -webgit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  outline: none !important;
+  text-shadow: none;
   background-image: none;
-  background-color: #1570a6;
+  background-color: #4f4f4f;
   color: #ffffff;
   border: 0;
+  display: table-cell;
+  vertical-align: bottom;
   &:hover {
-    background-color: #083047;
+    background-color: #7a7a7a;
     color: #ffffff;
   }
 }
@@ -168,12 +172,6 @@ input {
   margin: 0 auto;
   max-width: 333px;
   text-align: center;
-  p {
-  }
-  .teaser-text {
-    margin: 0 0 20px 10px;
-    float: left;
-  }
 
   textarea {
     width: 100%;
@@ -245,7 +243,7 @@ input {
 
 /* heads */
 
-.cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head {
+.cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head, .other-head {
   text-align: center;
   color: #ffffff;
   background-color: #828282;
@@ -254,20 +252,19 @@ input {
   text-transform: uppercase;
 }
 
-.feedbacks-head {
+.feedbacks-head, .company-head {
   margin-top: 2px;
+}
+
+.other-head {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7px;
 }
 
 
 /* cars */
-
-.teaser-first {
-  background-color: #eeeeee;
-}
-
-.teaser-sec {
-  background-color: #f6f6f6;
-}
 
 .simple-first {
   background-color: #eeeeee;
@@ -326,7 +323,7 @@ input {
   .car-teaser {
     margin: 0 auto;
     max-width: 240px;
-    background-color: #fff9c9;
+    background-color: #eeeeee;
     span + span {
       margin-left: 8px;
     }
@@ -395,44 +392,40 @@ input {
     margin: 4px 0;
     color: #545454;
     display: inline;
+    white-space: nowrap;
   }
   .phone-3 {
     margin: 4px 0;
     color: #616161;
     display: inline;
+    white-space: nowrap;
   }
 }
 
 /* feedbacks */
 
-.as-feedbacks {
-  background-color: #f2f2f2;
+.feedbacks {
+  list-style: none;
+  margin: 0;
 }
 
-.feedbacks-col {
-  h4 {
-    margin: 15px 0;
-  }
+.feed-first {
+  background-color: #eeeeee;
 }
 
-.feedback {
-  padding-top: 15px;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.feedback:first-child {
-  border-top: 1px solid #e8e8e8;
+.feed-sec {
+  background-color: #f6f6f6;
 }
 
 .fname {
   font-weight: bold;
   color: #696969;
-  margin-left: 25px;
+  padding: 15px 0 0 12px;
 }
 
 .fcontent {
   font-style: italic;
-  margin: 5px 20px 0 60px;
+  padding: 0 10px 0 30px;
   text-indent: 10px;
   color: #696969;
   word-wrap: break-word;
@@ -456,12 +449,8 @@ input {
 
 /* feed new edit */
 
-.newfeedback-col, .feed-edit, .site-edit {
+.newfeedback-col, .feed-edit, {
   text-align: center;
-
-  h4 {
-    margin: 15px 0;
-  }
 
   input {
     width: 230px;
@@ -563,6 +552,21 @@ input {
     z-index: 10000;
   }
 
+  .navbar-inner {
+    border-bottom: none;
+  }
+
+  .nav {
+    li {
+      a {
+        color: #474747 !important;
+        &:hover {
+          color: #777777 !important;
+        }
+      }
+    }
+  }
+
   .affix {
     position: fixed;
   }
@@ -581,20 +585,17 @@ input {
 
 /* heads */
 
-  .cars-head, .feedbacks-head, .teaser-head, .company-head {
-    margin-top: 3px;
+  .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head {
+    margin-top: 7px;
   }
 
 /* feedbacks */
 
   .feedbacks-col {
-    width: 60%;
+    width: 59%;
     float: left;
     h4 {
       text-align: center;
-    }
-    .feedbacks {
-      margin-right: 20px;
     }
   }
   .newfeedback-col {
@@ -605,11 +606,11 @@ input {
     }
   }
   .fname {
-    margin-left: 10px;
+    padding: 15px 0 0 22px;
   }
 
   .fcontent {
-    margin: 5px 5px 0 40px;
+    padding: 0 20px 0 40px;
   }
 
   /* carshow */
@@ -674,11 +675,11 @@ input {
     }
   }
   .fname {
-    margin-left: 10px;
+    padding: 15px 0 0 22px;
   }
 
   .fcontent {
-    margin: 5px 5px 0 40px;
+    padding: 0 20px 0 40px;
   }
 
 /* carshow */
@@ -709,7 +710,7 @@ input {
 
 /* heads */
 
-  .cars-head, .feedbacks-head, .teaser-head {
+  .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head {
     margin-top: 3px;
   }
 }

@@ -1,12 +1,14 @@
 <% provide(:title, 'Проверка отзыва') %>
-<h3>Проверка отзыва</h3>
+<div class="other-head">
+  проверка отзыва 
+</div>
 <div class="row-fluid">
   <div class="feed-edit">
     <%= form_for(@feedback) do |f| %>
       <%= render 'feedback_form', f: f %>
       <div><%= "Показать отзыв посетителям" %></div>
       <div><%= f.check_box :checkf %></div>
-      <%= f.submit "Сохранить отзыв", class: "btn btn-flat" %>
+      <%= f.submit "сохранить отзыв", class: "btn btn-flat" %>
     <% end %>
   </div>
 </div>

@@ -1,5 +1,7 @@
 <% provide(:title, "Смена пароля") %>
-<h3>Смена пароля</h3>
+<div class="other-head">
+  смена пароля 
+</div>
 
 <div class="row-fluid">
   <div class="user-edit">
@@ -15,7 +17,7 @@
       <%= f.label :password_confirmation, "Подтверждение" %>
       <%= f.password_field :password_confirmation %><br />
       
-      <%= f.submit "Сохранить", class: "btn btn-primary" %>
+      <%= f.submit "сохранить", class: "btn btn-flat" %>
     <% end %>
   </div>
 </div>
