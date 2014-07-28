@@ -263,15 +263,31 @@ input {
   margin-bottom: 7px;
 }
 
+/* empty span */
+
+.empty-span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url('empty.gif');
+  min-height: 5px !important;
+}
+
+
 
 /* cars */
 
 .simple-first {
   background-color: #eeeeee;
+  position: relative;
 }
 
 .simple-sec {
   background-color: #f6f6f6;
+  position: relative;
 }
 
 .cars {
@@ -324,6 +340,7 @@ input {
     margin: 0 auto;
     max-width: 240px;
     background-color: #eeeeee;
+    position: relative;
     span + span {
       margin-left: 8px;
     }

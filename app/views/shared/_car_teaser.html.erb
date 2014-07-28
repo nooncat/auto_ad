@@ -15,5 +15,8 @@
       <%= "#{car.engine} #{car.transmission}" %>
     </span>
     <br clear="all">
+    <%= link_to car_path(car) do %>
+      <span class="empty-span"></span>
+    <% end %>
   </div>
 <% end %>
