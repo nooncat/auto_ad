@@ -23,8 +23,8 @@ html {
 
 body {
   background-color: #ffffff;
-  margin: 0;
   padding: 0;
+  margin: 0;
   height: 100%;
 }
 
@@ -46,6 +46,7 @@ body {
 .push {
   height: 40px;
   clear: both;
+  padding-top: 45px;
 }
 
 textarea {
@@ -69,11 +70,12 @@ h4 {
 
 /* header */
 
-  .navbar {
-    li {
-     font-weight: bold;
-    }
+.navbar {
+  margin: 0;
+  li {
+   font-weight: bold;
   }
+}
 
 #logo {
   float: left;
@@ -114,7 +116,6 @@ footer {
     text-decoration: none;
   }
 }
-
 
 /* miscellaneous */
 
@@ -276,8 +277,6 @@ input {
   min-height: 5px !important;
 }
 
-
-
 /* cars */
 
 .simple-first {
@@ -292,11 +291,10 @@ input {
 
 .cars {
   list-style: none;
-  margin: 0 0 0 0;
+  margin: 0;
   .photo {
-    margin: 5px 15px 5px 5px;
+    padding: 5px 15px 5px 5px;
     float: left;
-    border: 1px solid #e8e8e8;
     max-height: 100%;
     height: auto;
   }
@@ -401,18 +399,15 @@ input {
   font-weight: bold;
   font-size: 1.8em;
   .phone-1 {
-    margin: 4px 0;
     color: #474747;
     display: inline;
   }
   .phone-2 {
-    margin: 4px 0;
     color: #545454;
     display: inline;
     white-space: nowrap;
   }
   .phone-3 {
-    margin: 4px 0;
     color: #616161;
     display: inline;
     white-space: nowrap;
@@ -442,7 +437,7 @@ input {
 
 .fcontent {
   font-style: italic;
-  padding: 0 10px 0 30px;
+  margin: 0 10px 0 30px;
   text-indent: 10px;
   color: #696969;
   word-wrap: break-word;
@@ -500,10 +495,6 @@ input {
 /* about page */
 
 .about-page {
-  h3 {
-    margin: 0;
-  }
-
   p {
     margin: 0 10px 0 15px;
     text-indent: 15px
@@ -528,19 +519,20 @@ input {
       }
     }
     .phones {
-      padding: 0 10px 0 0;
+      margin: 0 10px 0 0;
+      padding: 0;
       float: right;
       font-weight: bold;
       font-size: 1.8em;
       .phone-1 {
         margin: 4px 0;
-        padding-left: 40px;
+        margin-left: 40px;
         color: #474747;
         display: block;
       }
       .phone-2 {
         margin: 4px 0;
-        padding-left: 20px;
+        margin-left: 20px;
         color: #545454;
         display: block;
       }
@@ -592,6 +584,7 @@ input {
     top: 0;
     width: 100%;
   }
+
   .navbar.affix + .container-fluid {
     padding-top: 40px;
   }
@@ -615,6 +608,7 @@ input {
       text-align: center;
     }
   }
+
   .newfeedback-col {
     width: 40%;
     float: right;
@@ -622,6 +616,7 @@ input {
       text-align: center;
     }
   }
+
   .fname {
     padding: 15px 0 0 22px;
   }
@@ -630,12 +625,13 @@ input {
     padding: 0 20px 0 40px;
   }
 
-  /* carshow */
+/* carshow */
 
   .fotoshow-col {
     width: 65%;
     float: left;
   }
+
   .cardesc-col {
     width: 35%;
     float: right;
@@ -651,11 +647,13 @@ input {
     width: 25%;
     float: left;
   }
+
   .center-col {
     float: left;
     width: 49%;
     margin-left: 1%;
   }
+
   .right-as {
     width: 24%;
     float: right;
@@ -668,12 +666,7 @@ input {
     position: static;
   }
 
-  h4 {
-    text-align: left;
-  }
-
 /* feedbacks */
-
   .feedbacks-col {
     width: 60%;
     float: left;
@@ -684,6 +677,7 @@ input {
       margin-right: 20px;
     }
   }
+
   .newfeedback-col {
     width: 40%;
     float: right;
@@ -691,6 +685,7 @@ input {
       text-align: center;
     }
   }
+
   .fname {
     padding: 15px 0 0 22px;
   }
@@ -705,6 +700,7 @@ input {
     width: 60%;
     float: left;
   }
+
   .cardesc-col {
     width: 40%;
     float: right;
@@ -720,6 +716,7 @@ input {
     width: 72%;
     float: left;
   }
+
   .right-as {
     width: 26%;
     float: right;
@@ -735,7 +732,7 @@ input {
 @media (max-width: 767px) {
   header {
     .container-fluid {
-     margin: 0 10px;
+     padding: 0 10px;
     }
   }
 }
