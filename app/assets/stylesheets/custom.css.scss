@@ -257,10 +257,6 @@ input {
   margin-top: 2px;
 }
 
-.feedbacks-head {
-  margin-bottom: 7px;
-}
-
 .other-head {
   width: 320px;
   margin-left: auto;
@@ -427,21 +423,22 @@ input {
 
 .feed-first {
   background-color: #eeeeee;
+  padding: 17px 25px 0 25px;
 }
 
 .feed-sec {
   background-color: #f6f6f6;
+  padding: 17px 25px 0 25px;
 }
 
 .fname {
   font-weight: bold;
   color: #696969;
-  padding: 15px 0 0 12px;
 }
 
 .fcontent {
   font-style: italic;
-  margin: 0 10px 0 30px;
+  margin-left: 25px;
   text-indent: 10px;
   color: #696969;
   word-wrap: break-word;
@@ -453,13 +450,27 @@ input {
 
 /* vk_group */
 
-.vkgroup-vidget {
+.vkgroup-vidget-01 {
   width: 100%;
   margin-top: 2px;
 }
 
-#vk_groups,
-#vk_groups iframe {
+.vkgroup-vidget-02 {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.vkgroup-vidget-03 {
+  width: 100%;
+  margin-top: 2px;
+}
+
+#vk_groups_01,
+#vk_groups_02,
+#vk_groups_03,
+#vk_groups_01 iframe,
+#vk_groups_02 iframe,
+#vk_groups_03 iframe {
   width: 100% !important;
 }
 
@@ -593,10 +604,6 @@ input {
     padding-top: 40px;
   }
 
-  h4 {
-    text-align: left;
-  }
-
 /* heads */
 
   .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head {
@@ -608,25 +615,11 @@ input {
   .feedbacks-col {
     width: 59%;
     float: left;
-    h4 {
-      text-align: center;
-    }
   }
 
   .newfeedback-col {
     width: 40%;
     float: right;
-    h4 {
-      text-align: center;
-    }
-  }
-
-  .fname {
-    padding: 15px 0 0 22px;
-  }
-
-  .fcontent {
-    padding: 0 20px 0 40px;
   }
 
 /* carshow */
@@ -671,12 +664,10 @@ input {
   }
 
 /* feedbacks */
+  
   .feedbacks-col {
-    width: 60%;
+    width: 59%;
     float: left;
-    h4 {
-      text-align: center;
-    }
     .feedbacks {
       margin-right: 20px;
     }
@@ -685,17 +676,6 @@ input {
   .newfeedback-col {
     width: 40%;
     float: right;
-    h4 {
-      text-align: center;
-    }
-  }
-
-  .fname {
-    padding: 15px 0 0 22px;
-  }
-
-  .fcontent {
-    padding: 0 20px 0 40px;
   }
 
 /* carshow */
