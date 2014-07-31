@@ -1,18 +1,3 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  activerecord:
-    attributes:
-      user:
-        password_digest: "Password"
-  will_paginate:
-    previous_label: "<<"
-    next_label: ">>"
-  about_text: "Текст страницы О нас"
-  copyrights_text: "Copyrights текст в футере"
-  phone_text: "Номер телефона"
-  skype_text: "Skype username"
-  title_text: "Название сайта"
-  vk_text: "Ссылка вконтакте(http://vk.com/id)"
-
