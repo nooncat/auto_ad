@@ -17,10 +17,6 @@
 #  mileage         :string(255)
 #  model           :string(255)
 #
-# Indexes
-#
-#  index_cars_on_created_at  (created_at)
-#
 
 class Car < ActiveRecord::Base
   attr_accessible :name, :describtion, :price, :year_of_release, :body_type, :engine, :engine_type, :transmission, :color, :mileage, :model, :photos_attributes
