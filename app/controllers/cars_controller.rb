@@ -19,7 +19,7 @@ class CarsController < ApplicationController
     @car = Car.new(params[:car])
     if @car.save
       flash[:success] = "Объявление успешно размещено."
-      redirect_to root_url
+      redirect_to cars_url
     else
       render 'new'
     end
@@ -33,7 +33,7 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
     if @car.update_attributes(params[:car])
       flash[:success] = "Объявление изменено."
-      redirect_to root_url
+      redirect_to cars_url
     else
       render 'edit'
     end

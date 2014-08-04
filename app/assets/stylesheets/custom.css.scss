@@ -72,6 +72,7 @@ h4 {
 
 .navbar {
   margin: 0;
+
   li {
    font-weight: bold;
   }
@@ -87,6 +88,7 @@ h4 {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+
   &:hover {
     color: #777777;
     text-decoration: none;
@@ -100,6 +102,7 @@ footer {
   color: #a0a0a0;
   background-color: #e6e6e6;
   clear: both;
+
   ul {
     text-align: center;
     line-height: 40px;
@@ -111,6 +114,7 @@ footer {
   float: left;
   color: #e6e6e6;
   padding: 14px 0 0 12px;
+
   &:hover {
     color: #c0c0c0;
     text-decoration: none;
@@ -142,6 +146,7 @@ footer {
   border: 0;
   display: table-cell;
   vertical-align: bottom;
+
   &:hover {
     background-color: #7a7a7a;
     color: #ffffff;
@@ -177,6 +182,7 @@ input {
   textarea {
     width: 100%;
   }
+
   input, select {
     width: 49%;
   }
@@ -211,6 +217,7 @@ input {
 
 #error_explanation {
   color: #f00;
+
   ul {
     list-style: none;
     margin: 3px 0 3px 0;
@@ -228,9 +235,11 @@ input {
   margin: 0 auto;
   max-width: 333px;
   text-align: center;
+
   ul {
     list-style: none;
     margin: 0;
+
     li {
       overflow: auto;
       padding: 10px 0;
@@ -244,7 +253,8 @@ input {
 
 /* heads */
 
-.cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head, .other-head {
+.cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head,
+  .other-head, .callback-head {
   text-align: center;
   color: #ffffff;
   background-color: #828282;
@@ -292,12 +302,14 @@ input {
 .cars {
   list-style: none;
   margin: 0;
+
   .photo {
     padding: 5px 15px 5px 5px;
     float: left;
     max-height: 100%;
     height: auto;
   }
+
   .cartext {
     padding-top: 4px;
   }
@@ -331,9 +343,10 @@ input {
 
 /* teaser_cars */
 
-.teaser_cars {
+.teaser-cars {
   margin: 0;
   text-align: center;
+
   .car-teaser {
     margin: 0 auto;
     max-width: 240px;
@@ -355,6 +368,31 @@ input {
   margin-left: 5px;
 }
 
+/* callback */
+
+.callback {
+  margin: 0;
+  text-align: center;
+
+  form {
+    margin: 0;
+  }
+
+  label {
+    margin: 7px 0 0 0;
+    font-weight: bold;
+    color: #696969;
+  }
+
+  input {
+    margin: 4px 0 0 0;
+  }
+
+  .btn {
+    margin: 18px 0 12px 0;
+  }
+}
+
 /* carshow */
 
 .fotoshow-col {
@@ -365,13 +403,16 @@ input {
 .cardesc-col {
   margin: 0 auto;
   max-width: 640px;
+
   .cardesc {
     margin: 0 10px;
+
     .contacts {
       font-size: 1.5em;
       padding-top: 10px;
       text-align: center;
     }
+
     .price {
       margin: 20px 0 0 0;
 
@@ -398,15 +439,18 @@ input {
   padding-top: 4px;
   font-weight: bold;
   font-size: 1.8em;
+
   .phone-1 {
     color: #474747;
     display: inline;
   }
+
   .phone-2 {
     color: #545454;
     display: inline;
     white-space: nowrap;
   }
+
   .phone-3 {
     color: #616161;
     display: inline;
@@ -465,12 +509,8 @@ input {
   margin-top: 2px;
 }
 
-#vk_groups_01,
-#vk_groups_02,
-#vk_groups_03,
-#vk_groups_01 iframe,
-#vk_groups_02 iframe,
-#vk_groups_03 iframe {
+#vk_groups_01, #vk_groups_02, #vk_groups_03, #vk_groups_01 iframe,
+    #vk_groups_02 iframe, #vk_groups_03 iframe {
   width: 100% !important;
 }
 
@@ -497,6 +537,7 @@ input {
 
 .sign-in, .user-edit, .user-new {
   text-align: center;
+
   .btn {
     margin-top: 15px;
     width: auto;
@@ -510,6 +551,7 @@ input {
 /* about page */
 
 .about-page {
+
   p {
     margin: 0 10px 0 15px;
     text-indent: 15px
@@ -525,41 +567,49 @@ input {
   .intro {
     height: 93px;
     background-color: #fff;
+
     .intro-logo {
       float: left;
     }
     .intro-logo {
+
       .logo-png {
         max-height: 100%;
       }
     }
+
     .phones {
       margin: 0 10px 0 0;
       padding: 0;
       float: right;
       font-weight: bold;
       font-size: 1.8em;
+
       .phone-1 {
         margin: 4px 0;
         margin-left: 40px;
         color: #474747;
         display: block;
       }
+
       .phone-2 {
         margin: 4px 0;
         margin-left: 20px;
         color: #545454;
         display: block;
       }
+
       .phone-3 {
         margin: 4px 0;
         color: #616161;
         display: block;
       }
     }
+
     .intro-slogan {
       display: inline-block;
       padding-left: 80px;
+
       ul {
         text-align: center;
         line-height: 93px;
@@ -581,9 +631,12 @@ input {
   }
 
   .nav {
+
     li {
+
       a {
         color: #474747 !important;
+
         &:hover {
           color: #777777 !important;
         }
@@ -606,7 +659,8 @@ input {
 
 /* heads */
 
-  .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head {
+  .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head,
+    .callback-head {
     margin-top: 7px;
   }
 
@@ -633,6 +687,7 @@ input {
     width: 35%;
     float: right;
     padding: 0;
+
     .cardesc {
       margin: 0 20px;
     }
@@ -664,10 +719,11 @@ input {
   }
 
 /* feedbacks */
-  
+
   .feedbacks-col {
     width: 59%;
     float: left;
+
     .feedbacks {
       margin-right: 20px;
     }
@@ -689,6 +745,7 @@ input {
     width: 40%;
     float: right;
     padding: 0;
+
     .cardesc {
       margin: 0 15px;
     }
@@ -708,7 +765,8 @@ input {
 
 /* heads */
 
-  .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head {
+  .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head,
+    .callback-head {
     margin-top: 3px;
   }
 }

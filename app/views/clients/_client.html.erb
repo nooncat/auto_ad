@@ -1,0 +1,17 @@
+<% if $clientprev == 2 %>
+    <li class="client-first">
+    <% $clientprev = 1 %>
+<% elsif $clientprev == 1 %>
+    <li class="client-sec">
+    <% $clientprev = 2 %>
+<% else %>
+    <li class="client-first">
+    <% $clientprev = 1 %>
+<% end %>
+  <div class="client-name">
+    <%= client.name %>:
+  </div>
+  <div class="client-phone">
+    "<%= client.phone %>"
+  </div>
+</li>

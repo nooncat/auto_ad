@@ -14,7 +14,7 @@ class FeedbacksController < ApplicationController
   def create
     @feedback = Feedback.new(params[:feedback])
     if @feedback.save
-      flash[:success] = "Спасибо. Отзыв будет отображен после проверки администратором сайта."
+      flash[:success] = "Спасибо! Отзыв будет отображен после проверки администратором сайта."
       redirect_to feedbacks_url
     else
       if signed_in?

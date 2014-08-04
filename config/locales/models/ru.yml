@@ -2,10 +2,17 @@ ru:
   activerecord:
     models:
       feedback: Отзыв
+
     attributes:
+
       feedback:
         name: Имя
         contact: Email или номер телефона
         content: Отзыв
+
       user:
         password_digest: "Password"
+
+      client:
+        name: Имя
+        phone: Номер телефона

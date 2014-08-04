@@ -1,0 +1,17 @@
+<% provide(:title, 'Заявки') %>
+<div class="row-fluid">
+  <div class="clients-col">
+    <div class="collback-head">
+      Список заявок
+    </div>
+    <% if @clients.any? %>
+        <ol class="cliens">
+          <% $clientprev = 2 %>
+          <%= render @clients %>
+        </ol>
+      <%= will_paginate @clients %>
+    <% else %>
+      <%= "Заявок нет." %>
+    <% end %>
+  </div>
+</div>
