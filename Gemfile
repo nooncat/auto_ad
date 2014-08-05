@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'nested_form'
 gem 'rmagick'
 gem 'fotoramajs', '4.5.2'
+gem 'rails-i18n', '~> 3.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
