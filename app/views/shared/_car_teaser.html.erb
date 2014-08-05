@@ -1,12 +1,12 @@
 <% for car in @cars_teaser %>
   <div class="car-teaser">
     <% if car.photos.any? %>
-      <%= link_to(image_tag(car.photos.first.image.url(:small), class: "teaser-photo", title: "#{car.name} #{car.model}, #{car.year_of_release}"), car_path(car)) %>
+      <%= link_to(image_tag(car.photos.first.image.url(:small), class: "teaser-photo", title: "#{car.name} #{car.model}, #{car.year_of_release}"), car_path(car), class: "car-link") %>
     <% else %>
-      <%= link_to(image_tag("small_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release}"), car_path(car)) %>
+      <%= link_to(image_tag("small_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release}"), car_path(car), class: "car-link") %>
     <% end %>
     <span class="teaser-name">
-      <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>
+      <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car), class: "car-link" %>
     </span>
     <span class="teaser-price">
       <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб." %>

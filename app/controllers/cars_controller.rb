@@ -42,7 +42,7 @@ class CarsController < ApplicationController
   def destroy
     Car.find(params[:id]).destroy
     flash[:success] = "Объявление удалено."
-    redirect_to root_url
+    redirect_to cars_url
   end
 
   private

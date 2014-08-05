@@ -10,14 +10,17 @@
 <% end %>
   <div class="photo">
     <% if car.photos.any? %>
-      <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)"), car_path(car)) %>
+      <%= link_to(image_tag(car.photos.first.image.url(:thumb), title: "#{car.name} #{car.model}, #{car.year_of_release} (#{car.photos.count} фото)"), car_path(car), class: "car-link") %>
     <% else %>
-      <%= link_to(image_tag("thumb_default.png", title: "#{car.name} #{car.model}, #{car.year_of_release} (без фото)"), car_path(car)) %>
+      <%= link_to(image_tag("thumb_default.png", title:
+            "#{car.name} #{car.model},#{car.year_of_release} (без фото)"),
+                                    car_path(car), class: "car-link") %>
       <% end %>
   </div>
   <div class="cartext">
     <span class="name">
-      <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")), car_path(car) %>
+      <%= link_to (h("#{car.name} #{car.model}, #{car.year_of_release}")),
+                                      car_path(car), class: "car-link" %>
     </span><br />
     <span class="price">
       <%= "#{number_with_delimiter(car.price.to_i, delimiter: " ")} руб." %>
@@ -33,14 +36,15 @@
     </span><br />
     <% if signed_in? %>
       <span class="admin">
-        | <%= link_to "изменить", edit_car_path(car) %>
+        | <%= link_to "изменить", edit_car_path(car), class: "car-link" %>
         | <%= link_to "удалить", car, method: :delete,
-                                      data: { confirm: "Удалить?" } %>
+                    data: { confirm: "Удалить?" }, class: "car-link" %>
       </span>
     <% end %>
   </div>
+  <br clear="all">
   <%= link_to car_path(car) do %>
     <span class="empty-span"></span>
   <% end %>
-  <br clear="all">
 </li>
+
