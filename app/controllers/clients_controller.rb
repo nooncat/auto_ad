@@ -16,7 +16,9 @@ class ClientsController < ApplicationController
   end
 
   def index
+    @callbacks = Client.paginate(page: params[:page], per_page: 10)
     @clients = Client.paginate(page: params[:page], per_page: 10)
+    @client = Client.new
   end
 
   private

@@ -176,6 +176,7 @@ input {
 
 .car-form {
   margin: 0 auto;
+  margin-top: 14px;
   max-width: 333px;
   text-align: center;
 
@@ -229,7 +230,7 @@ input {
   @extend .error;
 }
 
-/* users index */
+/* users index page */
 
 .users {
   margin: 0 auto;
@@ -287,7 +288,7 @@ input {
   min-height: 5px !important;
 }
 
-/* cars */
+/* cars col */
 
 .simple-first {
   background-color: #eeeeee;
@@ -341,7 +342,7 @@ input {
   }
 }
 
-/* teaser_cars */
+/* teaser_cars col */
 
 .teaser-cars {
   margin: 0;
@@ -373,9 +374,39 @@ input {
   z-index: 2;
 }
 
-/* callback */
+/* clients page */
 
-.callback {
+.new-client-col {
+  text-align: center;
+}
+
+/* callback-list */
+
+.client-first {
+  background-color: #eeeeee;
+  position: relative;
+}
+
+.client-sec {
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+.client-first, .client-sec {
+
+  .client-name {
+    float: left;
+  }
+
+  .client-phone {
+    float: right;
+  }
+}
+
+
+/* callback-div new-client-col */
+
+.callback, .new-client-col {
   margin: 0;
   text-align: center;
 
@@ -393,6 +424,10 @@ input {
     margin: 4px 0 0 0;
   }
 
+  textarea {
+    margin: 4px 0 0 0;
+  }
+
   .field_with_errors {
     margin: 0;
   }
@@ -402,7 +437,7 @@ input {
   }
 }
 
-/* carshow */
+/* carshow page */
 
 .fotoshow-col {
   margin: 0 auto;
@@ -441,7 +476,7 @@ input {
   }
 }
 
-/* phones */
+/* phones on intro */
 
 .phones {
   text-align: center;
@@ -674,7 +709,7 @@ input {
     margin-top: 7px;
   }
 
-/* feedbacks */
+/* feedbacks page */
 
   .feedbacks-col {
     width: 59%;
@@ -686,7 +721,7 @@ input {
     float: right;
   }
 
-/* carshow */
+/* carshow page */
 
   .fotoshow-col {
     width: 65%;
@@ -718,6 +753,24 @@ input {
 
   .right-as {
     width: 24%;
+    float: right;
+  }
+
+/* client page */
+
+  .callbacks-col {
+    width: 30%;
+    float: left;
+  }
+
+  .clients-col {
+    width: 39%;
+    float: left;
+    margin-left: 1%;
+  }
+
+  .new-client-col {
+    width: 29%;
     float: right;
   }
 }
@@ -791,3 +844,4 @@ input {
 
 @media (max-width: 480px) {
 }
+

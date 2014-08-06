@@ -14,7 +14,7 @@
           <li><a href="/feedbacks"> отзывы </a></li>
           <% if signed_in? %>
             <li><a href="/compose"> объявление </a></li>
-            <li><%= link_to 'заявки'.html_safe, clients_path %><li>
+            <li><%= link_to 'заявки-клиенты'.html_safe, clients_path %><li>
             <% if current_user.admin? %>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> админка <b class="caret"></b>

@@ -1,17 +1,42 @@
-<% provide(:title, 'Заявки') %>
+<% provide(:title, 'Заявки-клиенты') %>
 <div class="row-fluid">
-  <div class="clients-col">
-    <div class="collback-head">
+  <span class="callbacks-col">
+    <div class="callback-head">
       Список заявок
     </div>
     <% if @clients.any? %>
-        <ol class="cliens">
+        <div class="clients">
           <% $clientprev = 2 %>
           <%= render @clients %>
-        </ol>
+        </div>
       <%= will_paginate @clients %>
     <% else %>
       <%= "Заявок нет." %>
     <% end %>
-  </div>
+  </span>
+  <span class="clients-col">
+    <div class="callback-head">
+      Список клиентов
+    </div>
+  </span>
+  <span class="new-client-col">
+    <div class="callback-head">
+      новый клиент
+    </div>
+    <%= form_for(@client) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name, "Ваше имя" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :phone, "Номер телефона" %>
+      <%= f.text_field :phone %>
+
+      <%= f.label :information, "Информация о заказе" %>
+      <%= f.text_area :information, :size => "25x7" %><br />
+
+      <%= f.submit "сохранить клиента", class: "btn btn-flat" %>
+    <% end %>
+  </span>
 </div>
+
