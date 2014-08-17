@@ -10,6 +10,12 @@
 #  remember_token  :string(255)
 #  admin           :boolean          default(FALSE)
 #
+# Indexes
+#
+#  index_users_on_login           (login) UNIQUE
+#  index_users_on_name            (login) UNIQUE
+#  index_users_on_remember_token  (remember_token)
+#
 
 class User < ActiveRecord::Base
   attr_accessible :login, :password, :password_confirmation

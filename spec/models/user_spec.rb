@@ -11,6 +11,12 @@
 #  remember_token  :string(255)
 #  admin           :boolean          default(FALSE)
 #
+# Indexes
+#
+#  index_users_on_login           (login) UNIQUE
+#  index_users_on_name            (login) UNIQUE
+#  index_users_on_remember_token  (remember_token)
+#
 
 require 'spec_helper'
 

@@ -18,6 +18,10 @@
 #  mileage         :string(255)
 #  model           :string(255)
 #
+# Indexes
+#
+#  index_cars_on_created_at  (created_at)
+#
 
 require 'spec_helper'
 

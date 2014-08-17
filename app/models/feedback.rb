@@ -10,6 +10,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_feedbacks_on_created_at  (created_at)
+#
 
 class Feedback < ActiveRecord::Base
   attr_accessible :checkf, :contact, :content, :name
