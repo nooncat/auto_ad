@@ -11,7 +11,8 @@ AutoAd::Application.routes.draw do
   match '/compose',  to: 'cars#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  match '/about',   to: 'static_pages#about'
+  match '/contacts',   to: 'static_pages#contacts'
+  match '/services', to: 'static_pages#services'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

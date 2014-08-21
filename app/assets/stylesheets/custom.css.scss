@@ -46,7 +46,7 @@ body {
 .push {
   height: 40px;
   clear: both;
-  padding-top: 45px;
+  margin-top: 30px;
 }
 
 textarea {
@@ -274,7 +274,7 @@ input {
 /* heads */
 
 .cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head,
-  .other-head, .callback-head {
+  .other-head, .callback-head, .contacts-head, .services-head {
   text-align: center;
   color: #ffffff;
   background-color: #828282;
@@ -497,24 +497,28 @@ input {
 
 /* phones on intro */
 
-.phones {
+#phones {
   text-align: center;
   padding-top: 4px;
   font-weight: bold;
   font-size: 1.8em;
+  a:link {
+    color:inherit;
+    text-decoration: none;
+  }
 
-  .phone-1 {
+  #phone-1 {
     color: #474747;
     display: inline;
   }
 
-  .phone-2 {
+  #phone-2 {
     color: #545454;
     display: inline;
     white-space: nowrap;
   }
 
-  .phone-3 {
+  #phone-3 {
     color: #616161;
     display: inline;
     white-space: nowrap;
@@ -613,12 +617,46 @@ input {
 
 /* about page */
 
-.about-page {
+#contact-col {
+  max-width: 490px;
+  margin: 0 auto;
+}
 
-  p {
-    margin: 0 10px 0 15px;
-    text-indent: 15px
+#all-contacts {
+  margin: 10px 5px 0 5px;
+  #phone {
+    white-space: nowrap;
+    color: inherit;
+    text-decoration:none;
   }
+}
+
+#mapwrapper {
+  margin-top:15px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+#mapwrapper:after {
+  padding-top: 80%;
+  display: block;
+  content: '';
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* services page */
+
+#services-col {
+  max-width: 490px;
+  margin: 0 auto;
 }
 
 /* @media queries */
@@ -633,37 +671,33 @@ input {
 
     .intro-logo {
       float: left;
-    }
-
-    .intro-logo {
-
       .logo-png {
         max-height: 100%;
       }
     }
 
-    .phones {
+    #phones {
       margin: 0 10px 0 0;
       padding: 0;
       float: right;
       font-weight: bold;
       font-size: 1.8em;
 
-      .phone-1 {
+      #phone-1 {
         margin: 4px 0;
         margin-left: 40px;
         color: #474747;
         display: block;
       }
 
-      .phone-2 {
+      #phone-2 {
         margin: 4px 0;
         margin-left: 20px;
         color: #545454;
         display: block;
       }
 
-      .phone-3 {
+      #phone-3 {
         margin: 4px 0;
         color: #616161;
         display: block;
@@ -724,7 +758,7 @@ input {
 /* heads */
 
   .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head,
-    .callback-head {
+    .callback-head, .contacts-head, .services-head {
     margin-top: 7px;
   }
 
