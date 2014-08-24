@@ -192,22 +192,55 @@ input {
 
 /* company describtion home */
 
-.company-main {
-  background-color: #eeeeee;
+#company-main {
+  //background-color: #eeeeee;
 }
 
-.podbor-info {
+#podbor-info {
   margin: 5px 10px 10px 14px;
+  font-size: 1.1em;
   li {
     line-height: 1.3;
     list-style: none;
     text-indent: 10px;
   }
 }
-.podbor-sequence {
+
+#podbor-sequence {
   margin: 5px 10px 10px 8px;
+  font-size: 1.1em;
+  .fa-caret-right {
+    color: #60bc56;
+  }
+
   li {
     line-height: 1.3;
+  }
+}
+
+#podbor-prise {
+  margin-top: 8px;
+
+  table, th, td {
+    padding: 5px;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    margin: 10px auto;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  th {
+    background-color: #f2f2eb;
+    padding: 5px 10px;
+  }
+  tr {
+    background-color: #ffffff;
+  }
+  tr:nth-child(odd) {
+    background-color: #f2f2eb;
   }
 }
 
@@ -276,15 +309,11 @@ input {
 .cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head,
   .other-head, .callback-head, .contacts-head, .services-head {
   text-align: center;
-  color: #ffffff;
-  background-color: #828282;
+  color: #474747;
   font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.feedbacks-head, .company-head {
-  margin-top: 2px;
+  margin-top: 14px;
 }
 
 .other-head {
@@ -364,7 +393,7 @@ input {
 /* teaser_cars col */
 
 .teaser-cars {
-  margin: 0;
+  margin: 10px 0 0 0;
   text-align: center;
 
   .car-teaser {
@@ -529,18 +558,18 @@ input {
 
 .feedbacks {
   list-style: none;
-  margin: 0;
+  margin: 2px 0 2px 0;
+
+  li {
+    padding: 10px 10px 0 8px;
+  }
+
+  li + li {
+    padding-top: 0;
+  }
+
 }
 
-.feed-first {
-  background-color: #eeeeee;
-  padding: 17px 25px 0 25px;
-}
-
-.feed-sec {
-  background-color: #f6f6f6;
-  padding: 17px 25px 0 25px;
-}
 
 .fname {
   font-weight: bold;
@@ -557,6 +586,34 @@ input {
 
 .edit {
   margin-left: 25px
+}
+
+.newfeedback-col {
+  form {
+    margin: 0;
+  }
+
+  label {
+    margin: 7px 0 0 0;
+    font-weight: bold;
+    color: #696969;
+  }
+
+  input {
+    margin: 4px 0 0 0;
+  }
+
+  textarea {
+    margin: 4px 0 0 0;
+  }
+
+  .field_with_errors {
+    margin: 0;
+  }
+
+  .btn {
+    margin: 18px 0 12px 0;
+  }
 }
 
 /* vk_group */
@@ -655,8 +712,15 @@ input {
 /* services page */
 
 #services-col {
-  max-width: 490px;
+  max-width: 350px;
   margin: 0 auto;
+  ul {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  .fa-check {
+    color: #60bc56;
+  }
 }
 
 /* @media queries */
@@ -759,7 +823,7 @@ input {
 
   .cars-head, .feedbacks-head, .teaser-head, .company-head, .other-head,
     .callback-head, .contacts-head, .services-head {
-    margin-top: 7px;
+    margin-top: 14px;
   }
 
 /* feedbacks page */

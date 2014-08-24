@@ -6,7 +6,6 @@
     </div>
     <% if @feedbacks.any? %>
         <ol class="feedbacks">
-          <% $feedprev = 2 %>
           <%= render @feedbacks %>
         </ol>
       <%= will_paginate @feedbacks %>

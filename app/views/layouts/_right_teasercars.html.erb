@@ -1,8 +1,8 @@
 <% if @cars_teaser.any? %>
+  <div class="teaser-head">
+    рекомендуем
+  </div>
   <div class="teaser-cars">
-    <div class="teaser-head">
-      рекомендуем
-    </div>
     <%= render 'shared/car_teaser' %>     
   </div>
 <% end %>
