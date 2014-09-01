@@ -1,7 +1,7 @@
 #encoding: UTF-8
 module ApplicationHelper
   def full_title(page_title)
-    base_title = 'Подбор Авто Чебоксары помощь при покупке и продаже автомобиля' 
+    base_title = '"Подбор Авто" Чебоксары профессиональная помощь при покупке автомобиля' 
     if page_title.empty?
       base_title
     else
