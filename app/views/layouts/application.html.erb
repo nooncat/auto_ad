@@ -17,7 +17,7 @@
         center: [56.0746, 47.275131],
         zoom: 16
       });
-    
+
       var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
         balloonContentBody: [
           '<strong>Офис компании "Подбор Авто"</strong>',
@@ -29,6 +29,22 @@
       });
 
       myMap.geoObjects.add(myPlacemark);
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $(window).load(function () {
+          $('.as-callback.affix').width($('.right-as').width());
+        });
+        $(window).resize(function () {
+          $('.as-callback.affix').width($('.right-as').width());
+        });
+        $(window).scroll(function () {
+          $('.as-callback.affix').width($('.right-as').width());
+        });
+        $(document).load(function () {
+            $('.as-callback.affix + .right-teasercars').marginTop($('.as-callback.affix').height());
+        });
     });
   </script>
   </head>

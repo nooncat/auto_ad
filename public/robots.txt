@@ -8,3 +8,11 @@ Disallow: /cars/
 User-Agent: Googlebot
 Disallow: /signin
 Disallow: /cars/
+
+User-Agent: StackRambler
+Disallow: /signin
+Disallow: /cars/
+
+User-Agent: Mail.Ru
+Disallow: /signin
+Disallow: /cars/

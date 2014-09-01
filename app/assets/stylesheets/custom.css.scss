@@ -72,6 +72,10 @@ h4 {
 
 /* header */
 
+.navbar.affix {
+  position: static;
+}
+
 .navbar {
   margin: 0;
   .navbar-inner {
@@ -86,10 +90,6 @@ h4 {
   li {
    font-weight: bold;
   }
-}
-
-.affix {
-  position: static;
 }
 
 #logo {
@@ -160,6 +160,8 @@ footer {
   border: 0;
   display: table-cell;
   vertical-align: bottom;
+  margin-left: auto !important;
+  margin-right: auto !important;
 
   &:hover {
     background-color: #666666;
@@ -204,7 +206,8 @@ input {
   }
 
   .btn {
-    margin: 18px 0 12px 0;
+    margin-top: 18px;
+    margin-bottom: 12px;
   }
 }
 
@@ -228,15 +231,23 @@ input {
   @extend .error;
 }
 
+/* home car index */
+
+#center-div {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
 /* company describtion home */
 
 #podbor-info {
-  margin: 7px 5px 10px 8px;
+  margin: 7px 5px 10px 5px;
   font-size: 1.1em;
   li {
     line-height: 1.3;
     list-style: none;
     text-indent: 10px;
+    margin: 9px 0;
   }
 }
 
@@ -485,8 +496,23 @@ input {
   }
 }
 
+/* callback */
+
+.as-callback {
+  width: 240px !important;
+  margin: 0 auto;
+  
+  #btn-div {
+    margin-top: 10px;
+    margin-left: 20px !important;
+  }
+}
 
 /* callback-div new-client-col */
+
+#client_name, #client_phone {
+    width: 190px;
+}
 
 .callback, .new-client-col {
   margin: 0;
@@ -691,7 +717,7 @@ input {
 /* services page */
 
 #services-col {
-  max-width: 390px;
+  max-width: 490px;
   margin: 0 auto;
   ul {
     margin-top: 10px;
@@ -699,6 +725,9 @@ input {
   }
   .fa-caret-right {
     color: #60bc56;
+  }
+  #services-png {
+    margin-top: 3px;
   }
 }
 
@@ -783,20 +812,40 @@ input {
     }
   }
 
-  .affix {
-    position: fixed;
-  }
-
   .navbar.affix {
+    position: fixed;
     top: 0;
     width: 100%;
     .navbar-inner {
-      box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.25);
+      box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
     }
   }
 
   .navbar.affix + .container-fluid {
     padding-top: 40px;
+  }
+
+/* callback */
+
+  .as-callback.affix {
+    box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
+    z-index: 10000;
+    background-color: #ffffff;
+    position: fixed;
+    top: 40px;
+    width: 240px;
+    .btn-flat {
+      margin-bottom: 23px;
+    }
+  }
+  .as-callback.affix + .right-teasercars {
+    margin-top: 225px;
+  }
+
+/* feedbacks */
+
+  .feedbacks {
+    margin: 0;
   }
 
 /* feedbacks page */
@@ -848,9 +897,9 @@ input {
 
 /* company describtion home */
 
-#podbor-info {
-  margin: 7px 15px 10px 19px;
-}
+  #podbor-info {
+    margin: 7px 15px 10px 19px;
+  }
 
 /* client page */
 
@@ -882,16 +931,26 @@ input {
 
 /* header */
 
-  .affix {
-    position: static;
-  }
-
   .navbar .navbar-inner {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-/* feedbacks */
+  .navbar.affix {
+    position: static;
+  }
+
+/* callback */
+
+  .as-callback, .callback {
+    width: 100%;
+  }
+
+  .as-callback.affix {
+    position: static;
+  }
+
+/* feedbacks page */
 
   .feedbacks-col {
     width: 59%;
@@ -927,17 +986,32 @@ input {
 /* home, carindex */
 
   .center-col {
-    width: 72%;
+    width: 65%;
     float: left;
   }
 
   .right-as {
-    width: 26%;
+    width: 34%;
     float: right;
+  }
+
+  #right-col {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+
+/* company describtion home */
+
+  #podbor-info {
+    margin: 7px 5px 10px 8px;
   }
 }
 
 @media (max-width: 767px) {
+
+/* header */
+
   header {
     .container-fluid {
      padding: 0 10px;

@@ -11,31 +11,45 @@
     </div>
   </span>
   <span class="center-col">
-    <div class="company-desk">
-      <%= render 'shared/as_company' %>
-    </div>
-    <div class="right-teasercars visible-phone">
-      <%= render 'layouts/right_teasercars' %>
-    </div>
-    <div class="as-feedbacks visible-phone">
-      <%= render 'layouts/as_feedbacks' %>
-    </div>
-    <div class="vkgroup-vidget-03 visible-phone">
-      <%= render 'layouts/as_vkgroup_03' %>
+    <div id="center-div">
+      <div class="as-callback visible-phone">
+        <div id="btn-div">
+          <button type="button" class="btn btn-flat" data-toggle="collapse" data-target="#hidden-callback">
+            Заказать обратный звонок
+          </button>
+        </div>
+        <div id="hidden-callback" class="collapse">
+          <%= render 'layouts/as_callback' %>
+        </div>
+      </div>
+      <div id="company-desk">
+        <%= render 'shared/as_company' %>
+      </div>
+      <div class="as-feedbacks visible-phone">
+        <%= render 'layouts/as_feedbacks' %>
+      </div>
+      <div class="right-teasercars visible-phone">
+        <%= render 'layouts/right_teasercars' %>
+      </div>
+      <div class="vkgroup-vidget-03 visible-phone">
+        <%= render 'layouts/as_vkgroup_03' %>
+      </div>
     </div>
   </span>
   <span class="right-as">
-    <div class="as-callback visible-desktop">
-      <%= render 'layouts/as_callback' %>
-    </div>
-    <div class="right-teasercars hidden-phone">
-      <%= render 'layouts/right_teasercars' %>
-    </div>
-    <div class="as-feedbacks visible-tablet">
-      <%= render 'layouts/as_feedbacks' %>
-    </div>
-    <div class='vkgroup-vidget-02 visible-tablet'>
-      <%= render 'layouts/as_vkgroup_02' %>
+    <div id="right-col">
+      <div class="as-callback" data-spy="affix" data-offset-top="97">
+        <%= render 'layouts/as_callback' %>
+      </div>
+      <div class="right-teasercars hidden-phone">
+        <%= render 'layouts/right_teasercars' %>
+      </div>
+      <div class="as-feedbacks visible-tablet">
+        <%= render 'layouts/as_feedbacks' %>
+      </div>
+      <div class='vkgroup-vidget-02 visible-tablet'>
+        <%= render 'layouts/as_vkgroup_02' %>
+      </div>
     </div>
   </span>
 </div>
