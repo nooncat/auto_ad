@@ -15,6 +15,7 @@ gem 'nested_form'
 gem 'rmagick'
 gem 'fotoramajs', '4.5.2'
 gem 'rails-i18n', '~> 3.0.0'
+gem 'sass', '3.4.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,8 +27,6 @@ group :development, :test do
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
   gem 'annotate', '2.5.0'
-  gem 'better_errors'
-  gem 'binding_of_caller'
 end
 
 
