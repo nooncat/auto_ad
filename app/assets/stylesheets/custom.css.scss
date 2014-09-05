@@ -281,11 +281,18 @@ input {
     background-color: #f2f2eb;
     padding: 5px 10px;
   }
+  
   tr {
     background-color: #ffffff;
   }
+
   tr:nth-child(odd) {
     background-color: #f2f2eb;
+  }
+
+  .nowr {
+    display: inline;
+    white-space: nowrap;
   }
 }
 
