@@ -1,43 +1,30 @@
 <div class="row-fluid">
   <div class="car-form">
-    <%= nested_form_for @car, :html=>{:multipart => true } do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-      <p>
+    <%= nested_form_for(@car, :html => {:multipart => true }, :validate => true) do |f| %>
         <%= f.select(:name, options_for_select(car_names_list, @car.name),
                                                include_blank: "--Марка--")  %>
         <%= f.text_field :model, placeholder: "Модель" %>
-      </p>
-      <p>
         <%= f.select(:year_of_release, options_for_select(years_list,
                    @car.year_of_release), include_blank: "--Год выпуска--") %>
         <%= f.select(:mileage, options_for_select(mileage_list,
                             @car.mileage), include_blank: "--Пробег, км--") %>
-      </p>
-      <p>
         <%= f.select(:body_type, options_for_select(car_bodys_list,
                           @car.body_type), include_blank: "--Тип кузова--") %>
         <%= f.select(:color, options_for_select(colors_list, @car.color),
                                                  include_blank: "--Цвет--") %>
-      </p>
-      <p>
         <%= f.select(:engine, options_for_select(car_engines_v_list,
                         @car.engine), include_blank: "--Объем двигателя--") %>
         <%= f.select(:transmission,
                          options_for_select([["Автоматическа","AT"],
                              ["Механическая","MT"]], @car.transmission),
                                       include_blank: "--Коробка передач--") %>
-      </p>
-      <p class="engine-type">
         <%= f.select(:engine_type,
                          options_for_select([["Бензиновый","бензин"],
                           ["Дизельный","дизель"],["Гибридный","гибрид"]],
                      @car.engine_type), include_blank: "--Тип двигателя--") %>
         <%= f.text_field :price, placeholder: "Цена" %>
-      </p>
-      <p>
         <%= f.text_area :describtion, placeholder: "Описание...",
                                                             :size => "25x7" %>
-      </p>
       <%= f.fields_for :photos do |p| %>
         <p class="photo-add">
           <%= image_tag(

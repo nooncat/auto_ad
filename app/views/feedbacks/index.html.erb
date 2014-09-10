@@ -17,7 +17,7 @@
     <div class="feedbacks-head">
       оставьте  ваш отзыв
     </div>
-    <%= form_for(@feedback) do |f| %>
+    <%= form_for(@feedback, :validate => true) do |f| %>
       <%= render 'feedback_form', f: f %>
       <%= f.submit "оставить отзыв", class: "btn btn-flat" %>
     <% end %>

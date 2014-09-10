@@ -6,13 +6,8 @@ class ClientsController < ApplicationController
     @client = Client.new(params[:client])
     if @client.save
       flash[:success] = "Спасибо! Менеджер перезвонит Вам в ближайшее время."
-      redirect_to root_url
-    else
-      @cars = Car.paginate(page: params[:page], per_page: 15)
-      @cars_teaser = Car.all.shuffle.first(3)
-      @feedbacks = Feedback.where("checkf = ?", true).shuffle.first(3)
-      render 'static_pages/home'
     end
+    redirect_to root_url
   end
 
   def index

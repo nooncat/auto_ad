@@ -23,8 +23,7 @@
     <div class="callback-head">
       новый клиент
     </div>
-    <%= form_for(@client) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+    <%= form_for(@client, :validate => true) do |f| %>
 
       <%= f.label :name, "Ваше имя" %>
       <%= f.text_field :name %>

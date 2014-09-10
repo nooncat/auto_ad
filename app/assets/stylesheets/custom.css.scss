@@ -6,9 +6,9 @@
 /* mixins, variables, etc. */
 
 @mixin box_sizing {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* universal */
@@ -150,8 +150,8 @@ footer {
 .btn-flat {
   filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
   -webgit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
   outline: none !important;
   text-shadow: none;
   background-image: none;
@@ -174,7 +174,6 @@ footer {
 input, textarea, select {
   border: 1px solid #bbb;
   padding: 1px;
-  margin-bottom: 15px;
   @include box_sizing;
 }
 
@@ -182,7 +181,7 @@ input {
   height: auto !important;
 }
 
-.newfeedback-col, .callback, .new-client-col, .sign-in {
+.newfeedback-col, .callback, .new-client-col, .sign-in, .feed-edit, .car-form {
   form {
     margin: 0;
   }
@@ -205,6 +204,12 @@ input {
     margin: 0;
   }
 
+  .message {
+    margin-top: 0;
+    color: #f00f00;
+    font-weight: lighter;
+  }
+
   .btn {
     margin-top: 18px;
     margin-bottom: 12px;
@@ -215,15 +220,6 @@ input {
 
 .alert {
   margin: 5px 0 5px 0;
-}
-
-#error_explanation {
-  color: #f00;
-
-  ul {
-    list-style: none;
-    margin: 3px 0 3px 0;
-  }
 }
 
 .field_with_errors {
@@ -281,7 +277,7 @@ input {
     background-color: #f2f2eb;
     padding: 5px 10px;
   }
-  
+
   tr {
     background-color: #ffffff;
   }
@@ -299,17 +295,20 @@ input {
 /* car form */
 
 .car-form {
-  margin: 0 auto;
-  margin-top: 14px;
-  max-width: 333px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6px;
+  max-width: 301px;
   text-align: center;
 
   textarea {
     width: 100%;
+    margin-top: 9px;
   }
 
   input, select {
-    width: 49%;
+    width: 60%;
+    margin: 9px 0 1px 0;
   }
 
   .btn {
@@ -365,7 +364,7 @@ input {
   font-size: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 14px;
+  padding-top: 14px;
 }
 
 .other-head {
@@ -505,13 +504,24 @@ input {
 
 /* callback */
 
-.as-callback {
-  width: 240px !important;
+.callback {
+  min-width: 220px;
+  width: 100%;
   margin: 0 auto;
-  
-  #btn-div {
-    margin-top: 10px;
-    margin-left: 20px !important;
+  padding-bottom: 9px;
+}
+
+#btn-div {
+  margin-top: 10px;
+  margin-left: 20px !important;
+}
+
+#modal-callback {
+  max-width: 240px;
+  margin: 0 auto;
+
+  .close {
+    padding-right: 4px;
   }
 }
 
@@ -824,7 +834,9 @@ input {
     top: 0;
     width: 100%;
     .navbar-inner {
-      box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
+      -webkit-box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
+         -moz-box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
+              box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
     }
   }
 
@@ -835,16 +847,16 @@ input {
 /* callback */
 
   .as-callback.affix {
-    box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
+    -webkit-box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
+       -moz-box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
+            box-shadow: -2px 2px 3px 0px rgba(50, 50, 50, 0.25);
     z-index: 10000;
     background-color: #ffffff;
     position: fixed;
     top: 40px;
-    width: 240px;
-    .btn-flat {
-      margin-bottom: 23px;
-    }
+    max-width: 240px;
   }
+
   .as-callback.affix + .right-teasercars {
     margin-top: 225px;
   }
@@ -951,6 +963,7 @@ input {
 
   .as-callback, .callback {
     width: 100%;
+    max-width: 240px
   }
 
   .as-callback.affix {
@@ -1023,6 +1036,11 @@ input {
     .container-fluid {
      padding: 0 10px;
     }
+  }
+
+  .as-callback {
+    width: 240px;
+    margin: 0 auto !important;
   }
 }
 

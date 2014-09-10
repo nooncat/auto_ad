@@ -42,9 +42,13 @@
         $(window).scroll(function () {
           $('.as-callback.affix').width($('.right-as').width());
         });
-        $(document).load(function () {
-            $('.as-callback.affix + .right-teasercars').marginTop($('.as-callback.affix').height());
-        });
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#modal-callback').on('shown', function () {
+        $(ClientSideValidations.selectors.forms).validate();
+      });
     });
   </script>
   </head>

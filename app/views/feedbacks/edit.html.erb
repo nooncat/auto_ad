@@ -4,10 +4,10 @@
 </div>
 <div class="row-fluid">
   <div class="feed-edit">
-    <%= form_for(@feedback) do |f| %>
+    <%= form_for(@feedback, :validate => true) do |f| %>
       <%= render 'feedback_form', f: f %>
-      <div><%= "Показать отзыв посетителям" %></div>
-      <div><%= f.check_box :checkf %></div>
+      <%= f.label :checkf, "Показать отзыв посетителям" %>
+      <%= f.check_box :checkf %><br>
       <%= f.submit "сохранить отзыв", class: "btn btn-flat" %>
     <% end %>
   </div>

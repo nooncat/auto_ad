@@ -16,6 +16,7 @@ gem 'rmagick'
 gem 'fotoramajs', '4.5.2'
 gem 'rails-i18n', '~> 3.0.0'
 gem 'sass', '3.4.1'
+gem 'client_side_validations', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

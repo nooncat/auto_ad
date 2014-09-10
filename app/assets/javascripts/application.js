@@ -11,8 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require fotorama
 //= require jquery_ujs
+//= require fotorama
 //= require bootstrap
 //= require jquery_nested_form
+//= require rails.validations
+//= require rails.validations.nested_form
 //= require_tree .
