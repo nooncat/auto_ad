@@ -30,7 +30,8 @@ class Car < ActiveRecord::Base
   
   validates :name, presence: true
   validates :year_of_release, presence: true
-  validates :price, presence: true, length: { maximum: 12 }
+  VALID_PRICE_REGEX = /^[0-9]+$/
+  validates :price, presence: true, length: { maximum: 12 }, format: { with: VALID_PRICE_REGEX }
   validates :describtion, presence: true, length: { maximum: 1500 }
   validates :photos, length: { maximum: 25, too_long: 'too much' }
   validates :body_type, presence: true

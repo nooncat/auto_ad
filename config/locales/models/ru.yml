@@ -1,5 +1,18 @@
 ru:
   activerecord:
+    errors:
+      messages:
+        blank: заполните поле
+        too_long:
+          few: не более %{count} символа
+          many: не более %{count} символов
+          one: не более %{count} символ
+          other: не более %{count} символа
+        too_short:
+          few: не менее %{count} символов
+          many: не менее %{count} символов
+          one: не менее %{count} символа
+          other: не менее %{count} символа
     models:
       feedback: Отзыв
 
