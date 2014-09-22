@@ -38,7 +38,7 @@ class UsersController < ApplicationController
       sign_in @user
       redirect_to root_url
     else
-      flash.now[:error] = "error Неверный текущий пароль" unless user
+      flash.now[:error] = "Неверный текущий пароль" unless user
       render 'edit'
     end
   end

@@ -5,8 +5,7 @@
 
 <div class="row-fluid">
   <div class="user-edit">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+    <%= form_for(@user, :validate => true) do |f| %>
       
       <%= label_tag :current_password, "Текущий пароль" %>
       <%= password_field_tag :current_password, params[:current_password] %>

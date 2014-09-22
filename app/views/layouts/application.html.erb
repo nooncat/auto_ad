@@ -51,6 +51,15 @@
       });
     });
   </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('.nav').find('a').each(function() {
+          if ($(this).attr('href') == window.location.pathname) {
+            $(this).closest("li").addClass('highlight');
+          }
+        });
+    });
+  </script>
   </head>
   <body>
     <div class="wrapper">

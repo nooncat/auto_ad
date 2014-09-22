@@ -4,8 +4,7 @@
 </div>
 <div class="row-fluid">
   <div class="user-new">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+    <%= form_for(@user, :validate => true) do |f| %>
 
       <%= f.label :login, "Логин" %>
       <%= f.text_field :login %>

@@ -82,21 +82,59 @@ h4 {
     padding-left: 0;
     padding-right: 0;
     border-bottom: none;
-    background-color: #ffffff;
+    background-color: #124191;
     background-image: none;
     box-shadow: none;
   }
+}
+
+.btn-navbar {
+  background: #124191 !important;
+  border: 0;
+  -webgit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+  .icon-bar {
+    -webgit-box-shadow: none !important;
+       -moz-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+}
+
+.nav, .dropdown-menu {
 
   li {
-   font-weight: bold;
+    &:hover {
+      background-color: #ffffff;
+    }
+
+    a {
+      color: #ffffff !important;
+      font-weight: bold;
+      text-shadow: none !important;
+      &:hover {
+        color: #124191 !important;
+      }
+    }
   }
+}
+
+.nav li.highlight {
+  background-color: #ffffff !important;
+  a {
+    color: #124191 !important;
+  }
+}
+
+.dropdown-menu {
+  background-color: #124191;
 }
 
 #logo {
   float: left;
   margin-right: 1em;
   font-size: 1.7em;
-  color: #474747;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -104,7 +142,7 @@ h4 {
   line-height: 1;
 
   &:hover {
-    color: #777777;
+    color: #ffffff;
     text-decoration: none;
   }
 }
@@ -181,7 +219,8 @@ input {
   height: auto !important;
 }
 
-.newfeedback-col, .callback, .new-client-col, .sign-in, .feed-edit, .car-form {
+.newfeedback-col, .callback, .new-client-col, .sign-in, .feed-edit, .car-form,
+.user-new, .user-edit {
   form {
     margin: 0;
   }
@@ -815,20 +854,6 @@ input {
     z-index: 10000;
   }
 
-  .nav {
-
-    li {
-
-      a {
-        color: #474747 !important;
-
-        &:hover {
-          color: #777777 !important;
-        }
-      }
-    }
-  }
-
   .navbar.affix {
     position: fixed;
     top: 0;
@@ -959,6 +984,10 @@ input {
     position: static;
   }
 
+  .nav {
+    margin-top: 5px !important;
+  }
+
 /* callback */
 
   .as-callback, .callback {
@@ -1036,6 +1065,10 @@ input {
     .container-fluid {
      padding: 0 10px;
     }
+  }
+
+  .nav {
+    margin-top: 5px !important;
   }
 
   .as-callback {

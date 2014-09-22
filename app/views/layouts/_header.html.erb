@@ -9,27 +9,27 @@
       <%= link_to "Подбор Авто", root_path, id: "logo" %>
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
-          <li><%= link_to 'автомобили'.html_safe, cars_path %><li>
-          <li><a href="/services"> услуги </a></li>
-          <li><a href="/feedbacks"> отзывы </a></li>
-          <li><a href="/contacts"> контакты </a></li>
+          <li><%= link_to 'Автомобили', cars_path %></li>
+          <li><%= link_to 'Услуги', services_path %></li>
+          <li><%= link_to 'Отзывы', feedbacks_path %></li>
+          <li><%= link_to 'Контакты', contacts_path %></li>
           <% if signed_in? %>
-            <li><a href="/compose"> объявление </a></li>
-            <li><%= link_to 'заявки-клиенты'.html_safe, clients_path %><li>
+            <li><a href="/compose"> Объявление </a></li>
+            <li><%= link_to 'Заявки-клиенты', clients_path %><li>
             <% if current_user.admin? %>
               <li id="fat-menu" class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> админка <b class="caret"></b>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Админка <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "создать пользователя", signup_path %></li>
-                  <li><%= link_to "все пользователи", users_path %></li>
+                  <li><%= link_to "Создать пользователя", signup_path %></li>
+                  <li><%= link_to "Все пользователи", users_path %></li>
                 </ul>
             <% end %>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.login %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "сменить пароль", edit_user_path(current_user) %></li>
+                <li><%= link_to "Сменить пароль", edit_user_path(current_user) %></li>
                 <li><%= link_to "выйти", signout_path, method: "delete" %></li>
               </ul>
             </li>
