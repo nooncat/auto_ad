@@ -11,6 +11,7 @@
     <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
   <script type="text/javascript">
     ymaps.ready(function () {
       var myMap = new ymaps.Map('map', {
@@ -31,6 +32,7 @@
       myMap.geoObjects.add(myPlacemark);
     });
   </script>
+
   <script type="text/javascript">
     $(document).ready(function () {
         $(window).load(function () {
@@ -44,6 +46,26 @@
         });
     });
   </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#modal-callback').on('show', function () {
+        var marginsize = ($(window).width() - 240) / 2;
+        $('#modal-callback').css('cssText', 'left:'+marginsize+'px !important;');
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('.nav').find('a').each(function () {
+          if ($(this).attr('href') == window.location.pathname) {
+            $(this).closest("li").addClass('highlight');
+          }
+        });
+    });
+  </script>
+
   <script type="text/javascript">
     $(document).ready(function () {
       $('#modal-callback').on('shown', function () {
@@ -51,12 +73,16 @@
       });
     });
   </script>
+
   <script type="text/javascript">
     $(document).ready(function () {
-        $('.nav').find('a').each(function() {
-          if ($(this).attr('href') == window.location.pathname) {
-            $(this).closest("li").addClass('highlight');
-          }
+        $('.nav-collapse').on('show', function () {
+          $('.btn-navbar').attr('style', 'background-color: #ffffff !important');
+          $('.icon-bar').attr('style', 'background-color: #124191 !important');
+        });
+        $('.nav-collapse').on('hide', function () {
+          $('.btn-navbar').attr('style', 'background-color: #113176 !important');
+          $('.icon-bar').attr('style', 'background-color: # !important');
         });
     });
   </script>

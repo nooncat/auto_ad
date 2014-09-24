@@ -89,30 +89,40 @@ h4 {
 }
 
 .btn-navbar {
-  background: #124191 !important;
+  background: #113176 !important;
   border: 0;
+  margin: 0 !important;
+  padding: 11px 15px !important;
   -webgit-box-shadow: none !important;
      -moz-box-shadow: none !important;
           box-shadow: none !important;
   .icon-bar {
+    margin: 0 !important;
+    height: 3px !important;
+    width: 21px !important;
     -webgit-box-shadow: none !important;
        -moz-box-shadow: none !important;
             box-shadow: none !important;
   }
+
+  .icon-bar:nth-child(2) {
+    margin: 5px 0 !important;
+  }
 }
 
-.nav, .dropdown-menu {
+.nav {
 
   li {
-    &:hover {
-      background-color: #ffffff;
-    }
 
     a {
       color: #ffffff !important;
       font-weight: bold;
       text-shadow: none !important;
-      &:hover {
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      a {
         color: #124191 !important;
       }
     }
@@ -152,7 +162,7 @@ h4 {
 footer {
   height: 40px;
   color: #a0a0a0;
-  background-color: #f2f2eb;
+  background-color: #ffffff;
   clear: both;
 
   ul {
@@ -164,7 +174,7 @@ footer {
 
 .fa-lock {
   float: left;
-  color: #f2f2eb;
+  color: #ffffff;
   padding: 14px 0 0 12px;
 
   &:hover {
@@ -193,16 +203,22 @@ footer {
   outline: none !important;
   text-shadow: none;
   background-image: none;
-  background-color: #5cb85c;
+  background-color: #124191;
   color: #ffffff;
   border: 0;
   display: table-cell;
   vertical-align: bottom;
   margin-left: auto !important;
   margin-right: auto !important;
+  padding: 6px 14px;
 
   &:hover {
-    background-color: #666666;
+    background-color: #77b8ce;
+    color: #ffffff;
+  }
+
+  &:focus {
+    background-color: #77b8ce;
     color: #ffffff;
   }
 }
@@ -290,7 +306,7 @@ input {
   margin: 5px 10px 10px 8px;
   font-size: 1.1em;
   .fa-caret-right {
-    color: #60bc56;
+    color: #124191;
   }
 
   li {
@@ -399,11 +415,23 @@ input {
 .cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head,
   .other-head, .callback-head, .contacts-head, .services-head {
   text-align: center;
-  color: #474747;
-  font-size: 1.2em;
+  color: #124191;
+  font-size: 1.3em;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.teaser-head {
+  margin: 5px 0 14px 0;
+}
+
+#car-head {
+  color: #124191;
+  font-size: 1.3em;
+  margin: 3px 0;
+  font-weight: bold;
+  text-align: center;
 }
 
 .other-head {
@@ -547,7 +575,7 @@ input {
   min-width: 220px;
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 9px;
+  padding-bottom: 8px;
 }
 
 #btn-div {
@@ -557,7 +585,6 @@ input {
 
 #modal-callback {
   max-width: 240px;
-  margin: 0 auto;
 
   .close {
     padding-right: 4px;
@@ -596,20 +623,14 @@ input {
     }
 
     .price {
-      margin: 20px 0 0 0;
+      margin: 25px 0 0 0;
 
       b {
-        margin-left: 1em;
+        margin-left: 7px;
       }
     }
 
     .ttx {
-      padding-top: 0.5em;
-    }
-
-    .describtion {
-      padding-top: 1em;
-      text-indent: 1em;
     }
   }
 }
@@ -627,18 +648,18 @@ input {
   }
 
   #phone-1 {
-    color: #474747;
+    color: #124191;
     display: inline;
   }
 
   #phone-2 {
-    color: #545454;
+    color: #124191;
     display: inline;
     white-space: nowrap;
   }
 
   #phone-3 {
-    color: #616161;
+    color: #124191;
     display: inline;
     white-space: nowrap;
   }
@@ -780,7 +801,7 @@ input {
     font-size: 1.2em;
   }
   .fa-caret-right {
-    color: #60bc56;
+    color: #124191;
   }
   #services-png {
     margin-top: 3px;
@@ -814,36 +835,36 @@ input {
       #phone-1 {
         margin: 4px 0;
         margin-left: 40px;
-        color: #474747;
+        color: #124191;
         display: block;
       }
 
       #phone-2 {
         margin: 4px 0;
         margin-left: 20px;
-        color: #545454;
+        color: #124191;
         display: block;
       }
 
       #phone-3 {
         margin: 4px 0;
-        color: #616161;
+        color: #124191;
         display: block;
       }
     }
 
     .intro-slogan {
       display: inline-block;
-      margin: 15px 0 0 80px;
+      margin: 5px 0 0 70px;
 
       ul {
         text-align: center;
         line-height: 82px;
         margin: 0;
-        font-size: 1.5em;
+        font-size: 1.6em;
         font-style: italic;
         font-weight: bold;
-        color: #5cb85c;
+        color: #124191;
       }
     }
   }
@@ -880,10 +901,11 @@ input {
     position: fixed;
     top: 40px;
     max-width: 240px;
+    border-bottom: none;
   }
 
   .as-callback.affix + .right-teasercars {
-    margin-top: 225px;
+    margin-top: 227px;
   }
 
 /* feedbacks */
@@ -1073,7 +1095,8 @@ input {
 
   .as-callback {
     width: 240px;
-    margin: 0 auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 

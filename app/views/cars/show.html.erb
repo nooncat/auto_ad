@@ -1,7 +1,7 @@
 <% provide(:title, "#{@car.name} #{@car.model}, #{@car.year_of_release}") %>
 <div class="row-fluid">
   <div class="fotoshow-col">
-    <h4><%= "#{@car.name} #{@car.model}, #{@car.year_of_release}" %></h4>
+    <div id="car-head"><%= "#{@car.name} #{@car.model}, #{@car.year_of_release}" %></div>
     <% if @car.photos.any? %>
       <div class="fotorama" data-nav="thumbs" data-width="100%" data-max-width="640" data-ratio="800/600" data-loop="true" data-thumb-width="100" data-thumb-height="75">
         <% for photo in @car.photos %>
@@ -19,7 +19,9 @@
       </div>
       <div class="ttx">
         <%= "#{@car.name} #{@car.model}, #{@car.year_of_release} г." %><br />
-        <%= "Пробег #{number_with_delimiter(@car.mileage.to_i, delimiter: " ")} км, #{@car.engine} #{@car.transmission}, #{@car.engine_type}, #{@car.body_type.mb_chars.downcase}, цвет #{@car.color.mb_chars.downcase}." %>
+        <%= "#{@car.body_type.mb_chars}, цвет #{@car.color.mb_chars.downcase}" %><br />
+        <%= "Пробег #{number_with_delimiter(@car.mileage.to_i, delimiter: " ")} км" %><br />
+        <%= "Двигатель #{@car.engine} #{@car.transmission}, #{@car.engine_type}" %><br />
       </div>
       <div class="describtion">
         <%= simple_format(@car.describtion) %>

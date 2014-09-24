@@ -15,8 +15,8 @@
         <%= f.select(:engine, options_for_select(car_engines_v_list,
                         @car.engine), include_blank: "--Объем двигателя--") %>
         <%= f.select(:transmission,
-                         options_for_select([["Автоматическа","AT"],
-                             ["Механическая","MT"]], @car.transmission),
+                         options_for_select([["Автоматическа","автомат"],
+                             ["Механическая","механика"]], @car.transmission),
                                       include_blank: "--Коробка передач--") %>
         <%= f.select(:engine_type,
                          options_for_select([["Бензиновый","бензин"],
