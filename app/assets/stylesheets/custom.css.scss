@@ -587,10 +587,15 @@ input {
 }
 
 #modal-callback {
-  max-width: 280px;
+  max-width: 235px;
+  top: 60px;
 
   .close {
-    padding: 6px 5px 8px 5px;
+    position: absolute;
+    display: inline;
+    top: -32px;
+    left: 235px;
+    padding: 6px 6px 6px 6px;
     color: #ffffff;
     background-color: #124191;
     font-size: 1.8em;
