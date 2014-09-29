@@ -8,10 +8,10 @@
       </a>
       <%= link_to "Подбор Авто", root_path, id: "logo" %>
       <div class="nav-collapse collapse">
-        <ul class="nav pull-right">
+        <ul class="nav pull-left">
           <li><%= link_to 'Автомобили', cars_path %></li>
-          <li><%= link_to 'Услуги', services_path %></li>
           <li><%= link_to 'Отзывы', feedbacks_path %></li>
+          <li><%= link_to 'Услуги', services_path %></li>
           <li><%= link_to 'Контакты', contacts_path %></li>
           <% if signed_in? %>
             <li><a href="/compose"> Объявление </a></li>

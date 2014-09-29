@@ -92,7 +92,7 @@ h4 {
   background: #113176 !important;
   border: 0;
   margin: 0 !important;
-  padding: 11px 15px !important;
+  padding: 10px 15px 11px 15px !important;
   -webgit-box-shadow: none !important;
      -moz-box-shadow: none !important;
           box-shadow: none !important;
@@ -142,18 +142,20 @@ h4 {
 
 #logo {
   float: left;
-  margin-right: 1em;
+  //margin-right: 1em;
   font-size: 1.7em;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding: 8px 15px 8px 15px;
   font-weight: bold;
   line-height: 1;
 
   &:hover {
-    color: #ffffff;
+    color: #124191;
+    background-color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
   }
 }
 
@@ -211,6 +213,7 @@ footer {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 6px 14px;
+  font-weight: bold;
 
   &:hover {
     background-color: #77b8ce;
@@ -584,10 +587,18 @@ input {
 }
 
 #modal-callback {
-  max-width: 240px;
+  max-width: 280px;
 
   .close {
-    padding-right: 4px;
+    padding: 6px 5px 8px 5px;
+    color: #ffffff;
+    background-color: #124191;
+    font-size: 1.8em;
+    opacity: 1;
+    &:hover {
+      color: #124191;
+      background-color: #ffffff;
+    }
   }
 }
 
@@ -1007,7 +1018,7 @@ input {
   }
 
   .nav {
-    margin-top: 5px !important;
+    margin-top: 2px !important;
   }
 
 /* callback */
@@ -1090,7 +1101,7 @@ input {
   }
 
   .nav {
-    margin-top: 5px !important;
+    margin-top: 2px !important;
   }
 
   .as-callback {

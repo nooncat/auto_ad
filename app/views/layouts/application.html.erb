@@ -16,81 +16,81 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
-  <script type="text/javascript">
-    ymaps.ready(function () {
-      var myMap = new ymaps.Map('map', {
-        center: [56.0746, 47.275131],
-        zoom: 16
+    <script type="text/javascript">
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+          center: [56.0746, 47.275131],
+          zoom: 16
+        });
+
+        var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          balloonContentBody: [
+            '<strong>Офис компании "Подбор Авто"</strong>',
+            '<br/>',
+            'Адрес: 428028, пр. Ивана Яковлева 39А, ТК "Хевел"',
+          ].join('')
+        }, {
+          preset: 'islands#blueDotIcon'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
       });
+    </script>
 
-      var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        balloonContentBody: [
-          '<strong>Офис компании "Подбор Авто"</strong>',
-          '<br/>',
-          'Адрес: 428028, пр. Ивана Яковлева 39А, ТК "Хевел"',
-        ].join('')
-      }, {
-        preset: 'islands#blueDotIcon'
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $(window).load(function() {
+            $( '.as-callback.affix' ).width($( '.right-as' ).width());
+          });
+          $(window).resize(function() {
+            $( '.as-callback.affix' ).width($( '.right-as' ).width());
+          });
+          $(window).scroll(function() {
+            $( '.as-callback.affix' ).width( $( '.right-as' ).width());
+          });
       });
+    </script>
 
-      myMap.geoObjects.add(myPlacemark);
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-        $(window).load(function () {
-          $('.as-callback.affix').width($('.right-as').width());
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $( '#modal-callback' ).on( 'show', function() {
+          var marginsize = ( $(window).width() - 280) / 2;
+          $( '#modal-callback' ).css( 'cssText', 'left:'+marginsize+'px !important;' );
         });
-        $(window).resize(function () {
-          $('.as-callback.affix').width($('.right-as').width());
-        });
-        $(window).scroll(function () {
-          $('.as-callback.affix').width($('.right-as').width());
-        });
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#modal-callback').on('show', function () {
-        var marginsize = ($(window).width() - 240) / 2;
-        $('#modal-callback').css('cssText', 'left:'+marginsize+'px !important;');
       });
-    });
-  </script>
+    </script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-        $('.nav').find('a').each(function () {
-          if ($(this).attr('href') == window.location.pathname) {
-            $(this).closest("li").addClass('highlight');
-          }
-        });
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#modal-callback').on('shown', function () {
-        $(ClientSideValidations.selectors.forms).validate();
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $( '.nav' ).find( 'a' ).each(function() {
+            if ( $( this ).attr( 'href' ) == window.location.pathname ) {
+              $( this ).closest( "li" ).addClass( 'highlight' );
+            }
+          });
       });
-    });
-  </script>
+    </script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-        $('.nav-collapse').on('show', function () {
-          $('.btn-navbar').attr('style', 'background-color: #ffffff !important');
-          $('.icon-bar').attr('style', 'background-color: #124191 !important');
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $( '#modal-callback' ).on( 'shown', function() {
+          $( ClientSideValidations.selectors.forms ).validate();
         });
-        $('.nav-collapse').on('hide', function () {
-          $('.btn-navbar').attr('style', 'background-color: #113176 !important');
-          $('.icon-bar').attr('style', 'background-color: # !important');
-        });
-    });
-  </script>
-  </head>
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $( '.nav-collapse' ).on( 'show', function() {
+            $( '.btn-navbar' ).attr( 'style', 'background-color: #ffffff !important' );
+            $( '.icon-bar' ).attr( 'style', 'background-color: #124191 !important' );
+          });
+          $( '.nav-collapse' ).on( 'hide', function() {
+            $( '.btn-navbar' ).attr( 'style', 'background-color: #113176 !important' );
+            $( '.icon-bar' ).attr( 'style', 'background-color: #ffffff: !important' );
+          });
+      });
+    </script>
+    </head>
   <body>
     <div class="wrapper">
       <%= render 'layouts/intro' %>
