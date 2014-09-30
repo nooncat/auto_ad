@@ -1,17 +1,16 @@
-<% if $clientprev == 2 %>
-    <li class="client-first">
-    <% $clientprev = 1 %>
-<% elsif $clientprev == 1 %>
-    <li class="client-sec">
-    <% $clientprev = 2 %>
-<% else %>
-    <li class="client-first">
-    <% $clientprev = 1 %>
+<%= div_for(client) do %>
+  <tr>
+    <td><%= client.name %></td>
+    <td><%= client.phone %></td>
+    <td>
+      <%= link_to(client, method: :delete) do %>
+        <i class="fa fa-trash-o"></i>
+      <% end %>
+    </td>
+    <td>
+      <%= link_to edit_client_path(client) do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+    </td>
+  </tr>
 <% end %>
-  <div class="client-name">
-    <%= client.name %>
-  </div>
-  <div class="client-phone">
-    "<%= client.phone %>"
-  </div>
-</li>

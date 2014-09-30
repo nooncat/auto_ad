@@ -214,6 +214,7 @@ footer {
   margin-right: auto !important;
   padding: 6px 14px;
   font-weight: bold;
+  width: auto !important;
 
   &:hover {
     background-color: #77b8ce;
@@ -239,7 +240,7 @@ input {
 }
 
 .newfeedback-col, .callback, .new-client-col, .sign-in, .feed-edit, .car-form,
-.user-new, .user-edit {
+.user-new, .user-edit, .client-edit {
   form {
     margin: 0;
   }
@@ -546,6 +547,10 @@ input {
 
 /* clients page */
 
+#callback-clients, #clients {
+  margin-top: 10px;
+}
+
 .new-client-col {
   text-align: center;
 }
@@ -739,7 +744,7 @@ input {
 
 /* feed new edit */
 
-.newfeedback-col, .feed-edit, {
+.newfeedback-col, .feed-edit, .client-edit  {
   text-align: center;
 
   input {
@@ -748,11 +753,6 @@ input {
 
   textarea {
     width: 301px;
-  }
-
-  .btn {
-    width: auto;
-    margin-top: 15px;
   }
 }
 
@@ -993,14 +993,15 @@ input {
 /* client page */
 
   .callbacks-col {
-    width: 30%;
+    width: 34%;
     float: left;
   }
 
   .clients-col {
-    width: 39%;
+    width: 34%;
     float: left;
     margin-left: 1%;
+    margin-right: 1%;
   }
 
   .new-client-col {
