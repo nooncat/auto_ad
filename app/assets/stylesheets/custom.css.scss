@@ -458,15 +458,16 @@ input {
 }
 
 /* cars col */
+.simple-first, .simple-sec {
+  position: relative;
+}
 
 .simple-first {
   background-color: #eeeeee;
-  position: relative;
 }
 
 .simple-sec {
   background-color: #f6f6f6;
-  position: relative;
 }
 
 .cars {
@@ -975,6 +976,12 @@ input {
   .right-as {
     width: 24%;
     float: right;
+  }
+
+/* car col */
+  .simple-first:hover, .simple-sec:hover {
+    top: -2px;
+    left: 2px;
   }
 
 /* company describtion home */
