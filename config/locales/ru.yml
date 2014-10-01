@@ -2,3 +2,6 @@ ru:
   will_paginate:
     next_label: ">>"
     previous_label: "<<"
+  time:
+    formats:
+      medium: ! '%d %b %H:%M'

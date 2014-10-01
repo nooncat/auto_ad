@@ -90,7 +90,16 @@
           });
       });
     </script>
-    </head>
+
+    <script type="text/javascript">
+      setInterval(function() {
+        $('blink').each(function() {
+          $(this).css('visibility' , $(this).css('visibility') === 'hidden' ? '' : 'hidden')
+        });
+      }, 250);
+    </script>
+
+  </head>
   <body>
     <div class="wrapper">
       <%= render 'layouts/intro' %>

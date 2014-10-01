@@ -15,7 +15,16 @@
           <li><%= link_to 'Контакты', contacts_path %></li>
           <% if signed_in? %>
             <li><a href="/compose"> Объявление </a></li>
-            <li><%= link_to 'Заявки-клиенты', clients_path %><li>
+            <li>
+              <%= link_to clients_path do %>
+                Заявки-клиенты
+                <% if @callbacks_new.any? %>
+                  <blink>
+                    <%= "(#{@callbacks_new.count})" %>
+                  </blink>
+                  <% end %>
+              <% end %>
+            </li>
             <% if current_user.admin? %>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Админка <b class="caret"></b>

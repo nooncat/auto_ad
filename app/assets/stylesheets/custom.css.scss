@@ -111,7 +111,9 @@ h4 {
 }
 
 .nav {
-
+  #new_count {
+    display: inline;
+  }
   li {
 
     a {
@@ -548,7 +550,28 @@ input {
 /* clients page */
 
 #callback-clients, #clients {
-  margin-top: 10px;
+  margin-top: 13px;
+  table {
+    width: 100%;
+    #name-col, #phone-col {
+      width: 28%;
+    }
+    #date-col {
+      width: 32%;
+    }
+    th {
+      background: #c9c9c9;
+    }
+    tr:nth-child(odd) {
+      background: #f0f0f0;
+    }
+    tr:nth-child(even) {
+      background: #e2e2e2;
+    }
+    td {
+      padding: 0 5px;
+    }
+  }
 }
 
 .new-client-col {
@@ -993,15 +1016,14 @@ input {
 /* client page */
 
   .callbacks-col {
-    width: 34%;
+    width: 35%;
     float: left;
   }
 
   .clients-col {
-    width: 34%;
+    width: 35%;
     float: left;
     margin-left: 1%;
-    margin-right: 1%;
   }
 
   .new-client-col {

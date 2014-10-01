@@ -7,7 +7,7 @@
     <% if @callbacks.any? %>
       <div id="callback-clients">
         <table>
-          <tr><th>Имя</th><th>Номер телефона</th><th></th></tr>
+          <tr><th id="date-col">Дата</th><th id="name-col">Имя</th><th id="phone-col">Номер тел.</th><th></th><th></th></tr>
           <%= render @callbacks %>
         </table>
         <br />
@@ -24,7 +24,7 @@
     <% if @clients.any? %>
       <div id="clients">
         <table>
-          <tr><th>Имя</th><th>Номер телефона</th><th></th></tr>
+          <tr><th id="date-col">Дата</th><th id="name-col">Имя</th><th id="phone-col">Номер тел.</th><th></th><th></th></tr>
           <%= render @clients %>
         </table>
         <br />

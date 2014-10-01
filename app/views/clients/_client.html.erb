@@ -1,15 +1,16 @@
 <%= div_for(client) do %>
   <tr>
+    <td><%= l(client.created_at, :format => :medium) %></td>
     <td><%= client.name %></td>
     <td><%= client.phone %></td>
     <td>
-      <%= link_to(client, method: :delete) do %>
-        <i class="fa fa-trash-o"></i>
+      <%= link_to(edit_client_path(client), title: "изменить") do %>
+        <i class="fa fa-edit"></i>
       <% end %>
     </td>
     <td>
-      <%= link_to edit_client_path(client) do %>
-        <i class="fa fa-edit"></i>
+      <%= link_to(client, method: :delete, data:{ confirm: "Удалить?" }, title: "удалить") do %>
+        <i class="fa fa-trash-o"></i>
       <% end %>
     </td>
   </tr>
