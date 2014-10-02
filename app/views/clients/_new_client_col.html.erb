@@ -1,0 +1,19 @@
+<div class="callback-head">
+  новый клиент
+</div>
+<div id="new-client-form">
+  <%= form_for(@client, :validate => true) do |f| %>
+
+    <%= f.label :name, "Имя" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :phone, "Номер телефона" %>
+    <%= f.text_field :phone %>
+
+    <%= f.label :information, "Информация о заказе" %>
+    <%= f.text_area :information, :size => "25x7" %><br />
+
+    <%= f.submit "сохранить клиента", class: "btn btn-flat" %>
+  <% end %>
+</div>
+

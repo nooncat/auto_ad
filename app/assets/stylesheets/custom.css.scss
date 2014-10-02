@@ -241,8 +241,10 @@ input {
   height: auto !important;
 }
 
-.newfeedback-col, .callback, .new-client-col, .sign-in, .feed-edit, .car-form,
+.newfeedback-col, .callback, #new-client-form, .sign-in, .feed-edit, .car-form,
 .user-new, .user-edit, .client-edit {
+  text-align: center;
+
   form {
     margin: 0;
   }
@@ -419,7 +421,7 @@ input {
 /* heads */
 
 .cars-head, .contacts-head, .teaser-head, .feedbacks-head, .company-head,
-  .other-head, .callback-head, .contacts-head, .services-head {
+  .other-head, .callback-head, .contacts-head, .services-head, .client-edit-head {
   text-align: center;
   color: #124191;
   font-size: 1.3em;
@@ -547,7 +549,7 @@ input {
   z-index: 2;
 }
 
-/* clients page */
+/* clients index page */
 
 #callback-clients, #clients {
   margin-top: 13px;
@@ -572,10 +574,6 @@ input {
       padding: 0 5px;
     }
   }
-}
-
-.new-client-col {
-  text-align: center;
 }
 
 /* callback-list */
@@ -642,7 +640,11 @@ input {
     width: 190px;
 }
 
-.callback, .new-client-col {
+#client_information {
+  width: 240px;
+}
+
+.callback, #new-client-form {
   margin: 0;
   text-align: center;
 }
@@ -783,11 +785,6 @@ input {
 
 .sign-in, .user-edit, .user-new {
   text-align: center;
-
-  .btn {
-    margin-top: 15px;
-    width: auto;
-  }
 
   input {
     width: 166px;
@@ -1013,20 +1010,20 @@ input {
     margin: 7px 15px 10px 19px;
   }
 
-/* client page */
+/* clients index page */
 
-  .callbacks-col {
+  .clients-index-left {
     width: 35%;
     float: left;
   }
 
-  .clients-col {
+  .clients-index-center {
     width: 35%;
     float: left;
     margin-left: 1%;
   }
 
-  .new-client-col {
+  .clients-index-right {
     width: 29%;
     float: right;
   }
@@ -1122,6 +1119,19 @@ input {
 
   #podbor-info {
     margin: 7px 5px 10px 8px;
+  }
+
+/* clients index page */
+
+  .clients-index-center {
+    float: left;
+    width: 57%;
+    margin-left: 3%;
+  }
+
+  .clients-index-right {
+    float: right;
+    width: 40%;
   }
 }
 

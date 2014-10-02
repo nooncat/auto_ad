@@ -1,56 +1,21 @@
 <% provide(:title, 'Заявки-клиенты') %>
 <div class="row-fluid">
-  <span class="callbacks-col">
-    <div class="callback-head">
-      Список заявок
-    </div>
-    <% if @callbacks.any? %>
-      <div id="callback-clients">
-        <table>
-          <tr><th id="date-col">Дата</th><th id="name-col">Имя</th><th id="phone-col">Номер тел.</th><th></th><th></th></tr>
-          <%= render @callbacks %>
-        </table>
-        <br />
-        <%= will_paginate @callbacks, :param_name => 'callbacks_page' %>
-      </div>
-    <% else %>
-      <%= "Заявок нет." %>
-    <% end %>
+  <span class="clients-index-left visible-desktop">
+      <%= render 'callbacks_col' %>
   </span>
-  <span class="clients-col">
-    <div class="callback-head">
-      Список клиентов
+  <span class="clients-index-center">
+    <div class="hidden-desktop">
+      <%= render 'callbacks_col' %>
     </div>
-    <% if @clients.any? %>
-      <div id="clients">
-        <table>
-          <tr><th id="date-col">Дата</th><th id="name-col">Имя</th><th id="phone-col">Номер тел.</th><th></th><th></th></tr>
-          <%= render @clients %>
-        </table>
-        <br />
-        <%= will_paginate @clients, :param_name => 'clients_page' %>
-      </div>
-    <% else %>
-      <%= "Клиентов нет." %>
-    <% end %>
+    <div>
+      <%= render 'clients_col' %>
+    </div>
+    <div class="visible-phone">
+      <%= render 'new_client_col' %>
+    </div>
   </span>
-  <span class="new-client-col">
-    <div class="callback-head">
-      новый клиент
-    </div>
-    <%= form_for(@client, :validate => true) do |f| %>
-
-      <%= f.label :name, "Имя" %>
-      <%= f.text_field :name %>
-
-      <%= f.label :phone, "Номер телефона" %>
-      <%= f.text_field :phone %>
-
-      <%= f.label :information, "Информация о заказе" %>
-      <%= f.text_area :information, :size => "25x7" %><br />
-
-      <%= f.submit "сохранить клиента", class: "btn btn-flat" %>
-    <% end %>
+  <span class="clients-index-right hidden-phone">
+    <%= render 'new_client_col' %>
   </span>
 </div>
 

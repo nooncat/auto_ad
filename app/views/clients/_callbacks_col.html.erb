@@ -1,0 +1,14 @@
+<div class="callback-head">
+  Список заявок
+</div>
+<% if @callbacks.any? %>
+  <div id="callback-clients">
+    <table>
+      <tr><th id="date-col">Дата</th><th id="name-col">Имя</th><th id="phone-col">Номер тел.</th><th></th><th></th></tr>
+      <%= render @callbacks %>
+    </table>
+    <%= will_paginate @callbacks, :param_name => 'callbacks_page' %>
+  </div>
+<% else %>
+  <%= "Заявок нет." %>
+<% end %>
