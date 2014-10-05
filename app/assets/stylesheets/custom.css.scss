@@ -851,14 +851,29 @@ input {
 
 /* intro */
 
-  .intro {
+  #intro {
     height: 97px;
     background-color: #fff;
 
-    .intro-logo {
+    #intro-logo {
+      width: 26%;
       float: left;
-      .logo-png {
+      #logo-png {
         max-height: 100%;
+      }
+    }
+
+    #intro-slogan {
+      display: inline-block;
+      margin: 5px 0 0 0;
+
+      ul {
+        line-height: 82px;
+        margin: 0;
+        font-size: 1.6em;
+        font-style: italic;
+        font-weight: bold;
+        color: #124191;
       }
     }
 
@@ -890,20 +905,6 @@ input {
       }
     }
 
-    .intro-slogan {
-      display: inline-block;
-      margin: 5px 0 0 70px;
-
-      ul {
-        text-align: center;
-        line-height: 82px;
-        margin: 0;
-        font-size: 1.6em;
-        font-style: italic;
-        font-weight: bold;
-        color: #124191;
-      }
-    }
   }
 
 /* header */
