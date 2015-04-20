@@ -29,6 +29,7 @@ group :development, :test do
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
   gem 'annotate', '2.5.0'
+  gem 'guard-livereload', '~> 2.4', require: false
 end
 
 
@@ -46,7 +47,7 @@ end
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails', '4.1.0'
-  gem 'rb-inotify', '0.8.8'
+  gem 'rb-inotify', '0.9.0'
   gem 'libnotify', '0.5.9'
 end
 
