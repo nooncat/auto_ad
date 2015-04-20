@@ -207,7 +207,7 @@ footer {
   outline: none !important;
   text-shadow: none;
   background-image: none;
-  background-color: #124191;
+  background-color: #2cba2c;
   color: #ffffff;
   border: 0;
   display: table-cell;
@@ -219,12 +219,12 @@ footer {
   width: auto !important;
 
   &:hover {
-    background-color: #77b8ce;
+    background-color: #3fcc3f;
     color: #ffffff;
   }
 
   &:focus {
-    background-color: #77b8ce;
+    background-color: #1a9b1a;
     color: #ffffff;
   }
 }
