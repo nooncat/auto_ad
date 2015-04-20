@@ -30,6 +30,7 @@ group :development, :test do
   gem 'spork', '0.9.2'
   gem 'annotate', '2.5.0'
   gem 'guard-livereload', '~> 2.4', require: false
+  gem 'rack-livereload', '0.3.15'
 end
 
 
