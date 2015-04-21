@@ -1,6 +1,6 @@
 <div class="callback">
   <div class="callback-head">
-    обратный звонок
+    закажите подбор сейчас
   </div>
   <%= form_for(@client, :validate => true) do |f| %>
     <%= f.label :name, "Ваше имя" %>
@@ -9,6 +9,6 @@
     <%= f.label :phone, "Номер телефона" %>
     <%= f.telephone_field :phone %>
 
-    <%= f.submit "заказать звонок", class: "btn btn-flat" %>
+    <%= f.submit "Заказать подбор", class: "btn btn-flat" %>
   <% end %>
 </div>
