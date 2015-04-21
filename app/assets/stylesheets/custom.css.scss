@@ -608,9 +608,15 @@ input {
   padding-bottom: 8px;
 }
 
+.callback-btn {
+  text-align: center;
+}
+
 #btn-div {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
-  margin-left: 20px !important;
 }
 
 #modal-callback {
