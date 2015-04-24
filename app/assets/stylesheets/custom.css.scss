@@ -29,7 +29,6 @@ body {
 }
 
 .container-fluid {
-  background-color: #c3c3c3;
   max-width: 1001px;
   margin: 0 auto;
 }
@@ -160,6 +159,41 @@ h4 {
     text-decoration: none;
     font-weight: bold;
   }
+}
+
+/* company-phones */
+
+.company-phone {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #124191;
+  display: inline;
+  letter-spacing: 0.05em;
+  a:link {
+    color:inherit;
+    text-decoration: none;
+  }
+  i {
+    margin-right: 0.2em;
+  }
+}
+
+.nav-phone {
+  display: none;
+  float: right;
+  margin-right: 15px;
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 1.6em;
+}
+
+.center-phone-div {
+  text-align: center;
+}
+
+.center-phone {
+  display: inline-block;
 }
 
 /* footer */
@@ -689,21 +723,6 @@ input {
   }
 }
 
-/* phones on intro */
-
-.company-phone {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.8em;
-  color: #124191;
-  display: inline;
-  background-color: #73c373;
-  a:link {
-    color:inherit;
-    text-decoration: none;
-  }
-}
-
 /* feedbacks */
 
 .feedbacks {
@@ -858,7 +877,6 @@ input {
 
     #intro-slogan {
       display: inline-block;
-      background: #c9c9c9;
       margin: 0;
       font-size: 1.6em;
       font-style: italic;
@@ -869,6 +887,7 @@ input {
     .intro-phone {
       display: inline-block;
       float: right;
+      font-size: 2.3em;
     }
   }
 
