@@ -7,6 +7,11 @@
         <span class="icon-bar"></span>
       </a>
       <%= link_to "Подбор Авто", root_path, id: "logo" %>
+      <div class="visible-tablet phone-tablet">
+        <span class="company-phone nav-phone-2">
+          <%= render 'layouts/phones' %>
+        </span>
+      </div>
       <div class="nav-collapse collapse">
         <ul class="nav pull-left">
           <li><%= link_to 'Автомобили', cars_path %></li>
@@ -45,11 +50,11 @@
           <% end %>
         </ul>
       </div>
-    <span class="visible-desktop">
-      <span class="company-phone nav-phone">
-        <%= render 'layouts/phones' %>
+      <span class="visible-desktop">
+        <span class="company-phone nav-phone">
+          <%= render 'layouts/phones' %>
+        </span>
       </span>
-    </span>
     </div>
   </div>
 </header>
