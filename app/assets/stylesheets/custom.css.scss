@@ -163,7 +163,7 @@ h4 {
 
 /* company-phones */
 
-.company-phone {
+.phone-company {
   text-align: center;
   font-weight: bold;
   font-size: 1.8em;
@@ -179,23 +179,20 @@ h4 {
   }
 }
 
-.nav-phone {
-  display: none;
-  float: right;
-  margin-right: 15px;
+.phone-navbar {
   line-height: 40px;
   color: #ffffff;
   font-size: 1.6em;
+}
+
+.phone-desktop {
+  display: none;
+  float: right;
+  margin-right: 15px;
 }
 
 .phone-tablet {
   text-align: center;
-}
-
-.nav-phone-2 {
-  line-height: 40px;
-  color: #ffffff;
-  font-size: 1.6em;
 }
 
 .center-phone-div {
@@ -894,7 +891,7 @@ input {
       color: #124191;
     }
 
-    .intro-phone {
+    .phone-intro {
       display: inline-block;
       float: right;
       font-size: 2.3em;
