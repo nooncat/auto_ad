@@ -114,6 +114,7 @@ h4 {
   #new_count {
     display: inline;
   }
+
   li {
 
     a {
@@ -142,23 +143,27 @@ h4 {
   background-color: #124191;
 }
 
-#logo {
+.nav-logo {
   float: left;
-  //margin-right: 1em;
-  font-size: 1.7em;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding: 8px 15px 8px 15px;
-  font-weight: bold;
-  line-height: 1;
+  display: inline-block;
+  height: 36px;
+  padding: 2px 15px;
 
   &:hover {
-    color: #124191;
     background-color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+
+    .nav-logo-image {
+      background: url('logo_black.svg') no-repeat;
+    }
   }
+}
+
+.nav-logo-image {
+  display: inline-block;
+  width: 80px;
+  height: 36px;
+  background: url('logo_white.svg') no-repeat;
 }
 
 /* company-phones */
@@ -174,6 +179,7 @@ h4 {
     color:inherit;
     text-decoration: none;
   }
+
   i {
     margin-right: 0.2em;
   }
