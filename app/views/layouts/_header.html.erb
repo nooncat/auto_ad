@@ -6,9 +6,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a href="/" class="nav-logo">
-        <span class="nav-logo-image"></span>
-      </a>
+      <span class="hidden-desktop">
+        <a href="/" class="nav-logo">
+          <span class="nav-logo-image"></span>
+        </a>
+      </span>
+      <span class="visible-desktop">
+        <a href="/" class="nav-logo nav-logo-desktop">
+          <span class="nav-logo-image"></span>
+        </a>
+      </span>
       <div class="hidden-desktop phone-2">
         <span class="phone-company phone-navbar">
           <%= render 'layouts/phones' %>

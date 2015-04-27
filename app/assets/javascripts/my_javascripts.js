@@ -84,11 +84,14 @@ var scrollTimeout;  // global for any pending scrollTimeout
 var phoneShow = false;
 
 $(document).ready(function () {
-  var $phone = $('.phone-1');
-  if ($(window).scrollTop() <= 78) {
+  var $phone = $('.phone-1'),
+      $logo = $('.nav-logo-desktop');
+  if ($(window).scrollTop() <= 97) {
     $phone.css('display', 'none');
+    $logo.removeClass('nav-logo-desktop-show');
   } else {
     $phone.css('display', 'inline');
+    $logo.addClass('nav-logo-desktop-show');
     phoneShow = true;
   }
   $(window).scroll(function () {
@@ -97,17 +100,20 @@ $(document).ready(function () {
           clearTimeout(scrollTimeout);
           scrollTimeout = null;
       }
-      scrollTimeout = setTimeout(scrollHandler, 50);
+      scrollTimeout = setTimeout(scrollHandler, 15);
   });
 
   scrollHandler = function () {
     var $pageOff = $(window).scrollTop();
-    if (($pageOff > 78) && (phoneShow === false)) {
+    if (($pageOff > 97) && (phoneShow === false)) {
       $phone.css('display', 'inline');
+      $logo.addClass('nav-logo-desktop-show');
       phoneShow = true;
-    } else if (($pageOff <= 78) && (phoneShow === true)) {
+    } else if (($pageOff <= 97) && (phoneShow === true)) {
       $phone.css('display', 'none');
+      $logo.removeClass('nav-logo-desktop-show');
       phoneShow = false;
     }
   };
 });
+

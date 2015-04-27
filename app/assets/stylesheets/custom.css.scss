@@ -159,9 +159,35 @@ h4 {
   }
 }
 
+.nav-logo-desktop {
+  width: 0px;
+  padding: 2px 0px;
+  opacity: 0;
+  -webkit-transform: rotateY(90deg);
+     -moz-transform: rotateY(90deg);
+       -o-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: width 0.3s linear, padding 0.3s linear, transform 0.26s linear 0.04s, opacity 0.3s linear;
+     -moz-transition: width 0.3s linear, padding 0.3s linear, transform 0.26s linear 0.04s, opacity 0.3s linear;
+       -o-transition: width 0.3s linear, padding 0.3s linear, transform 0.26s linear 0.04s, opacity 0.3s linear;
+          transition: width 0.3s linear, padding 0.3s linear, transform 0.26s linear 0.04s, opacity 0.3s linear;
+}
+
+.nav-logo-desktop-show {
+  width: 75px;
+  padding: 2px 15px;
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+       -o-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
 .nav-logo-image {
   display: inline-block;
-  width: 80px;
+  width: 75px;
   height: 36px;
   background: url('logo_white.svg') no-repeat;
 }
