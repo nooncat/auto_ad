@@ -869,33 +869,39 @@ input {
 
 /* intro */
 
-  #intro {
+  .intro {
     height: 97px;
-      text-align: center;
-      line-height: 97px;
+    text-align: center;
+    line-height: 97px;
+  }
 
-    #intro-logo {
-      display: inline-block;
-      float: left;
-      #logo-png {
-        max-height: 100%;
-      }
-    }
+  .intro-logo {
+    width: 135px;
+    height: 95px;
+    display: inline-block;
+    float: left;
+    background: url('logo_text.svg') no-repeat;
+  }
 
-    #intro-slogan {
-      display: inline-block;
-      margin: 0;
-      font-size: 1.6em;
-      font-style: italic;
-      font-weight: bold;
-      color: #124191;
-    }
+  .intro-logo > a {
+    display: block;
+    width: 135px;
+    height: 97px;
+  }
 
-    .phone-intro {
-      display: inline-block;
-      float: right;
-      font-size: 2.3em;
-    }
+  .intro-slogan {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.6em;
+    font-style: italic;
+    font-weight: bold;
+    color: #124191;
+  }
+
+  .phone-intro {
+    display: inline-block;
+    float: right;
+    font-size: 2.3em;
   }
 
 /* header */
