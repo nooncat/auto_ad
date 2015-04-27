@@ -84,7 +84,7 @@ var scrollTimeout;  // global for any pending scrollTimeout
 var phoneShow = false;
 
 $(document).ready(function () {
-  var $phone = $('.phone-desktop');
+  var $phone = $('.phone-1');
   if ($(window).scrollTop() <= 78) {
     $phone.css('display', 'none');
   } else {
