@@ -86,12 +86,15 @@ var phoneShow = false;
 $(document).ready(function () {
   var $phone = $('.phone-1'),
       $logo = $('.nav-logo-desktop');
+      $nav = $('ul.nav.pull-left');
   if ($(window).scrollTop() <= 97) {
     $phone.css('display', 'none');
     $logo.removeClass('nav-logo-desktop-show');
+    $nav.addClass('add-margin');
   } else {
     $phone.css('display', 'inline');
     $logo.addClass('nav-logo-desktop-show');
+    $nav.removeClass('add-margin');
     phoneShow = true;
   }
   $(window).scroll(function () {
@@ -108,10 +111,12 @@ $(document).ready(function () {
     if (($pageOff > 97) && (phoneShow === false)) {
       $phone.css('display', 'inline');
       $logo.addClass('nav-logo-desktop-show');
+      $nav.removeClass('add-margin');
       phoneShow = true;
     } else if (($pageOff <= 97) && (phoneShow === true)) {
       $phone.css('display', 'none');
       $logo.removeClass('nav-logo-desktop-show');
+      $nav.addClass('add-margin');
       phoneShow = false;
     }
   };
