@@ -218,9 +218,14 @@ h4 {
 }
 
 .phone-1 {
-  display: none;
+  opacity: 0;
   float: right;
   margin-right: 15px;
+}
+
+.phone-show {
+  opacity: 1;
+  transition: opacity 0.3s linear;
 }
 
 .phone-2 {
