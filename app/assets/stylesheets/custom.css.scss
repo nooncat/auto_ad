@@ -143,7 +143,7 @@ h4 {
   background-color: #124191;
 }
 
-.nav-logo {
+.logo-nav {
   float: left;
   display: inline-block;
   height: 36px;
@@ -153,13 +153,13 @@ h4 {
     background-color: #ffffff;
     text-decoration: none;
 
-    .nav-logo-image {
+    .logo-nav-image {
       background: url('logo_black.svg') no-repeat;
     }
   }
 }
 
-.nav-logo-desktop {
+.logo-nav-desktop {
   width: 0px;
   padding: 2px 0px;
   opacity: 0;
@@ -174,7 +174,7 @@ h4 {
           transition: width 0.3s linear, padding 0.3s linear, transform 0.26s linear 0.04s, opacity 0.3s linear;
 }
 
-.nav-logo-desktop-show {
+.logo-nav-desktop-show {
   width: 75px;
   padding: 2px 15px;
   opacity: 1;
@@ -185,7 +185,7 @@ h4 {
           transform: none;
 }
 
-.nav-logo-image {
+.logo-nav-image {
   display: inline-block;
   width: 75px;
   height: 36px;
@@ -1188,7 +1188,7 @@ input {
 }
 
 @media (max-width: 480px) {
-  .nav-logo {
+  .logo-nav {
     padding: 2px 0px;
   }
 
