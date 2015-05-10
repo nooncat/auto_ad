@@ -65,10 +65,10 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.nav-collapse').on('show', function() {
     $('.btn-navbar').attr('style', 'background-color: #ffffff !important');
-    $('.icon-bar').attr('style', 'background-color: #124191 !important');
+    $('.icon-bar').attr('style', 'background-color: #2c2c2c !important');
   });
   $('.nav-collapse').on('hide', function() {
-    $('.btn-navbar').attr('style', 'background-color: #113176 !important');
+    $('.btn-navbar').attr('style', 'background-color: #515151 !important');
     $('.icon-bar').attr('style', 'background-color: #ffffff: !important');
   });
 });

@@ -82,14 +82,14 @@ h4 {
     padding-left: 0;
     padding-right: 0;
     border-bottom: none;
-    background-color: #124191;
+    background-color: #2c2c2c;
     background-image: none;
     box-shadow: none;
   }
 }
 
 .btn-navbar {
-  background: #113176 !important;
+  background: #515151 !important;
   border: 0;
   margin: 0 !important;
   padding: 10px 15px 11px 15px !important;
@@ -126,7 +126,7 @@ h4 {
     &:hover {
       background-color: #ffffff;
       a {
-        color: #124191 !important;
+        color: #2c2c2c !important;
       }
     }
   }
@@ -135,13 +135,21 @@ h4 {
 .nav li.highlight {
   background-color: #ffffff !important;
   a {
-    color: #124191 !important;
+    color: #2c2c2c !important;
+  }
+}
+
+li.dopdown.open > a.dropdown-toggle {
+  background: blue !important;
+
+  &:hover {
   }
 }
 
 .dropdown-menu {
-  background-color: #124191;
+  background-color: #2c2c2c;
 }
+
 
 .logo-nav {
   float: left;
