@@ -82,11 +82,9 @@ setInterval(function() {
 
 // on affix event imitation for logo, phone, margin-left
 
-var scrollTimeout;  // global for any pending scrollTimeout
-var phoneShow = false;
-
 $(document).ready(function () {
-  var $phone = $('.phone-1'),
+  var phoneShow = false,
+      $phone = $('.phone-1'),
       $logo = $('.logo-nav-desktop');
       $nav = $('ul.nav.pull-left');
   if ($(window).scrollTop() <= 97) {
@@ -99,16 +97,10 @@ $(document).ready(function () {
     $nav.removeClass('add-margin');
     phoneShow = true;
   }
-  $(window).scroll(function () {
-      if (scrollTimeout) {
-          // clear the timeout, if one is pending
-          clearTimeout(scrollTimeout);
-          scrollTimeout = null;
-      }
-      scrollTimeout = setTimeout(scrollHandler, 15);
-  });
 
-  scrollHandler = function () {
+  $(window).scroll($.throttle(200, scrollHandler));
+
+  function scrollHandler() {
     var $pageOff = $(window).scrollTop();
     if (($pageOff > 97) && (phoneShow === false)) {
       $phone.addClass('phone-show');
@@ -121,6 +113,6 @@ $(document).ready(function () {
       $nav.addClass('add-margin');
       phoneShow = false;
     }
-  };
+  }
 });
 
