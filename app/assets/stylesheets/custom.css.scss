@@ -214,7 +214,6 @@ li.dopdown.open > a.dropdown-toggle {
   text-align: center;
   font-weight: bold;
   font-size: 1.8em;
-  color: #124191;
   display: inline;
   letter-spacing: 0.05em;
   a:link {
@@ -945,7 +944,8 @@ input {
   .phone-intro {
     display: inline-block;
     float: right;
-    font-size: 2.3em;
+    font-size: 2.0em;
+    color: #696969;
   }
 
 /* header */
