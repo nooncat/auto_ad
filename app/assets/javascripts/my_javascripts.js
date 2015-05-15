@@ -86,11 +86,12 @@ setInterval(function() {
 // on affix event imitation for logo, phone, margin-left
 
 $(document).ready(function () {
-  var phoneShow = false,
+  var INTRO_HEIGHT = 78,
+      phoneShow = false,
       $phone = $('.phone-1'),
       $logo = $('.logo-nav-desktop');
       $nav = $('ul.nav.pull-left');
-  if ($(window).scrollTop() <= 97) {
+  if ($(window).scrollTop() <= INTRO_HEIGHT) {
     $phone.removeClass('phone-show');
     $logo.removeClass('logo-nav-desktop-show');
     $nav.addClass('add-margin');
@@ -105,12 +106,12 @@ $(document).ready(function () {
 
   function scrollHandler() {
     var $pageOff = $(window).scrollTop();
-    if (($pageOff > 97) && (phoneShow === false)) {
+    if (($pageOff > INTRO_HEIGHT) && (phoneShow === false)) {
       $phone.addClass('phone-show');
       $logo.addClass('logo-nav-desktop-show');
       $nav.removeClass('add-margin');
       phoneShow = true;
-    } else if (($pageOff <= 97) && (phoneShow === true)) {
+    } else if (($pageOff <= INTRO_HEIGHT) && (phoneShow === true)) {
       $phone.removeClass('phone-show');
       $logo.removeClass('logo-nav-desktop-show');
       $nav.addClass('add-margin');

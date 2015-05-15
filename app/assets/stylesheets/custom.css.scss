@@ -912,23 +912,24 @@ input {
 /* intro */
 
   .intro {
-    height: 97px;
+    height: 78px;
     text-align: center;
-    line-height: 97px;
+    line-height: 78px;
   }
 
   .intro-logo {
-    width: 135px;
-    height: 95px;
     display: inline-block;
     float: left;
+    width: 99px;
+    height: 70px;
+    margin-top: 4px;
     background: url('logo_text.svg') no-repeat;
   }
 
   .intro-logo > a {
     display: block;
-    width: 135px;
-    height: 97px;
+    width: 99px;
+    height: 70px;
   }
 
   .intro-slogan {
