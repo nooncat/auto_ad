@@ -37,7 +37,7 @@ $(document).ready(function() {
   });
 });
 
-// callback modal window horizontal centering
+// callback modal window horizontal centering IE bug fix
 $(document).ready(function() {
   $('#modal-callback').on('show', function() {
     var marginsize = ( $(window).width() - 235) / 2;
