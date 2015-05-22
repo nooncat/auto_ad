@@ -94,11 +94,11 @@ $(document).ready(function () {
   if ($(window).scrollTop() <= INTRO_HEIGHT) {
     $phone.removeClass('phone-show');
     $logo.removeClass('logo-nav-desktop-show');
-    $nav.addClass('add-margin');
+    $nav.removeClass('add-margin');
   } else {
     $phone.addClass('phone-show');
     $logo.addClass('logo-nav-desktop-show');
-    $nav.removeClass('add-margin');
+    $nav.addClass('add-margin');
     phoneShow = true;
   }
 
@@ -109,12 +109,12 @@ $(document).ready(function () {
     if (($pageOff > INTRO_HEIGHT) && (phoneShow === false)) {
       $phone.addClass('phone-show');
       $logo.addClass('logo-nav-desktop-show');
-      $nav.removeClass('add-margin');
+      $nav.addClass('add-margin');
       phoneShow = true;
     } else if (($pageOff <= INTRO_HEIGHT) && (phoneShow === true)) {
       $phone.removeClass('phone-show');
       $logo.removeClass('logo-nav-desktop-show');
-      $nav.addClass('add-margin');
+      $nav.removeClass('add-margin');
       phoneShow = false;
     }
   }

@@ -963,8 +963,12 @@ input {
     padding-top: 40px;
   }
 
+  ul.nav.pull-left {
+    margin-left: -13px;
+  }
+
   .add-margin {
-    margin-left: -13px !important;
+    margin-left: 0px !important;
   }
 
 /* callback */
