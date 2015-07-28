@@ -5,14 +5,10 @@
 #  id         :integer          not null, primary key
 #  name       :string(255)
 #  contact    :string(255)
-#  content    :string(255)
+#  content    :text
 #  checkf     :boolean          default(FALSE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#
-# Indexes
-#
-#  index_feedbacks_on_created_at  (created_at)
 #
 
 class Feedback < ActiveRecord::Base
